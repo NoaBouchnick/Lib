@@ -1,0 +1,1082 @@
+[2025-01-07 00:14:30,591] INFO: book added successfully
+[2025-01-07 00:14:30,591] INFO: book added successfully
+[2025-01-07 00:14:30,591] INFO: book added successfully
+[2025-01-07 00:14:30,591] INFO: book added successfully
+[2025-01-07 00:14:30,591] INFO: book loaned successfully
+[2025-01-07 00:14:30,591] INFO: book loaned successfully
+[2025-01-07 00:14:30,591] INFO: book loaned successfully
+[2025-01-07 00:14:30,591] INFO: book loaned successfully
+[2025-01-07 00:14:30,592] INFO: book loaned successfully
+[2025-01-07 00:14:30,592] INFO: book loaned successfully
+[2025-01-07 00:14:30,592] ERROR: book loaned fail
+[2025-01-07 00:14:30,592] ERROR: book loaned fail
+[2025-01-07 00:14:30,592] INFO: book added successfully
+[2025-01-07 00:14:30,592] INFO: book added successfully
+[2025-01-07 00:14:30,592] INFO: book added successfully
+[2025-01-07 00:14:30,592] INFO: book removed successfully
+[2025-01-07 00:14:30,592] INFO: book removed successfully
+[2025-01-07 00:14:30,592] INFO: book removed successfully
+[2025-01-07 00:14:30,592] INFO: book added successfully
+[2025-01-07 00:14:30,592] INFO: book added successfully
+[2025-01-07 00:14:30,592] INFO: book added successfully
+[2025-01-07 00:14:30,592] INFO: book removed successfully
+[2025-01-07 00:14:30,592] INFO: book removed successfully
+[2025-01-07 00:14:30,592] INFO: book removed successfully
+[2025-01-07 00:14:30,593] INFO: book added successfully
+[2025-01-07 00:14:30,593] INFO: book added successfully
+[2025-01-07 00:14:30,593] INFO: book added successfully
+[2025-01-07 00:14:30,593] INFO: book added successfully
+[2025-01-07 00:14:30,593] INFO: book loaned successfully
+[2025-01-07 00:14:30,593] INFO: book loaned successfully
+[2025-01-07 00:14:30,593] INFO: book loaned successfully
+[2025-01-07 00:14:30,593] INFO: book loaned successfully
+[2025-01-07 00:14:30,593] INFO: book return successfully
+[2025-01-07 00:14:30,593] INFO: book return successfully
+[2025-01-07 00:14:30,593] INFO: book return successfully
+[2025-01-07 00:14:30,593] INFO: book return successfully
+[2025-01-07 00:14:30,593] ERROR: book return fail
+[2025-01-07 00:14:30,593] ERROR: book return fail
+[2025-01-07 00:14:30,593] ERROR: book return fail
+[2025-01-07 00:14:30,593] ERROR: book return fail
+
+[2025-01-07 01:15:40,664] INFO: Displayed all books successfully
+[2025-01-07 01:15:40,664] INFO: Displayed all books successfully
+[2025-01-07 01:15:40,665] INFO: Displayed available books successfully.
+[2025-01-07 01:15:40,665] INFO: Displayed available books successfully.
+[2025-01-07 01:15:40,665] INFO: Displayed available books successfully.
+[2025-01-07 01:15:40,665] INFO: Displayed available books successfully.
+[2025-01-07 01:15:40,666] INFO: Displayed borrowed books successfully.
+[2025-01-07 01:15:40,666] INFO: Displayed borrowed books successfully.
+[2025-01-07 01:15:40,666] INFO: Displayed borrowed books successfully.
+[2025-01-07 01:15:40,666] INFO: Displayed borrowed books successfully.
+[2025-01-07 01:15:40,666] INFO: Displayed borrowed books successfully.
+[2025-01-07 01:15:40,666] INFO: Displayed borrowed books successfully.
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,667] INFO: Search book Row by Row completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,668] INFO: Search book Mart by Mart completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,669] INFO: Search book 2 by 2 completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Fan by Fan completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,670] INFO: Search book Pro by Pro completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,671] INFO: Search book Har by Har completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,672] INFO: Search book Potter by Potter completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,673] INFO: Search book 19 by 19 completed successfully
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-07 01:15:40,674] ERROR: Search for book Nonexistent by Nonexistent fail
+
+[2025-01-08 02:23:47,400] INFO: book added successfully
+[2025-01-08 02:23:47,400] INFO: book added successfully
+[2025-01-08 02:23:47,401] INFO: book added successfully
+[2025-01-08 02:23:47,401] INFO: book added successfully
+[2025-01-08 02:23:47,401] INFO: book loaned successfully
+[2025-01-08 02:23:47,401] INFO: book loaned successfully
+[2025-01-08 02:23:47,401] INFO: book loaned successfully
+[2025-01-08 02:23:47,401] INFO: book loaned successfully
+[2025-01-08 02:23:47,401] INFO: book loaned successfully
+[2025-01-08 02:23:47,401] INFO: book loaned successfully
+[2025-01-08 02:23:47,401] ERROR: book loaned fail
+[2025-01-08 02:23:47,401] ERROR: book loaned fail
+[2025-01-08 02:23:47,401] INFO: Customer added to the waiting list successfully
+[2025-01-08 02:23:47,401] INFO: Customer added to the waiting list successfully
+[2025-01-08 02:23:47,401] INFO: <Customer.Customer object at 0x0000027744139CD0> added to waiting list
+[2025-01-08 02:23:47,401] INFO: <Customer.Customer object at 0x0000027744139CD0> added to waiting list
+[2025-01-08 02:23:47,402] INFO: book added successfully
+[2025-01-08 02:23:47,402] INFO: book added successfully
+[2025-01-08 02:23:47,402] INFO: book added successfully
+[2025-01-08 02:23:47,402] INFO: book removed successfully
+[2025-01-08 02:23:47,402] INFO: book removed successfully
+[2025-01-08 02:23:47,402] INFO: book removed successfully
+[2025-01-08 02:23:47,402] INFO: book added successfully
+[2025-01-08 02:23:47,402] INFO: book added successfully
+[2025-01-08 02:23:47,402] INFO: book added successfully
+[2025-01-08 02:23:47,402] INFO: book removed successfully
+[2025-01-08 02:23:47,402] INFO: book removed successfully
+[2025-01-08 02:23:47,402] INFO: book removed successfully
+[2025-01-08 02:23:47,403] INFO: book added successfully
+[2025-01-08 02:23:47,403] INFO: book added successfully
+[2025-01-08 02:23:47,403] INFO: book added successfully
+[2025-01-08 02:23:47,403] INFO: book added successfully
+[2025-01-08 02:23:47,403] INFO: book loaned successfully
+[2025-01-08 02:23:47,403] INFO: book loaned successfully
+[2025-01-08 02:23:47,403] INFO: book loaned successfully
+[2025-01-08 02:23:47,403] INFO: book loaned successfully
+[2025-01-08 02:23:47,403] INFO: book return successfully
+[2025-01-08 02:23:47,403] INFO: book return successfully
+[2025-01-08 02:23:47,403] INFO: book return successfully
+[2025-01-08 02:23:47,403] INFO: book return successfully
+[2025-01-08 02:23:47,403] ERROR: book returned fail
+[2025-01-08 02:23:47,403] ERROR: book returned fail
+[2025-01-08 02:23:47,403] ERROR: book returned fail
+[2025-01-08 02:23:47,403] ERROR: book returned fail
+[2025-01-08 02:30:15,322] INFO: book added successfully
+[2025-01-08 02:30:15,322] INFO: book added successfully
+[2025-01-08 02:30:15,323] INFO: book added successfully
+[2025-01-08 02:30:15,323] INFO: book added successfully
+[2025-01-08 02:30:15,323] INFO: book loaned successfully
+[2025-01-08 02:30:15,323] INFO: book loaned successfully
+[2025-01-08 02:30:15,323] INFO: book loaned successfully
+[2025-01-08 02:30:15,323] INFO: book loaned successfully
+[2025-01-08 02:30:15,323] INFO: book loaned successfully
+[2025-01-08 02:30:15,323] INFO: book loaned successfully
+[2025-01-08 02:30:15,323] ERROR: book loaned fail
+[2025-01-08 02:30:15,323] ERROR: book loaned fail
+[2025-01-08 02:30:15,323] INFO: Customer added to the waiting list successfully
+[2025-01-08 02:30:15,323] INFO: Customer added to the waiting list successfully
+[2025-01-08 02:30:15,324] INFO: <Customer.Customer object at 0x000001F1E81B5B10> added to waiting list
+[2025-01-08 02:30:15,324] INFO: <Customer.Customer object at 0x000001F1E81B5B10> added to waiting list
+[2025-01-08 02:30:15,324] INFO: book added successfully
+[2025-01-08 02:30:15,324] INFO: book added successfully
+[2025-01-08 02:30:15,324] INFO: book added successfully
+[2025-01-08 02:30:15,324] INFO: book removed successfully
+[2025-01-08 02:30:15,324] INFO: book removed successfully
+[2025-01-08 02:30:15,324] INFO: book removed successfully
+[2025-01-08 02:30:15,324] INFO: book added successfully
+[2025-01-08 02:30:15,324] INFO: book added successfully
+[2025-01-08 02:30:15,324] INFO: book added successfully
+[2025-01-08 02:30:15,324] INFO: book removed successfully
+[2025-01-08 02:30:15,324] INFO: book removed successfully
+[2025-01-08 02:30:15,324] INFO: book removed successfully
+[2025-01-08 02:30:15,325] INFO: book added successfully
+[2025-01-08 02:30:15,325] INFO: book added successfully
+[2025-01-08 02:30:15,325] INFO: book added successfully
+[2025-01-08 02:30:15,325] INFO: book added successfully
+[2025-01-08 02:30:15,326] INFO: book loaned successfully
+[2025-01-08 02:30:15,326] INFO: book loaned successfully
+[2025-01-08 02:30:15,326] INFO: book loaned successfully
+[2025-01-08 02:30:15,326] INFO: book loaned successfully
+[2025-01-08 02:30:15,326] INFO: book return successfully
+[2025-01-08 02:30:15,326] INFO: book return successfully
+[2025-01-08 02:30:15,326] INFO: book return successfully
+[2025-01-08 02:30:15,326] INFO: book return successfully
+[2025-01-08 02:30:15,326] ERROR: book returned fail
+[2025-01-08 02:30:15,326] ERROR: book returned fail
+[2025-01-08 02:30:15,326] ERROR: book returned fail
+[2025-01-08 02:30:15,326] ERROR: book returned fail
+[2025-01-08 02:32:17,177] INFO: book added successfully
+[2025-01-08 02:32:17,177] INFO: book added successfully
+[2025-01-08 02:32:17,177] INFO: book added successfully
+[2025-01-08 02:32:17,177] INFO: book added successfully
+[2025-01-08 02:32:17,177] INFO: book loaned successfully
+[2025-01-08 02:32:17,177] INFO: book loaned successfully
+[2025-01-08 02:32:17,177] INFO: book loaned successfully
+[2025-01-08 02:32:17,177] INFO: book loaned successfully
+[2025-01-08 02:32:17,178] INFO: book loaned successfully
+[2025-01-08 02:32:17,178] INFO: book loaned successfully
+[2025-01-08 02:32:17,178] ERROR: book loaned fail
+[2025-01-08 02:32:17,178] ERROR: book loaned fail
+[2025-01-08 02:32:17,178] INFO: Customer added to the waiting list successfully
+[2025-01-08 02:32:17,178] INFO: Customer added to the waiting list successfully
+[2025-01-08 02:32:17,178] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 02:32:17,178] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 02:32:17,178] INFO: book added successfully
+[2025-01-08 02:32:17,178] INFO: book added successfully
+[2025-01-08 02:32:17,178] INFO: book added successfully
+[2025-01-08 02:32:17,178] INFO: book removed successfully
+[2025-01-08 02:32:17,178] INFO: book removed successfully
+[2025-01-08 02:32:17,178] INFO: book removed successfully
+[2025-01-08 02:32:17,178] INFO: book added successfully
+[2025-01-08 02:32:17,178] INFO: book added successfully
+[2025-01-08 02:32:17,178] INFO: book added successfully
+[2025-01-08 02:32:17,179] INFO: book removed successfully
+[2025-01-08 02:32:17,179] INFO: book removed successfully
+[2025-01-08 02:32:17,179] INFO: book removed successfully
+[2025-01-08 02:32:17,179] INFO: book added successfully
+[2025-01-08 02:32:17,179] INFO: book added successfully
+[2025-01-08 02:32:17,179] INFO: book added successfully
+[2025-01-08 02:32:17,179] INFO: book added successfully
+[2025-01-08 02:32:17,179] INFO: book loaned successfully
+[2025-01-08 02:32:17,179] INFO: book loaned successfully
+[2025-01-08 02:32:17,179] INFO: book loaned successfully
+[2025-01-08 02:32:17,179] INFO: book loaned successfully
+[2025-01-08 02:32:17,179] INFO: book return successfully
+[2025-01-08 02:32:17,179] INFO: book return successfully
+[2025-01-08 02:32:17,179] INFO: book return successfully
+[2025-01-08 02:32:17,179] INFO: book return successfully
+[2025-01-08 02:32:17,180] ERROR: book returned fail
+[2025-01-08 02:32:17,180] ERROR: book returned fail
+[2025-01-08 02:32:17,180] ERROR: book returned fail
+[2025-01-08 02:32:17,180] ERROR: book returned fail
+[2025-01-08 03:17:21,635] INFO: book added successfully
+[2025-01-08 03:17:21,636] INFO: book added successfully
+[2025-01-08 03:17:21,640] INFO: book added successfully
+[2025-01-08 03:17:21,640] INFO: book added successfully
+[2025-01-08 03:17:21,641] INFO: book loaned successfully
+[2025-01-08 03:17:21,641] INFO: book loaned successfully
+[2025-01-08 03:17:21,642] INFO: book loaned successfully
+[2025-01-08 03:17:21,642] INFO: book loaned successfully
+[2025-01-08 03:17:21,643] INFO: book loaned successfully
+[2025-01-08 03:17:21,643] INFO: book loaned successfully
+[2025-01-08 03:17:21,643] ERROR: book loaned fail
+[2025-01-08 03:17:21,643] ERROR: book loaned fail
+[2025-01-08 03:17:21,644] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:17:21,644] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:17:21,644] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:17:21,644] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:17:21,648] INFO: book added successfully
+[2025-01-08 03:17:21,648] INFO: book added successfully
+[2025-01-08 03:17:21,648] INFO: book added successfully
+[2025-01-08 03:17:21,650] INFO: book removed successfully
+[2025-01-08 03:17:21,650] INFO: book removed successfully
+[2025-01-08 03:17:21,650] INFO: book removed successfully
+[2025-01-08 03:17:21,651] INFO: book added successfully
+[2025-01-08 03:17:21,651] INFO: book added successfully
+[2025-01-08 03:17:21,651] INFO: book added successfully
+[2025-01-08 03:17:21,652] INFO: book removed successfully
+[2025-01-08 03:17:21,652] INFO: book removed successfully
+[2025-01-08 03:17:21,652] INFO: book removed successfully
+[2025-01-08 03:17:21,658] INFO: book added successfully
+[2025-01-08 03:17:21,658] INFO: book added successfully
+[2025-01-08 03:17:21,658] INFO: book added successfully
+[2025-01-08 03:17:21,658] INFO: book added successfully
+[2025-01-08 03:17:21,659] INFO: book loaned successfully
+[2025-01-08 03:17:21,659] INFO: book loaned successfully
+[2025-01-08 03:17:21,659] INFO: book loaned successfully
+[2025-01-08 03:17:21,659] INFO: book loaned successfully
+[2025-01-08 03:17:21,660] INFO: book return successfully
+[2025-01-08 03:17:21,660] INFO: book return successfully
+[2025-01-08 03:17:21,660] INFO: book return successfully
+[2025-01-08 03:17:21,660] INFO: book return successfully
+[2025-01-08 03:17:21,662] ERROR: book returned fail
+[2025-01-08 03:17:21,662] ERROR: book returned fail
+[2025-01-08 03:17:21,662] ERROR: book returned fail
+[2025-01-08 03:17:21,662] ERROR: book returned fail
+[2025-01-08 03:18:20,245] INFO: book added successfully
+[2025-01-08 03:18:20,246] INFO: book added successfully
+[2025-01-08 03:18:20,250] INFO: book added successfully
+[2025-01-08 03:18:20,250] INFO: book added successfully
+[2025-01-08 03:18:20,251] INFO: book loaned successfully
+[2025-01-08 03:18:20,251] INFO: book loaned successfully
+[2025-01-08 03:18:20,252] INFO: book loaned successfully
+[2025-01-08 03:18:20,252] INFO: book loaned successfully
+[2025-01-08 03:18:20,253] INFO: book loaned successfully
+[2025-01-08 03:18:20,253] INFO: book loaned successfully
+[2025-01-08 03:18:20,253] ERROR: book loaned fail
+[2025-01-08 03:18:20,253] ERROR: book loaned fail
+[2025-01-08 03:18:20,254] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:18:20,254] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:18:20,254] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:18:20,254] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:18:20,258] INFO: book added successfully
+[2025-01-08 03:18:20,258] INFO: book added successfully
+[2025-01-08 03:18:20,258] INFO: book added successfully
+[2025-01-08 03:18:20,261] INFO: book removed successfully
+[2025-01-08 03:18:20,261] INFO: book removed successfully
+[2025-01-08 03:18:20,261] INFO: book removed successfully
+[2025-01-08 03:18:20,262] INFO: book added successfully
+[2025-01-08 03:18:20,262] INFO: book added successfully
+[2025-01-08 03:18:20,262] INFO: book added successfully
+[2025-01-08 03:18:20,263] INFO: book removed successfully
+[2025-01-08 03:18:20,263] INFO: book removed successfully
+[2025-01-08 03:18:20,263] INFO: book removed successfully
+[2025-01-08 03:18:20,267] INFO: book added successfully
+[2025-01-08 03:18:20,267] INFO: book added successfully
+[2025-01-08 03:18:20,267] INFO: book added successfully
+[2025-01-08 03:18:20,267] INFO: book added successfully
+[2025-01-08 03:18:20,270] INFO: book loaned successfully
+[2025-01-08 03:18:20,270] INFO: book loaned successfully
+[2025-01-08 03:18:20,270] INFO: book loaned successfully
+[2025-01-08 03:18:20,270] INFO: book loaned successfully
+[2025-01-08 03:18:20,271] INFO: book return successfully
+[2025-01-08 03:18:20,271] INFO: book return successfully
+[2025-01-08 03:18:20,271] INFO: book return successfully
+[2025-01-08 03:18:20,271] INFO: book return successfully
+[2025-01-08 03:18:20,272] ERROR: book returned fail
+[2025-01-08 03:18:20,272] ERROR: book returned fail
+[2025-01-08 03:18:20,272] ERROR: book returned fail
+[2025-01-08 03:18:20,272] ERROR: book returned fail
+[2025-01-08 03:20:28,905] INFO: book added successfully
+[2025-01-08 03:20:28,906] INFO: book added successfully
+[2025-01-08 03:20:28,911] INFO: book added successfully
+[2025-01-08 03:20:28,911] INFO: book added successfully
+[2025-01-08 03:20:28,913] INFO: book loaned successfully
+[2025-01-08 03:20:28,913] INFO: book loaned successfully
+[2025-01-08 03:20:28,914] INFO: book loaned successfully
+[2025-01-08 03:20:28,914] INFO: book loaned successfully
+[2025-01-08 03:20:28,915] INFO: book loaned successfully
+[2025-01-08 03:20:28,915] INFO: book loaned successfully
+[2025-01-08 03:20:28,915] ERROR: book loaned fail
+[2025-01-08 03:20:28,915] ERROR: book loaned fail
+[2025-01-08 03:20:28,916] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:20:28,916] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:20:28,916] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:20:28,916] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:20:28,919] INFO: book added successfully
+[2025-01-08 03:20:28,919] INFO: book added successfully
+[2025-01-08 03:20:28,919] INFO: book added successfully
+[2025-01-08 03:20:28,920] INFO: book removed successfully
+[2025-01-08 03:20:28,920] INFO: book removed successfully
+[2025-01-08 03:20:28,920] INFO: book removed successfully
+[2025-01-08 03:20:28,921] INFO: book added successfully
+[2025-01-08 03:20:28,921] INFO: book added successfully
+[2025-01-08 03:20:28,921] INFO: book added successfully
+[2025-01-08 03:20:28,922] INFO: book removed successfully
+[2025-01-08 03:20:28,922] INFO: book removed successfully
+[2025-01-08 03:20:28,922] INFO: book removed successfully
+[2025-01-08 03:20:28,926] INFO: book added successfully
+[2025-01-08 03:20:28,926] INFO: book added successfully
+[2025-01-08 03:20:28,926] INFO: book added successfully
+[2025-01-08 03:20:28,926] INFO: book added successfully
+[2025-01-08 03:20:28,929] INFO: book loaned successfully
+[2025-01-08 03:20:28,929] INFO: book loaned successfully
+[2025-01-08 03:20:28,929] INFO: book loaned successfully
+[2025-01-08 03:20:28,929] INFO: book loaned successfully
+[2025-01-08 03:20:28,930] INFO: book return successfully
+[2025-01-08 03:20:28,930] INFO: book return successfully
+[2025-01-08 03:20:28,930] INFO: book return successfully
+[2025-01-08 03:20:28,930] INFO: book return successfully
+[2025-01-08 03:20:28,931] ERROR: book returned fail
+[2025-01-08 03:20:28,931] ERROR: book returned fail
+[2025-01-08 03:20:28,931] ERROR: book returned fail
+[2025-01-08 03:20:28,931] ERROR: book returned fail
+[2025-01-08 03:23:46,274] INFO: book added successfully
+[2025-01-08 03:23:46,276] INFO: book added successfully
+[2025-01-08 03:23:46,280] INFO: book added successfully
+[2025-01-08 03:23:46,280] INFO: book added successfully
+[2025-01-08 03:23:46,282] INFO: book loaned successfully
+[2025-01-08 03:23:46,282] INFO: book loaned successfully
+[2025-01-08 03:23:46,283] INFO: book loaned successfully
+[2025-01-08 03:23:46,283] INFO: book loaned successfully
+[2025-01-08 03:23:46,285] INFO: book loaned successfully
+[2025-01-08 03:23:46,285] INFO: book loaned successfully
+[2025-01-08 03:23:46,286] ERROR: book loaned fail
+[2025-01-08 03:23:46,286] ERROR: book loaned fail
+[2025-01-08 03:23:46,286] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:23:46,286] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:23:46,286] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:23:46,286] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:23:46,290] INFO: book added successfully
+[2025-01-08 03:23:46,290] INFO: book added successfully
+[2025-01-08 03:23:46,290] INFO: book added successfully
+[2025-01-08 03:23:46,292] INFO: book removed successfully
+[2025-01-08 03:23:46,292] INFO: book removed successfully
+[2025-01-08 03:23:46,292] INFO: book removed successfully
+[2025-01-08 03:23:46,293] INFO: book added successfully
+[2025-01-08 03:23:46,293] INFO: book added successfully
+[2025-01-08 03:23:46,293] INFO: book added successfully
+[2025-01-08 03:23:46,295] INFO: book removed successfully
+[2025-01-08 03:23:46,295] INFO: book removed successfully
+[2025-01-08 03:23:46,295] INFO: book removed successfully
+[2025-01-08 03:23:46,300] INFO: book added successfully
+[2025-01-08 03:23:46,300] INFO: book added successfully
+[2025-01-08 03:23:46,300] INFO: book added successfully
+[2025-01-08 03:23:46,300] INFO: book added successfully
+[2025-01-08 03:23:46,301] INFO: book loaned successfully
+[2025-01-08 03:23:46,301] INFO: book loaned successfully
+[2025-01-08 03:23:46,301] INFO: book loaned successfully
+[2025-01-08 03:23:46,301] INFO: book loaned successfully
+[2025-01-08 03:23:46,303] INFO: book return successfully
+[2025-01-08 03:23:46,303] INFO: book return successfully
+[2025-01-08 03:23:46,303] INFO: book return successfully
+[2025-01-08 03:23:46,303] INFO: book return successfully
+[2025-01-08 03:23:46,305] ERROR: book returned fail
+[2025-01-08 03:23:46,305] ERROR: book returned fail
+[2025-01-08 03:23:46,305] ERROR: book returned fail
+[2025-01-08 03:23:46,305] ERROR: book returned fail
+[2025-01-08 03:25:08,304] INFO: book added successfully
+[2025-01-08 03:25:08,305] INFO: book added successfully
+[2025-01-08 03:25:08,308] INFO: book added successfully
+[2025-01-08 03:25:08,308] INFO: book added successfully
+[2025-01-08 03:25:08,309] INFO: book loaned successfully
+[2025-01-08 03:25:08,309] INFO: book loaned successfully
+[2025-01-08 03:25:08,310] INFO: book loaned successfully
+[2025-01-08 03:25:08,310] INFO: book loaned successfully
+[2025-01-08 03:25:08,310] INFO: book loaned successfully
+[2025-01-08 03:25:08,310] INFO: book loaned successfully
+[2025-01-08 03:25:08,311] ERROR: book loaned fail
+[2025-01-08 03:25:08,311] ERROR: book loaned fail
+[2025-01-08 03:25:08,311] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:25:08,311] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:25:08,311] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:25:08,311] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:25:08,315] INFO: book added successfully
+[2025-01-08 03:25:08,315] INFO: book added successfully
+[2025-01-08 03:25:08,315] INFO: book added successfully
+[2025-01-08 03:25:08,316] INFO: book removed successfully
+[2025-01-08 03:25:08,316] INFO: book removed successfully
+[2025-01-08 03:25:08,316] INFO: book removed successfully
+[2025-01-08 03:25:08,317] INFO: book added successfully
+[2025-01-08 03:25:08,317] INFO: book added successfully
+[2025-01-08 03:25:08,317] INFO: book added successfully
+[2025-01-08 03:25:08,317] INFO: book removed successfully
+[2025-01-08 03:25:08,317] INFO: book removed successfully
+[2025-01-08 03:25:08,317] INFO: book removed successfully
+[2025-01-08 03:25:08,320] INFO: book added successfully
+[2025-01-08 03:25:08,320] INFO: book added successfully
+[2025-01-08 03:25:08,320] INFO: book added successfully
+[2025-01-08 03:25:08,320] INFO: book added successfully
+[2025-01-08 03:25:08,321] INFO: book loaned successfully
+[2025-01-08 03:25:08,321] INFO: book loaned successfully
+[2025-01-08 03:25:08,321] INFO: book loaned successfully
+[2025-01-08 03:25:08,321] INFO: book loaned successfully
+[2025-01-08 03:25:08,322] INFO: book return successfully
+[2025-01-08 03:25:08,322] INFO: book return successfully
+[2025-01-08 03:25:08,322] INFO: book return successfully
+[2025-01-08 03:25:08,322] INFO: book return successfully
+[2025-01-08 03:25:08,323] ERROR: book returned fail
+[2025-01-08 03:25:08,323] ERROR: book returned fail
+[2025-01-08 03:25:08,323] ERROR: book returned fail
+[2025-01-08 03:25:08,323] ERROR: book returned fail
+[2025-01-08 03:26:47,409] INFO: book added successfully
+[2025-01-08 03:26:47,411] INFO: book added successfully
+[2025-01-08 03:26:47,415] INFO: book added successfully
+[2025-01-08 03:26:47,415] INFO: book added successfully
+[2025-01-08 03:26:47,417] INFO: book loaned successfully
+[2025-01-08 03:26:47,417] INFO: book loaned successfully
+[2025-01-08 03:26:47,420] INFO: book loaned successfully
+[2025-01-08 03:26:47,420] INFO: book loaned successfully
+[2025-01-08 03:26:47,422] INFO: book loaned successfully
+[2025-01-08 03:26:47,422] INFO: book loaned successfully
+[2025-01-08 03:26:47,424] ERROR: book loaned fail
+[2025-01-08 03:26:47,424] ERROR: book loaned fail
+[2025-01-08 03:26:47,424] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:26:47,424] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:26:47,425] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:26:47,425] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:26:47,427] INFO: book added successfully
+[2025-01-08 03:26:47,427] INFO: book added successfully
+[2025-01-08 03:26:47,427] INFO: book added successfully
+[2025-01-08 03:26:47,428] INFO: book removed successfully
+[2025-01-08 03:26:47,428] INFO: book removed successfully
+[2025-01-08 03:26:47,428] INFO: book removed successfully
+[2025-01-08 03:26:47,430] INFO: book added successfully
+[2025-01-08 03:26:47,430] INFO: book added successfully
+[2025-01-08 03:26:47,430] INFO: book added successfully
+[2025-01-08 03:26:47,432] INFO: book removed successfully
+[2025-01-08 03:26:47,432] INFO: book removed successfully
+[2025-01-08 03:26:47,432] INFO: book removed successfully
+[2025-01-08 03:26:47,436] INFO: book added successfully
+[2025-01-08 03:26:47,436] INFO: book added successfully
+[2025-01-08 03:26:47,436] INFO: book added successfully
+[2025-01-08 03:26:47,436] INFO: book added successfully
+[2025-01-08 03:26:47,438] INFO: book loaned successfully
+[2025-01-08 03:26:47,438] INFO: book loaned successfully
+[2025-01-08 03:26:47,438] INFO: book loaned successfully
+[2025-01-08 03:26:47,438] INFO: book loaned successfully
+[2025-01-08 03:26:47,441] INFO: book return successfully
+[2025-01-08 03:26:47,441] INFO: book return successfully
+[2025-01-08 03:26:47,441] INFO: book return successfully
+[2025-01-08 03:26:47,441] INFO: book return successfully
+[2025-01-08 03:26:47,443] ERROR: book returned fail
+[2025-01-08 03:26:47,443] ERROR: book returned fail
+[2025-01-08 03:26:47,443] ERROR: book returned fail
+[2025-01-08 03:26:47,443] ERROR: book returned fail
+[2025-01-08 03:27:40,518] INFO: book added successfully
+[2025-01-08 03:27:40,519] INFO: book added successfully
+[2025-01-08 03:27:40,523] INFO: book added successfully
+[2025-01-08 03:27:40,523] INFO: book added successfully
+[2025-01-08 03:27:40,524] INFO: book loaned successfully
+[2025-01-08 03:27:40,524] INFO: book loaned successfully
+[2025-01-08 03:27:40,525] INFO: book loaned successfully
+[2025-01-08 03:27:40,525] INFO: book loaned successfully
+[2025-01-08 03:27:40,526] INFO: book loaned successfully
+[2025-01-08 03:27:40,526] INFO: book loaned successfully
+[2025-01-08 03:27:40,527] ERROR: book loaned fail
+[2025-01-08 03:27:40,527] ERROR: book loaned fail
+[2025-01-08 03:27:40,527] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:27:40,527] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:27:40,527] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:27:40,527] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:27:40,530] INFO: book added successfully
+[2025-01-08 03:27:40,530] INFO: book added successfully
+[2025-01-08 03:27:40,530] INFO: book added successfully
+[2025-01-08 03:27:40,532] INFO: book removed successfully
+[2025-01-08 03:27:40,532] INFO: book removed successfully
+[2025-01-08 03:27:40,532] INFO: book removed successfully
+[2025-01-08 03:27:40,533] INFO: book added successfully
+[2025-01-08 03:27:40,533] INFO: book added successfully
+[2025-01-08 03:27:40,533] INFO: book added successfully
+[2025-01-08 03:27:40,534] INFO: book removed successfully
+[2025-01-08 03:27:40,534] INFO: book removed successfully
+[2025-01-08 03:27:40,534] INFO: book removed successfully
+[2025-01-08 03:27:40,537] INFO: book added successfully
+[2025-01-08 03:27:40,537] INFO: book added successfully
+[2025-01-08 03:27:40,537] INFO: book added successfully
+[2025-01-08 03:27:40,537] INFO: book added successfully
+[2025-01-08 03:27:40,538] INFO: book loaned successfully
+[2025-01-08 03:27:40,538] INFO: book loaned successfully
+[2025-01-08 03:27:40,538] INFO: book loaned successfully
+[2025-01-08 03:27:40,538] INFO: book loaned successfully
+[2025-01-08 03:27:40,539] INFO: book return successfully
+[2025-01-08 03:27:40,539] INFO: book return successfully
+[2025-01-08 03:27:40,539] INFO: book return successfully
+[2025-01-08 03:27:40,539] INFO: book return successfully
+[2025-01-08 03:27:40,540] ERROR: book returned fail
+[2025-01-08 03:27:40,540] ERROR: book returned fail
+[2025-01-08 03:27:40,540] ERROR: book returned fail
+[2025-01-08 03:27:40,540] ERROR: book returned fail
+[2025-01-08 03:31:42,463] INFO: book added successfully
+[2025-01-08 03:31:42,464] INFO: book added successfully
+[2025-01-08 03:31:42,465] INFO: book added successfully
+[2025-01-08 03:31:42,465] INFO: book added successfully
+[2025-01-08 03:31:42,466] INFO: book loaned successfully
+[2025-01-08 03:31:42,466] INFO: book loaned successfully
+[2025-01-08 03:31:42,466] INFO: book loaned successfully
+[2025-01-08 03:31:42,466] INFO: book loaned successfully
+[2025-01-08 03:31:42,467] INFO: book loaned successfully
+[2025-01-08 03:31:42,467] INFO: book loaned successfully
+[2025-01-08 03:31:42,467] ERROR: book loaned fail
+[2025-01-08 03:31:42,467] ERROR: book loaned fail
+[2025-01-08 03:31:42,467] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:31:42,467] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:31:42,467] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:31:42,467] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:31:42,468] INFO: book added successfully
+[2025-01-08 03:31:42,468] INFO: book added successfully
+[2025-01-08 03:31:42,468] INFO: book added successfully
+[2025-01-08 03:31:42,469] INFO: book removed successfully
+[2025-01-08 03:31:42,469] INFO: book removed successfully
+[2025-01-08 03:31:42,469] INFO: book removed successfully
+[2025-01-08 03:31:42,469] INFO: book added successfully
+[2025-01-08 03:31:42,469] INFO: book added successfully
+[2025-01-08 03:31:42,469] INFO: book added successfully
+[2025-01-08 03:31:42,469] INFO: book removed successfully
+[2025-01-08 03:31:42,469] INFO: book removed successfully
+[2025-01-08 03:31:42,469] INFO: book removed successfully
+[2025-01-08 03:31:42,470] INFO: book added successfully
+[2025-01-08 03:31:42,470] INFO: book added successfully
+[2025-01-08 03:31:42,470] INFO: book added successfully
+[2025-01-08 03:31:42,470] INFO: book added successfully
+[2025-01-08 03:31:42,471] INFO: book loaned successfully
+[2025-01-08 03:31:42,471] INFO: book loaned successfully
+[2025-01-08 03:31:42,471] INFO: book loaned successfully
+[2025-01-08 03:31:42,471] INFO: book loaned successfully
+[2025-01-08 03:31:42,471] INFO: book return successfully
+[2025-01-08 03:31:42,471] INFO: book return successfully
+[2025-01-08 03:31:42,471] INFO: book return successfully
+[2025-01-08 03:31:42,471] INFO: book return successfully
+[2025-01-08 03:31:42,471] ERROR: book returned fail
+[2025-01-08 03:31:42,471] ERROR: book returned fail
+[2025-01-08 03:31:42,471] ERROR: book returned fail
+[2025-01-08 03:31:42,471] ERROR: book returned fail
+[2025-01-08 03:32:41,300] INFO: book added successfully
+[2025-01-08 03:32:41,301] INFO: book added successfully
+[2025-01-08 03:32:41,304] INFO: book added successfully
+[2025-01-08 03:32:41,304] INFO: book added successfully
+[2025-01-08 03:32:41,305] INFO: book loaned successfully
+[2025-01-08 03:32:41,305] INFO: book loaned successfully
+[2025-01-08 03:32:41,306] INFO: book loaned successfully
+[2025-01-08 03:32:41,306] INFO: book loaned successfully
+[2025-01-08 03:32:41,307] INFO: book loaned successfully
+[2025-01-08 03:32:41,307] INFO: book loaned successfully
+[2025-01-08 03:32:41,308] ERROR: book loaned fail
+[2025-01-08 03:32:41,308] ERROR: book loaned fail
+[2025-01-08 03:32:41,308] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:32:41,308] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:32:41,309] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:32:41,309] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:32:41,311] INFO: book added successfully
+[2025-01-08 03:32:41,311] INFO: book added successfully
+[2025-01-08 03:32:41,311] INFO: book added successfully
+[2025-01-08 03:32:41,312] INFO: book removed successfully
+[2025-01-08 03:32:41,312] INFO: book removed successfully
+[2025-01-08 03:32:41,312] INFO: book removed successfully
+[2025-01-08 03:32:41,314] INFO: book added successfully
+[2025-01-08 03:32:41,314] INFO: book added successfully
+[2025-01-08 03:32:41,314] INFO: book added successfully
+[2025-01-08 03:32:41,315] INFO: book removed successfully
+[2025-01-08 03:32:41,315] INFO: book removed successfully
+[2025-01-08 03:32:41,315] INFO: book removed successfully
+[2025-01-08 03:32:41,318] INFO: book added successfully
+[2025-01-08 03:32:41,318] INFO: book added successfully
+[2025-01-08 03:32:41,318] INFO: book added successfully
+[2025-01-08 03:32:41,318] INFO: book added successfully
+[2025-01-08 03:32:41,319] INFO: book loaned successfully
+[2025-01-08 03:32:41,319] INFO: book loaned successfully
+[2025-01-08 03:32:41,319] INFO: book loaned successfully
+[2025-01-08 03:32:41,319] INFO: book loaned successfully
+[2025-01-08 03:32:41,320] INFO: book return successfully
+[2025-01-08 03:32:41,320] INFO: book return successfully
+[2025-01-08 03:32:41,320] INFO: book return successfully
+[2025-01-08 03:32:41,320] INFO: book return successfully
+[2025-01-08 03:32:41,322] ERROR: book returned fail
+[2025-01-08 03:32:41,322] ERROR: book returned fail
+[2025-01-08 03:32:41,322] ERROR: book returned fail
+[2025-01-08 03:32:41,322] ERROR: book returned fail
+[2025-01-08 03:33:38,052] INFO: book added successfully
+[2025-01-08 03:33:38,053] INFO: book added successfully
+[2025-01-08 03:33:38,054] INFO: book added successfully
+[2025-01-08 03:33:38,054] INFO: book added successfully
+[2025-01-08 03:33:38,054] INFO: book loaned successfully
+[2025-01-08 03:33:38,054] INFO: book loaned successfully
+[2025-01-08 03:33:38,054] INFO: book loaned successfully
+[2025-01-08 03:33:38,054] INFO: book loaned successfully
+[2025-01-08 03:33:38,055] INFO: book loaned successfully
+[2025-01-08 03:33:38,055] INFO: book loaned successfully
+[2025-01-08 03:33:38,055] ERROR: book loaned fail
+[2025-01-08 03:33:38,055] ERROR: book loaned fail
+[2025-01-08 03:33:38,055] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:33:38,055] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:33:38,055] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:33:38,055] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:33:38,056] INFO: book added successfully
+[2025-01-08 03:33:38,056] INFO: book added successfully
+[2025-01-08 03:33:38,056] INFO: book added successfully
+[2025-01-08 03:33:38,056] INFO: book removed successfully
+[2025-01-08 03:33:38,056] INFO: book removed successfully
+[2025-01-08 03:33:38,056] INFO: book removed successfully
+[2025-01-08 03:33:38,056] INFO: book added successfully
+[2025-01-08 03:33:38,056] INFO: book added successfully
+[2025-01-08 03:33:38,056] INFO: book added successfully
+[2025-01-08 03:33:38,057] INFO: book removed successfully
+[2025-01-08 03:33:38,057] INFO: book removed successfully
+[2025-01-08 03:33:38,057] INFO: book removed successfully
+[2025-01-08 03:33:38,058] INFO: book added successfully
+[2025-01-08 03:33:38,058] INFO: book added successfully
+[2025-01-08 03:33:38,058] INFO: book added successfully
+[2025-01-08 03:33:38,058] INFO: book added successfully
+[2025-01-08 03:33:38,058] INFO: book loaned successfully
+[2025-01-08 03:33:38,058] INFO: book loaned successfully
+[2025-01-08 03:33:38,058] INFO: book loaned successfully
+[2025-01-08 03:33:38,058] INFO: book loaned successfully
+[2025-01-08 03:33:38,058] INFO: book return successfully
+[2025-01-08 03:33:38,058] INFO: book return successfully
+[2025-01-08 03:33:38,058] INFO: book return successfully
+[2025-01-08 03:33:38,058] INFO: book return successfully
+[2025-01-08 03:33:38,059] ERROR: book returned fail
+[2025-01-08 03:33:38,059] ERROR: book returned fail
+[2025-01-08 03:33:38,059] ERROR: book returned fail
+[2025-01-08 03:33:38,059] ERROR: book returned fail
+[2025-01-08 03:34:20,210] INFO: book added successfully
+[2025-01-08 03:34:20,213] INFO: book added successfully
+[2025-01-08 03:34:20,220] INFO: book added successfully
+[2025-01-08 03:34:20,220] INFO: book added successfully
+[2025-01-08 03:34:20,223] INFO: book loaned successfully
+[2025-01-08 03:34:20,223] INFO: book loaned successfully
+[2025-01-08 03:34:20,225] INFO: book loaned successfully
+[2025-01-08 03:34:20,225] INFO: book loaned successfully
+[2025-01-08 03:34:20,227] INFO: book loaned successfully
+[2025-01-08 03:34:20,227] INFO: book loaned successfully
+[2025-01-08 03:34:20,229] ERROR: book loaned fail
+[2025-01-08 03:34:20,229] ERROR: book loaned fail
+[2025-01-08 03:34:20,229] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:34:20,229] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:34:20,229] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:34:20,229] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:34:20,233] INFO: book added successfully
+[2025-01-08 03:34:20,233] INFO: book added successfully
+[2025-01-08 03:34:20,233] INFO: book added successfully
+[2025-01-08 03:34:20,236] INFO: book removed successfully
+[2025-01-08 03:34:20,236] INFO: book removed successfully
+[2025-01-08 03:34:20,236] INFO: book removed successfully
+[2025-01-08 03:34:20,237] INFO: book added successfully
+[2025-01-08 03:34:20,237] INFO: book added successfully
+[2025-01-08 03:34:20,237] INFO: book added successfully
+[2025-01-08 03:34:20,239] INFO: book removed successfully
+[2025-01-08 03:34:20,239] INFO: book removed successfully
+[2025-01-08 03:34:20,239] INFO: book removed successfully
+[2025-01-08 03:34:20,244] INFO: book added successfully
+[2025-01-08 03:34:20,244] INFO: book added successfully
+[2025-01-08 03:34:20,244] INFO: book added successfully
+[2025-01-08 03:34:20,244] INFO: book added successfully
+[2025-01-08 03:34:20,246] INFO: book loaned successfully
+[2025-01-08 03:34:20,246] INFO: book loaned successfully
+[2025-01-08 03:34:20,246] INFO: book loaned successfully
+[2025-01-08 03:34:20,246] INFO: book loaned successfully
+[2025-01-08 03:34:20,248] INFO: book return successfully
+[2025-01-08 03:34:20,248] INFO: book return successfully
+[2025-01-08 03:34:20,248] INFO: book return successfully
+[2025-01-08 03:34:20,248] INFO: book return successfully
+[2025-01-08 03:34:20,249] ERROR: book returned fail
+[2025-01-08 03:34:20,249] ERROR: book returned fail
+[2025-01-08 03:34:20,249] ERROR: book returned fail
+[2025-01-08 03:34:20,249] ERROR: book returned fail
+[2025-01-08 03:35:17,366] INFO: book added successfully
+[2025-01-08 03:35:17,369] INFO: book added successfully
+[2025-01-08 03:35:17,376] INFO: book added successfully
+[2025-01-08 03:35:17,376] INFO: book added successfully
+[2025-01-08 03:35:17,379] INFO: book loaned successfully
+[2025-01-08 03:35:17,379] INFO: book loaned successfully
+[2025-01-08 03:35:17,381] INFO: book loaned successfully
+[2025-01-08 03:35:17,381] INFO: book loaned successfully
+[2025-01-08 03:35:17,383] INFO: book loaned successfully
+[2025-01-08 03:35:17,383] INFO: book loaned successfully
+[2025-01-08 03:35:17,386] ERROR: book loaned fail
+[2025-01-08 03:35:17,386] ERROR: book loaned fail
+[2025-01-08 03:35:17,386] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:35:17,386] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:35:17,386] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:35:17,386] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:35:17,391] INFO: book added successfully
+[2025-01-08 03:35:17,391] INFO: book added successfully
+[2025-01-08 03:35:17,391] INFO: book added successfully
+[2025-01-08 03:35:17,393] INFO: book removed successfully
+[2025-01-08 03:35:17,393] INFO: book removed successfully
+[2025-01-08 03:35:17,393] INFO: book removed successfully
+[2025-01-08 03:35:17,396] INFO: book added successfully
+[2025-01-08 03:35:17,396] INFO: book added successfully
+[2025-01-08 03:35:17,396] INFO: book added successfully
+[2025-01-08 03:35:17,399] INFO: book removed successfully
+[2025-01-08 03:35:17,399] INFO: book removed successfully
+[2025-01-08 03:35:17,399] INFO: book removed successfully
+[2025-01-08 03:35:17,406] INFO: book added successfully
+[2025-01-08 03:35:17,406] INFO: book added successfully
+[2025-01-08 03:35:17,406] INFO: book added successfully
+[2025-01-08 03:35:17,406] INFO: book added successfully
+[2025-01-08 03:35:17,408] INFO: book loaned successfully
+[2025-01-08 03:35:17,408] INFO: book loaned successfully
+[2025-01-08 03:35:17,408] INFO: book loaned successfully
+[2025-01-08 03:35:17,408] INFO: book loaned successfully
+[2025-01-08 03:35:17,411] INFO: book return successfully
+[2025-01-08 03:35:17,411] INFO: book return successfully
+[2025-01-08 03:35:17,411] INFO: book return successfully
+[2025-01-08 03:35:17,411] INFO: book return successfully
+[2025-01-08 03:35:17,413] ERROR: book returned fail
+[2025-01-08 03:35:17,413] ERROR: book returned fail
+[2025-01-08 03:35:17,413] ERROR: book returned fail
+[2025-01-08 03:35:17,413] ERROR: book returned fail
+[2025-01-08 03:38:47,692] INFO: book added successfully
+[2025-01-08 03:38:47,692] INFO: book added successfully
+[2025-01-08 03:38:47,698] INFO: book added successfully
+[2025-01-08 03:38:47,698] INFO: book added successfully
+[2025-01-08 03:38:47,699] INFO: book loaned successfully
+[2025-01-08 03:38:47,699] INFO: book loaned successfully
+[2025-01-08 03:38:47,700] INFO: book loaned successfully
+[2025-01-08 03:38:47,700] INFO: book loaned successfully
+[2025-01-08 03:38:47,700] INFO: book loaned successfully
+[2025-01-08 03:38:47,700] INFO: book loaned successfully
+[2025-01-08 03:38:47,701] ERROR: book loaned fail
+[2025-01-08 03:38:47,701] ERROR: book loaned fail
+[2025-01-08 03:38:47,701] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:38:47,701] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:38:47,701] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:38:47,701] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:38:47,704] INFO: book added successfully
+[2025-01-08 03:38:47,704] INFO: book added successfully
+[2025-01-08 03:38:47,704] INFO: book added successfully
+[2025-01-08 03:38:47,705] INFO: book removed successfully
+[2025-01-08 03:38:47,705] INFO: book removed successfully
+[2025-01-08 03:38:47,705] INFO: book removed successfully
+[2025-01-08 03:38:47,706] INFO: book added successfully
+[2025-01-08 03:38:47,706] INFO: book added successfully
+[2025-01-08 03:38:47,706] INFO: book added successfully
+[2025-01-08 03:38:47,706] INFO: book removed successfully
+[2025-01-08 03:38:47,706] INFO: book removed successfully
+[2025-01-08 03:38:47,706] INFO: book removed successfully
+[2025-01-08 03:38:47,710] INFO: book added successfully
+[2025-01-08 03:38:47,710] INFO: book added successfully
+[2025-01-08 03:38:47,710] INFO: book added successfully
+[2025-01-08 03:38:47,710] INFO: book added successfully
+[2025-01-08 03:38:47,712] INFO: book loaned successfully
+[2025-01-08 03:38:47,712] INFO: book loaned successfully
+[2025-01-08 03:38:47,712] INFO: book loaned successfully
+[2025-01-08 03:38:47,712] INFO: book loaned successfully
+[2025-01-08 03:38:47,713] INFO: book return successfully
+[2025-01-08 03:38:47,713] INFO: book return successfully
+[2025-01-08 03:38:47,713] INFO: book return successfully
+[2025-01-08 03:38:47,713] INFO: book return successfully
+[2025-01-08 03:38:47,713] ERROR: book returned fail
+[2025-01-08 03:38:47,713] ERROR: book returned fail
+[2025-01-08 03:38:47,713] ERROR: book returned fail
+[2025-01-08 03:38:47,713] ERROR: book returned fail
+[2025-01-08 03:50:35,630] INFO: book added successfully
+[2025-01-08 03:50:35,633] INFO: book added successfully
+[2025-01-08 03:50:35,639] INFO: book added successfully
+[2025-01-08 03:50:35,639] INFO: book added successfully
+[2025-01-08 03:50:35,641] INFO: book loaned successfully
+[2025-01-08 03:50:35,641] INFO: book loaned successfully
+[2025-01-08 03:50:35,644] INFO: book loaned successfully
+[2025-01-08 03:50:35,644] INFO: book loaned successfully
+[2025-01-08 03:50:35,646] INFO: book loaned successfully
+[2025-01-08 03:50:35,646] INFO: book loaned successfully
+[2025-01-08 03:50:35,647] ERROR: book loaned fail
+[2025-01-08 03:50:35,647] ERROR: book loaned fail
+[2025-01-08 03:50:35,647] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:50:35,647] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:50:35,647] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:50:35,647] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:50:35,653] INFO: book added successfully
+[2025-01-08 03:50:35,653] INFO: book added successfully
+[2025-01-08 03:50:35,653] INFO: book added successfully
+[2025-01-08 03:50:35,655] INFO: book removed successfully
+[2025-01-08 03:50:35,655] INFO: book removed successfully
+[2025-01-08 03:50:35,655] INFO: book removed successfully
+[2025-01-08 03:50:35,657] INFO: book added successfully
+[2025-01-08 03:50:35,657] INFO: book added successfully
+[2025-01-08 03:50:35,657] INFO: book added successfully
+[2025-01-08 03:50:35,660] INFO: book removed successfully
+[2025-01-08 03:50:35,660] INFO: book removed successfully
+[2025-01-08 03:50:35,660] INFO: book removed successfully
+[2025-01-08 03:50:35,666] INFO: book added successfully
+[2025-01-08 03:50:35,666] INFO: book added successfully
+[2025-01-08 03:50:35,666] INFO: book added successfully
+[2025-01-08 03:50:35,666] INFO: book added successfully
+[2025-01-08 03:50:35,668] INFO: book loaned successfully
+[2025-01-08 03:50:35,668] INFO: book loaned successfully
+[2025-01-08 03:50:35,668] INFO: book loaned successfully
+[2025-01-08 03:50:35,668] INFO: book loaned successfully
+[2025-01-08 03:50:35,670] INFO: book return successfully
+[2025-01-08 03:50:35,670] INFO: book return successfully
+[2025-01-08 03:50:35,670] INFO: book return successfully
+[2025-01-08 03:50:35,670] INFO: book return successfully
+[2025-01-08 03:50:35,672] ERROR: book returned fail
+[2025-01-08 03:50:35,672] ERROR: book returned fail
+[2025-01-08 03:50:35,672] ERROR: book returned fail
+[2025-01-08 03:50:35,672] ERROR: book returned fail
+[2025-01-08 03:59:28,465] INFO: book added successfully
+[2025-01-08 03:59:28,466] INFO: book added successfully
+[2025-01-08 03:59:28,470] INFO: book added successfully
+[2025-01-08 03:59:28,470] INFO: book added successfully
+[2025-01-08 03:59:28,471] INFO: book loaned successfully
+[2025-01-08 03:59:28,471] INFO: book loaned successfully
+[2025-01-08 03:59:28,471] INFO: book loaned successfully
+[2025-01-08 03:59:28,471] INFO: book loaned successfully
+[2025-01-08 03:59:28,472] INFO: book loaned successfully
+[2025-01-08 03:59:28,472] INFO: book loaned successfully
+[2025-01-08 03:59:28,473] ERROR: book loaned fail
+[2025-01-08 03:59:28,473] ERROR: book loaned fail
+[2025-01-08 03:59:28,473] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:59:28,473] INFO: Customer added to the waiting list successfully
+[2025-01-08 03:59:28,473] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:59:28,473] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-08 03:59:28,476] INFO: book added successfully
+[2025-01-08 03:59:28,476] INFO: book added successfully
+[2025-01-08 03:59:28,476] INFO: book added successfully
+[2025-01-08 03:59:28,477] INFO: book removed successfully
+[2025-01-08 03:59:28,477] INFO: book removed successfully
+[2025-01-08 03:59:28,477] INFO: book removed successfully
+[2025-01-08 03:59:28,477] INFO: book added successfully
+[2025-01-08 03:59:28,477] INFO: book added successfully
+[2025-01-08 03:59:28,477] INFO: book added successfully
+[2025-01-08 03:59:28,479] INFO: book removed successfully
+[2025-01-08 03:59:28,479] INFO: book removed successfully
+[2025-01-08 03:59:28,479] INFO: book removed successfully
+[2025-01-08 03:59:28,485] INFO: book added successfully
+[2025-01-08 03:59:28,485] INFO: book added successfully
+[2025-01-08 03:59:28,485] INFO: book added successfully
+[2025-01-08 03:59:28,485] INFO: book added successfully
+[2025-01-08 03:59:28,487] INFO: book loaned successfully
+[2025-01-08 03:59:28,487] INFO: book loaned successfully
+[2025-01-08 03:59:28,487] INFO: book loaned successfully
+[2025-01-08 03:59:28,487] INFO: book loaned successfully
+[2025-01-08 03:59:28,489] INFO: book return successfully
+[2025-01-08 03:59:28,489] INFO: book return successfully
+[2025-01-08 03:59:28,489] INFO: book return successfully
+[2025-01-08 03:59:28,489] INFO: book return successfully
+[2025-01-08 03:59:28,492] ERROR: book returned fail
+[2025-01-08 03:59:28,492] ERROR: book returned fail
+[2025-01-08 03:59:28,492] ERROR: book returned fail
+[2025-01-08 03:59:28,492] ERROR: book returned fail
+[2025-01-08 03:59:34,701] INFO: Displayed all books successfully
+[2025-01-08 03:59:34,701] INFO: Displayed all books successfully
+[2025-01-08 03:59:34,706] INFO: Displayed available books successfully.
+[2025-01-08 03:59:34,706] INFO: Displayed available books successfully.
+[2025-01-08 03:59:34,706] INFO: Displayed available books successfully.
+[2025-01-08 03:59:34,706] INFO: Displayed available books successfully.
+[2025-01-08 03:59:34,711] INFO: Displayed borrowed books successfully.
+[2025-01-08 03:59:34,711] INFO: Displayed borrowed books successfully.
+[2025-01-08 03:59:34,711] INFO: Displayed borrowed books successfully.
+[2025-01-08 03:59:34,711] INFO: Displayed borrowed books successfully.
+[2025-01-08 03:59:34,711] INFO: Displayed borrowed books successfully.
+[2025-01-08 03:59:34,711] INFO: Displayed borrowed books successfully.
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,716] INFO: Search book Row by Row completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,717] INFO: Search book Mart by Mart completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,722] INFO: Search book 2 by 2 completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,727] INFO: Search book Fan by Fan completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,728] INFO: Search book Pro by Pro completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,732] INFO: Search book Har by Har completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,734] INFO: Search book Potter by Potter completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,741] INFO: Search book 19 by 19 completed successfully
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
+[2025-01-08 03:59:34,750] ERROR: Search for book Nonexistent by Nonexistent fail
