@@ -269,8 +269,8 @@ class LibraryApp:
         view_books_window = tk.Toplevel(self.root)
         view_books_window.title("View Books")
 
-        # הגדרת עמודות כולל עותקים זמינים וכוללים
-        columns = ("Title", "Author", "Genre", "Year", "Copies Available", "Total Copies")
+        # הגדרת עמודות כולל עותקים זמינים וכוללים וסטטוס השאלה
+        columns = ("Title", "Author", "Genre", "Year", "Copies Available", "Total Copies", "Loan Status")
 
         # יצירת Treeview להצגת הספרים
         tree = ttk.Treeview(view_books_window, columns=columns, show="headings")
@@ -280,10 +280,11 @@ class LibraryApp:
         for col in columns:
             tree.heading(col, text=col)
 
-        # הוספת ספרים לרשימה, כולל כמות העותקים הכוללת
+        # הוספת ספרים לרשימה, כולל כמות העותקים הכוללת וסטטוס השאלה
         for book in self.books.values():
+            loan_status = "Yes" if book.is_loaned == "Yes" else "No"  # קביעת סטטוס השאלה
             tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
-                                           book.available_copies, book.total_copies))
+                                           book.available_copies, book.total_copies, loan_status))
 
         tree.pack(padx=10, pady=10)
 
