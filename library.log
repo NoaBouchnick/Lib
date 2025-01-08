@@ -4678,3 +4678,7 @@
 [2025-01-09 00:56:17,598] INFO: book added successfully
 [2025-01-09 00:59:56,371] INFO: book removed successfully
 [2025-01-09 00:59:56,371] INFO: book removed successfully
+[2025-01-09 01:09:33,469] INFO: book loaned successfully
+[2025-01-09 01:09:33,469] INFO: book loaned successfully
+[2025-01-09 01:10:21,087] INFO: book return successfully
+[2025-01-09 01:10:21,087] INFO: book return successfully

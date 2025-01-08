@@ -231,7 +231,7 @@ class LibraryApp:
             title = title_entry.get()
             if title in self.books:
                 book = self.books[title]
-                self.librarian.loaned(book)  # קריאה לפונקציה loaned
+                self.librarian.loaned(book,)  # קריאה לפונקציה loaned
                 messagebox.showinfo("Lend Book", f"Book '{title}' lent successfully!")
                 lend_book_window.destroy()
             else:

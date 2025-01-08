@@ -63,7 +63,7 @@ class Librarian:
                 self.logger.log_info("book removed successfully")
         self.save_books()
 
-    def loaned(self, book: Book, customer: Customer):
+    def loaned(self, book: Book):
         if book.title in self.books:
             current_book = self.books[book.title]
 
@@ -71,12 +71,11 @@ class Librarian:
                 current_book.available_copies -= 1
                 current_book.is_loaned = "Yes"
                 self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
-
                 self.logger.log_info("book loaned successfully")
             else:
                 self.logger.log_error("book loaned fail")
-                self.waiting_for_book(book, customer)
-                self.logger.log_info(f"{customer} added to waiting list")
+                self.waiting_for_book(book)  # אין צורך בפרמטר לקוח פה
+                self.logger.log_info(f"Customer added to waiting list for book '{book.title}'")
         else:
             self.logger.log_error("book loaned fail")
         self.save_books()
@@ -98,15 +97,25 @@ class Librarian:
             self.logger.log_info("book return successfully")
         self.save_books()
 
-    def waiting_for_book(self, book: Book, customer: Customer):
-        if book.title in self.books and self.books[book.title].available_copies == 0:
-            if book.title not in self.waiting_list:
-                self.waiting_list[book.title] = []
-            self.waiting_list[book.title].append(customer)
-            self.logger.log_info("Customer added to the waiting list successfully")
-        else:
-            self.logger.log_error("Customer added to the waiting list fail")
+    def waiting_for_book(self, book: Book):
+        # יצירת לקוח בעת הצורך להוספה לרשימת ההמתנה
+        customer = self.create_customer()  # יצירת לקוח חדש אם צריך
+        if book.title not in self.waiting_list:
+            self.waiting_list[book.title] = []
+        self.waiting_list[book.title].append(customer)
+        self.logger.log_info(f"Customer {customer} added to waiting list for book '{book.title}'")
 
+    def create_customer(self):
+        def create_customer(self):
+            # בקשת פרטי הלקוח מהמשתמש
+            name = input("Enter customer name: ")
+            phone = input("Enter customer phone: ")
+            email = input("Enter customer email: ")
+
+            # יצירת אובייקט לקוח חדש
+            customer = Customer(name, phone, email)
+
+            return customer
     def save_books(self):
         CSVHandler.save_books_to_csv(self.books)
 
