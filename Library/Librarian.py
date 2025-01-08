@@ -23,7 +23,6 @@ from .Customer import Customer
 class Librarian:
 
     def __init__(self, file_path=None) -> None:
-        # אם לא נמסר path לקובץ, ברירת המחדל היא מיקום הקובץ בספריית הספרייה
         if file_path is None:
             base_path = os.path.dirname(os.path.abspath(__file__))
             file_path = os.path.join(base_path, 'books.csv')
@@ -32,6 +31,11 @@ class Librarian:
         self.books = CSVHandler.load_books_from_csv(file_path)
 
         self.books_borrowed = {}
+        for title, book in self.books.items():
+            if book.is_loaned == "Yes":
+                book.available_copies = 0
+                self.books_borrowed[title] = book.total_copies
+
         self.logger = Log()
         self.waiting_list = {}  # Book, customer
         self.notifications = Notifications()
@@ -44,7 +48,6 @@ class Librarian:
         else:
             self.books[book.title] = book
             self.logger.log_info("book added successfully")
-
         self.save_books()
 
     def removed(self, book: Book):
@@ -66,12 +69,12 @@ class Librarian:
 
             if current_book.available_copies > 0:
                 current_book.available_copies -= 1
+                current_book.is_loaned = "Yes"
                 self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
 
                 self.logger.log_info("book loaned successfully")
             else:
                 self.logger.log_error("book loaned fail")
-                # כאן ניתן להוסיף אפשרות להכניס לרשימת המתנה
                 self.waiting_for_book(book, customer)
                 self.logger.log_info(f"{customer} added to waiting list")
         else:
@@ -81,14 +84,14 @@ class Librarian:
     def returned(self, book: Book):
         if book.title not in self.books or book.title not in self.books_borrowed:
             self.logger.log_error("book returned fail")
-            ## רשימת המתנה
             if book.title in self.waiting_list:
                 self.notifications.notify_waiting_list(book)
                 self.logger.log_info("send message")
-
         else:
             current_book = self.books[book.title]
             current_book.available_copies += 1
+            if current_book.available_copies > 0:
+                current_book.is_loaned = "No"
             self.books_borrowed[book.title] -= 1
             if self.books_borrowed[book.title] == 0:
                 del self.books_borrowed[book.title]
@@ -106,3 +109,4 @@ class Librarian:
 
     def save_books(self):
         CSVHandler.save_books_to_csv(self.books)
+

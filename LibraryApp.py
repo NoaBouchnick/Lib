@@ -180,7 +180,7 @@ class LibraryApp:
                 try:
                     copies = int(copies)  # המרת copies למספר שלם
                     year = int(year)  # המרת year למספר שלם
-                    book = Book(title, author, copies, genre, year)
+                    book = Book(title, author, copies, genre, year)  # יצירת ספר עם is_loaned כ-"No"
                     self.librarian.added(book)  # קריאה לפונקציה added
                     messagebox.showinfo("Add Book", f"Book '{title}' added successfully!")
                     add_book_window.destroy()
@@ -188,7 +188,6 @@ class LibraryApp:
                     messagebox.showerror("Add Book", "Copies and year must be integers.")
             else:
                 messagebox.showerror("Add Book", "All fields must be filled!")
-            # CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
 
         submit_button = tk.Button(add_book_window, text="Add Book", command=submit, font=("Arial", 12), width=20)
         submit_button.grid(row=5, columnspan=2, pady=10)
@@ -206,15 +205,18 @@ class LibraryApp:
             title = title_entry.get()
             if title in self.books:
                 book = self.books[title]
-                self.librarian.removed(book)  # קריאה לפונקציה remove_book
-                messagebox.showinfo("Remove Book", f"Book '{title}' removed successfully!")
+                # הנחת בסיס שזה צריך לקרוא ל-returned ולא ל-removed
+                self.librarian.removed(book)  # קריאה לפונקציה returned במקום removed
+                messagebox.showinfo("Remove Book", f"Book '{title}' processed successfully!")
                 remove_book_window.destroy()
             else:
                 messagebox.showerror("Remove Book", "Book not found!")
-            # CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
 
-        submit_button = tk.Button(remove_book_window, text="Remove Book", command=submit, font=("Arial", 12), width=20)
+        # יצירת כפתור להסרת הספר
+        submit_button = tk.Button(remove_book_window, text="Remove Book", command=submit, font=("Arial", 12))
         submit_button.pack(pady=10)
+
+    # בדוק שהפונקציה `removed_gui` נקראת במקום מתאים בקוד כדי לפתוח את החלון
 
     def loaned_gui(self):
         # יצירת חלון השאלת ספר

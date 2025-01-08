@@ -4498,3 +4498,183 @@
 [2025-01-08 23:47:59,606] INFO: book added successfully
 [2025-01-08 23:48:49,065] INFO: book removed successfully
 [2025-01-08 23:48:49,065] INFO: book removed successfully
+[2025-01-09 00:11:07,101] INFO: Displayed all books successfully
+[2025-01-09 00:11:07,101] INFO: Displayed all books successfully
+[2025-01-09 00:11:07,103] INFO: Displayed available books successfully.
+[2025-01-09 00:11:07,103] INFO: Displayed available books successfully.
+[2025-01-09 00:11:07,103] INFO: Displayed available books successfully.
+[2025-01-09 00:11:07,103] INFO: Displayed available books successfully.
+[2025-01-09 00:11:07,105] INFO: Displayed borrowed books successfully.
+[2025-01-09 00:11:07,105] INFO: Displayed borrowed books successfully.
+[2025-01-09 00:11:07,105] INFO: Displayed borrowed books successfully.
+[2025-01-09 00:11:07,105] INFO: Displayed borrowed books successfully.
+[2025-01-09 00:11:07,105] INFO: Displayed borrowed books successfully.
+[2025-01-09 00:11:07,105] INFO: Displayed borrowed books successfully.
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Rowling by Rowling completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,108] INFO: Search book Tolkien by Tolkien completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,110] INFO: Search book 3 by 3 completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,112] INFO: Search book Fantasy by Fantasy completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Harry by Harry completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,114] INFO: Search book Hobbit by Hobbit completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,116] INFO: Search book 1997 by 1997 completed successfully
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:07,117] ERROR: Search for book Nonexistent Book by Nonexistent Book fail
+[2025-01-09 00:11:16,786] ERROR: book loaned fail
+[2025-01-09 00:11:16,786] ERROR: book loaned fail
+[2025-01-09 00:11:16,786] ERROR: book loaned fail
+[2025-01-09 00:11:16,786] ERROR: book loaned fail
+[2025-01-09 00:11:16,786] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,786] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,786] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,786] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,786] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,786] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,786] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,786] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,787] ERROR: book loaned fail
+[2025-01-09 00:11:16,787] ERROR: book loaned fail
+[2025-01-09 00:11:16,787] ERROR: book loaned fail
+[2025-01-09 00:11:16,787] ERROR: book loaned fail
+[2025-01-09 00:11:16,788] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,788] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,788] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,788] INFO: Customer added to the waiting list successfully
+[2025-01-09 00:11:16,788] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,788] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,788] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,788] INFO: Customer(name: John Doe, phone: 1234567890, email: johndoe@example.com) added to waiting list
+[2025-01-09 00:11:16,795] INFO: book removed successfully
+[2025-01-09 00:11:16,795] INFO: book removed successfully
+[2025-01-09 00:11:16,795] INFO: book removed successfully
+[2025-01-09 00:11:16,795] INFO: book removed successfully
+[2025-01-09 00:11:16,795] INFO: book removed successfully
+[2025-01-09 00:11:16,795] INFO: book removed successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,805] INFO: book loaned successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:11:16,806] INFO: book return successfully
+[2025-01-09 00:12:50,397] ERROR: book returned fail
+[2025-01-09 00:12:50,397] ERROR: book returned fail
+[2025-01-09 00:15:19,635] ERROR: book returned fail
+[2025-01-09 00:15:19,635] ERROR: book returned fail
+[2025-01-09 00:20:52,239] ERROR: book returned fail
+[2025-01-09 00:20:52,239] ERROR: book returned fail
+[2025-01-09 00:21:17,416] ERROR: book returned fail
+[2025-01-09 00:21:17,416] ERROR: book returned fail
+[2025-01-09 00:22:14,826] ERROR: Error in returned function: 'Crime and Punishment'
+[2025-01-09 00:22:14,826] ERROR: Error in returned function: 'Crime and Punishment'
+[2025-01-09 00:25:29,756] ERROR: Error in returned function: 'Crime and Punishment'
+[2025-01-09 00:25:29,756] ERROR: Error in returned function: 'Crime and Punishment'
+[2025-01-09 00:41:50,191] INFO: book added successfully
+[2025-01-09 00:41:50,191] INFO: book added successfully
+[2025-01-09 00:48:58,653] ERROR: book returned fail
+[2025-01-09 00:48:58,653] ERROR: book returned fail
+[2025-01-09 00:49:44,608] ERROR: book returned fail
+[2025-01-09 00:49:44,608] ERROR: book returned fail
+[2025-01-09 00:56:17,598] INFO: book added successfully
+[2025-01-09 00:56:17,598] INFO: book added successfully
+[2025-01-09 00:59:56,371] INFO: book removed successfully
+[2025-01-09 00:59:56,371] INFO: book removed successfully
