@@ -1,6 +1,7 @@
 import os
 import csv
-from .Book import Book  # הנחה שמחלקת Book נמצאת בקובץ נפרד בשם Book.py
+from Library.Book import Book  # הנחה שמחלקת Book נמצאת בקובץ נפרד בשם Book.py
+
 
 class CSVHandler:
 
@@ -9,11 +10,9 @@ class CSVHandler:
         """טוען ספרים מקובץ CSV ומחזיר רשימה של ספרים."""
         books = {}
         try:
-            # אם לא צויין נתיב, מחשבים את הנתיב המלא
             if file_path is None:
-                # אם לא עבר נתיב, מחשבים את הנתיב המלא
                 base_path = os.path.dirname(os.path.abspath(__file__))
-                file_path = os.path.join(base_path, 'Library', 'books.csv')
+                file_path = os.path.join(base_path, 'books.csv')
 
             with open(file_path, mode='r', newline='', encoding='utf-8') as file:
                 reader = csv.DictReader(file)
@@ -25,6 +24,9 @@ class CSVHandler:
                         genre=row['genre'],
                         year=int(row['year'])
                     )
+                    # קריאת מצב השאלה
+                    book.is_loaned = row['is_loaned']
+                    book.available_copies = int(row['copies']) if row['is_loaned'] == "No" else 0
                     books[book.title] = book
         except FileNotFoundError:
             print(f"File not found: {file_path}, starting with empty library.")
@@ -33,12 +35,10 @@ class CSVHandler:
     @staticmethod
     def save_books_to_csv(books, file_path=None):
         try:
-            # אם לא צויין נתיב, מחשבים את הנתיב המלא
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
-                file_path = os.path.join(base_path, 'Library', 'books.csv')
+                file_path = os.path.join(base_path, 'books.csv')
 
-            # וודא שהתיקייה קיימת, אם לא צור אותה
             directory = os.path.dirname(file_path)
             if not os.path.exists(directory):
                 os.makedirs(directory)
@@ -47,21 +47,18 @@ class CSVHandler:
                 fieldnames = ['title', 'author', 'is_loaned', 'copies', 'genre', 'year']
                 writer = csv.DictWriter(file, fieldnames=fieldnames)
 
-                # כתיבת כותרת
                 writer.writeheader()
 
                 for book in books.values():
-                    # אם כל העותקים מושאלים, הסטטוס יהיה "Yes", אחרת "No"
-                    is_loaned = "Yes" if book.available_copies == 0 else "No"
-                    # כותבים את הספר עם העותקים הכוללים והסטטוס המחשב
+                    # שלוף את הנתונים מתוך האובייקט של הספר
                     writer.writerow({
                         'title': book.title,
                         'author': book.author,
-                        'is_loaned': is_loaned,
+                        'is_loaned': book.is_loaned,
                         'copies': book.total_copies,
                         'genre': book.genre,
                         'year': book.year
                     })
-                # print("Books saved successfully")
         except Exception as e:
             print(f"Error saving books to CSV: {str(e)}")
+

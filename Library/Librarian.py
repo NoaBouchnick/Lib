@@ -1,10 +1,13 @@
+import os
+
+from .Book import Book
 from .CSVHandler import CSVHandler
-from Library import Book, Customer
 from Log import Log
 from Notifications import Notifications
+from .Customer import Customer
 
 
-################# בדוק מימוש###############
+################# בדוק מימוש ###############
 # def log_action(func):
 #     def wrapper(self, *args, **kwargs):
 #         try:
@@ -19,13 +22,18 @@ from Notifications import Notifications
 
 class Librarian:
 
-    def __init__(self) -> None:
-        self.books = CSVHandler.load_books_from_csv()  # טוען ספרים מקובץ CSV
-        self.books = {}
+    def __init__(self, file_path=None) -> None:
+        # אם לא נמסר path לקובץ, ברירת המחדל היא מיקום הקובץ בספריית הספרייה
+        if file_path is None:
+            base_path = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.join(base_path, 'books.csv')
+
+        # טוען ספרים מקובץ CSV
+        self.books = CSVHandler.load_books_from_csv(file_path)
+
         self.books_borrowed = {}
         self.logger = Log()
         self.waiting_list = {}  # Book, customer
-        # self.customer = {}  # Name, phone, email
         self.notifications = Notifications()
 
     def added(self, book: Book):
@@ -33,11 +41,11 @@ class Librarian:
             self.books[book.title].total_copies += book.total_copies
             self.books[book.title].available_copies += book.available_copies
             self.logger.log_info("book added successfully")
-
         else:
             self.books[book.title] = book
             self.logger.log_info("book added successfully")
-        CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
+
+        self.save_books()
 
     def removed(self, book: Book):
         if book.title not in self.books:
@@ -50,7 +58,7 @@ class Librarian:
             else:
                 del self.books[book.title]
                 self.logger.log_info("book removed successfully")
-        CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
+        self.save_books()
 
     def loaned(self, book: Book, customer: Customer):
         if book.title in self.books:
@@ -59,17 +67,16 @@ class Librarian:
             if current_book.available_copies > 0:
                 current_book.available_copies -= 1
                 self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
+
                 self.logger.log_info("book loaned successfully")
-                CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
-
             else:
-
                 self.logger.log_error("book loaned fail")
                 # כאן ניתן להוסיף אפשרות להכניס לרשימת המתנה
-                self.waiting_for_book(book,customer)
+                self.waiting_for_book(book, customer)
                 self.logger.log_info(f"{customer} added to waiting list")
         else:
             self.logger.log_error("book loaned fail")
+        self.save_books()
 
     def returned(self, book: Book):
         if book.title not in self.books or book.title not in self.books_borrowed:
@@ -86,15 +93,16 @@ class Librarian:
             if self.books_borrowed[book.title] == 0:
                 del self.books_borrowed[book.title]
             self.logger.log_info("book return successfully")
-            CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
+        self.save_books()
 
-    def waiting_for_book(self, book: Book, customer):
+    def waiting_for_book(self, book: Book, customer: Customer):
         if book.title in self.books and self.books[book.title].available_copies == 0:
             if book.title not in self.waiting_list:
                 self.waiting_list[book.title] = []
-                self.waiting_list[book.title].append(customer)
+            self.waiting_list[book.title].append(customer)
             self.logger.log_info("Customer added to the waiting list successfully")
         else:
             self.logger.log_error("Customer added to the waiting list fail")
 
-    # def view_books(self,):
+    def save_books(self):
+        CSVHandler.save_books_to_csv(self.books)
