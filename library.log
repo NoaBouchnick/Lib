@@ -4682,3 +4682,85 @@
 [2025-01-09 01:09:33,469] INFO: book loaned successfully
 [2025-01-09 01:10:21,087] INFO: book return successfully
 [2025-01-09 01:10:21,087] INFO: book return successfully
+[2025-01-09 01:23:54,314] INFO: book added successfully
+[2025-01-09 01:23:54,314] INFO: book added successfully
+[2025-01-09 01:24:09,908] INFO: book added successfully
+[2025-01-09 01:24:09,908] INFO: book added successfully
+[2025-01-09 01:33:43,548] INFO: book added successfully
+[2025-01-09 01:33:43,548] INFO: book added successfully
+[2025-01-09 01:33:54,137] INFO: book removed successfully
+[2025-01-09 01:33:54,137] INFO: book removed successfully
+[2025-01-09 01:34:05,575] INFO: book removed successfully
+[2025-01-09 01:34:05,575] INFO: book removed successfully
+[2025-01-09 01:34:19,996] INFO: book added successfully
+[2025-01-09 01:34:19,996] INFO: book added successfully
+[2025-01-09 01:34:24,503] INFO: book removed successfully
+[2025-01-09 01:34:24,503] INFO: book removed successfully
+[2025-01-09 01:34:39,914] INFO: book added successfully
+[2025-01-09 01:34:39,914] INFO: book added successfully
+[2025-01-09 01:35:31,557] INFO: book removed successfully
+[2025-01-09 01:35:31,557] INFO: book removed successfully
+[2025-01-09 01:36:08,298] INFO: book loaned successfully
+[2025-01-09 01:36:08,298] INFO: book loaned successfully
+[2025-01-09 01:36:20,192] INFO: book return successfully
+[2025-01-09 01:36:20,192] INFO: book return successfully
+[2025-01-09 01:37:06,735] INFO: book loaned successfully
+[2025-01-09 01:37:06,735] INFO: book loaned successfully
+[2025-01-09 01:37:19,210] INFO: book return successfully
+[2025-01-09 01:37:19,210] INFO: book return successfully
+[2025-01-09 01:37:28,751] ERROR: book returned fail
+[2025-01-09 01:37:28,751] ERROR: book returned fail
+[2025-01-09 01:37:38,495] INFO: book loaned successfully
+[2025-01-09 01:37:38,495] INFO: book loaned successfully
+[2025-01-09 01:59:22,345] INFO: Search book The by the completed successfully
+[2025-01-09 01:59:22,345] INFO: Search book The by the completed successfully
+[2025-01-09 01:59:22,345] INFO: Search book The by the completed successfully
+[2025-01-09 02:00:16,888] INFO: Search book 19 by 19 completed successfully
+[2025-01-09 02:00:16,888] INFO: Search book 19 by 19 completed successfully
+[2025-01-09 02:00:16,888] INFO: Search book 19 by 19 completed successfully
+[2025-01-09 02:00:16,888] INFO: Search book 19 by 19 completed successfully
+[2025-01-09 02:01:12,051] INFO: Search book Tragedy by Tragedy completed successfully
+[2025-01-09 02:01:12,051] INFO: Search book Tragedy by Tragedy completed successfully
+[2025-01-09 02:01:12,051] INFO: Search book Tragedy by Tragedy completed successfully
+[2025-01-09 02:04:41,467] INFO: Search book The by the completed successfully
+[2025-01-09 02:04:41,467] INFO: Search book The by the completed successfully
+[2025-01-09 02:04:41,467] INFO: Search book The by the completed successfully
+[2025-01-09 02:05:39,270] INFO: Search book The by the completed successfully
+[2025-01-09 02:05:39,270] INFO: Search book The by the completed successfully
+[2025-01-09 02:05:39,270] INFO: Search book The by the completed successfully
+[2025-01-09 02:07:02,007] INFO: Search book The by the completed successfully
+[2025-01-09 02:07:02,007] INFO: Search book The by the completed successfully
+[2025-01-09 02:07:02,007] INFO: Search book The by the completed successfully
+[2025-01-09 02:07:32,249] INFO: book added successfully
+[2025-01-09 02:07:32,249] INFO: book added successfully
+[2025-01-09 02:07:32,249] INFO: book added successfully
+[2025-01-09 02:08:58,803] INFO: book removed successfully
+[2025-01-09 02:08:58,803] INFO: book removed successfully
+[2025-01-09 02:09:09,406] INFO: book removed successfully
+[2025-01-09 02:09:09,406] INFO: book removed successfully
+[2025-01-09 02:09:20,867] INFO: book added successfully
+[2025-01-09 02:09:20,867] INFO: book added successfully
+[2025-01-09 02:09:29,175] INFO: book removed successfully
+[2025-01-09 02:09:29,175] INFO: book removed successfully
+[2025-01-09 02:09:42,676] INFO: book added successfully
+[2025-01-09 02:09:42,676] INFO: book added successfully
+[2025-01-09 02:09:49,566] INFO: book removed successfully
+[2025-01-09 02:09:49,566] INFO: book removed successfully
+[2025-01-09 02:10:09,333] INFO: book loaned successfully
+[2025-01-09 02:10:09,333] INFO: book loaned successfully
+[2025-01-09 02:10:16,513] INFO: book return successfully
+[2025-01-09 02:10:16,513] INFO: book return successfully
+[2025-01-09 02:15:35,729] INFO: book loaned successfully
+[2025-01-09 02:15:35,729] INFO: book loaned successfully
+[2025-01-09 02:15:43,501] INFO: book loaned successfully
+[2025-01-09 02:15:43,501] INFO: book loaned successfully
+[2025-01-09 02:15:49,933] INFO: book loaned successfully
+[2025-01-09 02:15:49,933] INFO: book loaned successfully
+[2025-01-09 02:16:00,088] ERROR: book loaned fail
+[2025-01-09 02:16:00,088] ERROR: book loaned fail
+[2025-01-09 02:16:00,088] INFO: Customer None added to waiting list for book 'The Handmaid's Tale'
+[2025-01-09 02:16:00,088] INFO: Customer None added to waiting list for book 'The Handmaid's Tale'
+[2025-01-09 02:16:00,088] INFO: Customer added to waiting list for book 'The Handmaid's Tale'
+[2025-01-09 02:16:00,088] INFO: Customer added to waiting list for book 'The Handmaid's Tale'
+[2025-01-09 02:16:10,376] INFO: book return successfully
+[2025-01-09 02:16:10,376] INFO: book return successfully

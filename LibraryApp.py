@@ -8,6 +8,8 @@ from Library.Book import Book
 from Library.Customer import Customer
 from Library.Librarian import Librarian
 from Library.CSVHandler import CSVHandler  # ודא שהייבוא הזה נכון
+from Library.Search import Search
+from Library.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy
 from Log import Log
 
 class LibraryApp:
@@ -49,6 +51,9 @@ class LibraryApp:
     def create_login_screen(self):
         """יצירת מסך התחברות עם אפשרות לרישום"""
         self.login_frame.pack(padx=20, pady=20)
+
+        title_label = tk.Label(self.login_frame, text="Login / Register", font=("Arial", 20, "bold"))
+        title_label.pack(pady=20)
 
         tk.Label(self.login_frame, text="Username", font=("Arial", 12)).pack(pady=10)
         self.username_entry = tk.Entry(self.login_frame, font=("Arial", 12), width=30)
@@ -114,17 +119,22 @@ class LibraryApp:
         """יצירת תפריט ראשי אחרי התחברות או רישום מוצלח"""
         self.main_menu.pack(padx=20, pady=20)
 
+        title_label = tk.Label(self.main_menu, text="Library - Main Menu", font=("Arial", 18, "bold"))
+        title_label.pack(pady=20)
+
         menu_buttons = [
             ("Add Book", self.added_gui),
             ("Remove Book", self.removed_gui),
             ("Lend Book", self.loaned_gui),
             ("Return Book", self.returned_gui),
             ("View Books", self.view_books_gui),
+            ("Search Books", self.search_books_gui),  # כפתור חיפוש חדש
             ("Logout", self.logout),
         ]
 
         for text, command in menu_buttons:
             tk.Button(self.main_menu, text=text, command=command, font=("Arial", 12), width=20).pack(pady=10)
+
 
     def logout(self):
         """פונקציה להתנתקות"""
@@ -287,6 +297,70 @@ class LibraryApp:
                                            book.available_copies, book.total_copies, loan_status))
 
         tree.pack(padx=10, pady=10)
+
+    import tkinter as tk
+    from tkinter import ttk, messagebox
+
+    def search_books_gui(self):
+        """יצירת חלון חיפוש ספרים"""
+        search_window = tk.Toplevel(self.root)
+        search_window.title("Search Books")
+
+        # יצירת תוויות ושדות חיפוש
+        tk.Label(search_window, text="Enter search query:", font=("Arial", 20)).pack(pady=25)
+        search_entry = tk.Entry(search_window, font=("Arial", 12), width=30)
+        search_entry.pack(pady=5)
+
+        search_criteria = ["Title", "Author", "Genre"]
+        search_criteria_combobox = ttk.Combobox(search_window, values=search_criteria, font=("Arial", 12), width=28)
+        search_criteria_combobox.set(search_criteria[0])  # ברירת מחדל
+        search_criteria_combobox.pack(pady=10)
+
+        def search_submit():
+            query = search_entry.get()
+            criterion = search_criteria_combobox.get()
+
+            # יצירת אסטרטגיה חיפוש חדשה בהתאם למפתח
+            if criterion == "Title":
+                strategy = TitleSearchStrategy()
+            elif criterion == "Author":
+                strategy = AuthorSearchStrategy()
+            else:
+                strategy = GenreSearchStrategy()
+
+            search = Search(self.books)
+            search.set_strategy(strategy)
+
+            results = search.search(query)
+
+            # הצגת תוצאות החיפוש בחלון חדש או הודעה
+            if results:
+                result_window = tk.Toplevel(search_window)
+                result_window.title("Search Results")
+
+                # יצירת Treeview להצגת התוצאות בצורה מסודרת
+                treeview = ttk.Treeview(result_window, columns=("Title", "Author", "Genre", "Year", "Available Copies"),
+                                        show="headings")
+                treeview.pack(pady=20, padx=20)
+
+                # הגדרת כותרות העמודות
+                treeview.heading("Title", text="Title")
+                treeview.heading("Author", text="Author")
+                treeview.heading("Genre", text="Genre")
+                treeview.heading("Year", text="Year")
+                treeview.heading("Available Copies", text="Available Copies")
+
+                # הוספת נתונים ל-Treeview
+                for book in results:
+                    treeview.insert("", "end",
+                                    values=(book.title, book.author, book.genre, book.year, book.available_copies))
+
+            else:
+                messagebox.showinfo("Search Results", "No books found.")
+
+        # כפתור לשליחת חיפוש
+        search_button = tk.Button(search_window, text="Search", command=search_submit, font=("Arial", 12), width=20)
+        search_button.pack(pady=10)
 
 
 if __name__ == "__main__":

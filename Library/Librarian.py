@@ -69,7 +69,8 @@ class Librarian:
 
             if current_book.available_copies > 0:
                 current_book.available_copies -= 1
-                current_book.is_loaned = "Yes"
+                if current_book.available_copies == 0:
+                    current_book.is_loaned = "Yes"
                 self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
                 self.logger.log_info("book loaned successfully")
             else:

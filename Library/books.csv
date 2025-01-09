@@ -24,7 +24,7 @@ Brave New World,Aldous Huxley,No,5,Dystopian,1932
 Heart of Darkness,Joseph Conrad,Yes,3,Adventure,1899
 The Grapes of Wrath,John Steinbeck,No,2,Fiction,1939
 Of Mice and Men,John Steinbeck,Yes,1,Tragedy,1937
-The Old Man and the Sea,Ernest Hemingway,No,3,Fiction,1952
+The Old Man and the Sea,Ernest Hemingway,Yes,3,Fiction,1952
 The Hobbit,J.R.R. Tolkien,Yes,4,Fantasy,1937
 The Lord of the Rings,J.R.R. Tolkien,Yes,2,Fantasy,1954
 Harry Potter and the Philosopher's Stone,J.K. Rowling,No,7,Fantasy,1997
@@ -32,4 +32,3 @@ A Game of Thrones,George R.R. Martin,Yes,5,Fantasy,1996
 The Name of the Wind,Patrick Rothfuss,No,3,Fantasy,2007
 Mistborn: The Final Empire,Brandon Sanderson,Yes,4,Fantasy,2006
 The Handmaid's Tale,Margaret Atwood,No,3,Dystopian,1985
-The Odyssey,Homer,Yes,2,Epic Poetry,-800
