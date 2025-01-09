@@ -7,71 +7,70 @@ import os
 from Library.Book import Book
 from Library.Customer import Customer
 from Library.Librarian import Librarian
-from Library.CSVHandler import CSVHandler  # ודא שהייבוא הזה נכון
+from Library.CSVHandler import CSVHandler
 from Library.Search import Search
 from Library.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy
 from Log import Log
 
 class LibraryApp:
     def __init__(self, file_path=None):
-        # self.logger = Log()
-
-        # יצירת חלון ראשי
         self.root = tk.Tk()
         self.root.title("Library Management System")
-        self.root.geometry("800x600")
+        self.root.configure(bg='#f0f8ff')  # Soft background color for cards and text areas
 
-        # מנגנון סגירת חלון רגיל (X)
+        # Set window to full-screen
+        # self.root.attributes("-full-screen", True)
+        self.root.bind("<Configure>", self.on_resize)  # Bind resize event
         self.root.protocol("WM_DELETE_WINDOW", self.close_window)
 
-        # יצירת אובייקט של Librarian
+
+
         self.librarian = Librarian()
 
-        # יצירת תפריט ראשי
         self.main_menu = tk.Frame(self.root)
-
-        # יצירת דף התחברות
-        self.login_frame = tk.Frame(self.root)
+        self.login_frame = tk.Frame(self.root, bg='#f0f8ff')  # Set background color for login screen
         self.create_login_screen()
 
-        # קריאת ספרים
         if file_path is None:
             base_path = os.path.dirname(os.path.abspath(__file__))
             file_path = os.path.join(base_path, 'Library', 'books.csv')
 
-        # בדוק אם הקובץ קיים
         if not os.path.exists(file_path):
-            self.books = {}  # אם הקובץ לא קיים, יתחיל עם ספריה ריקה
+            self.books = {}
         else:
             self.books = CSVHandler.load_books_from_csv(file_path)
 
-        # CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
-
+    def on_resize(self, event):
+        """Resize elements when window is resized"""
+        new_width = event.width
+        new_height = event.height
+        if hasattr(self, 'tree'):
+            self.tree.config(width=new_width - 20, height=new_height - 20)
 
     def create_login_screen(self):
-        """יצירת מסך התחברות עם אפשרות לרישום"""
-        self.login_frame.pack(padx=20, pady=20)
+        """Create a login screen with a modern design"""
+        self.login_frame.pack(fill="both", expand=True, padx=30, pady=30)
 
-        title_label = tk.Label(self.login_frame, text="Login / Register", font=("Arial", 20, "bold"))
+        title_label = tk.Label(self.login_frame, text="Welcome to the Library", font=("Arial", 24, "bold"), fg="#4b0082", bg="#f0f8ff")
         title_label.pack(pady=20)
 
-        tk.Label(self.login_frame, text="Username", font=("Arial", 12)).pack(pady=10)
-        self.username_entry = tk.Entry(self.login_frame, font=("Arial", 12), width=30)
+        tk.Label(self.login_frame, text="Username", font=("Arial", 14), bg="#f0f8ff").pack(pady=10)
+        self.username_entry = tk.Entry(self.login_frame, font=("Arial", 12), width=30, bd=2, relief="groove")
         self.username_entry.pack(pady=5)
 
-        tk.Label(self.login_frame, text="Password", font=("Arial", 12)).pack(pady=10)
-        self.password_entry = tk.Entry(self.login_frame, show="*", font=("Arial", 12), width=30)
+        tk.Label(self.login_frame, text="Password", font=("Arial", 14), bg="#f0f8ff").pack(pady=10)
+        self.password_entry = tk.Entry(self.login_frame, show="*", font=("Arial", 12), width=30, bd=2, relief="groove")
         self.password_entry.pack(pady=5)
 
-        tk.Button(self.login_frame, text="Login", command=self.login, font=("Arial", 12), width=20).pack(pady=10)
-        tk.Button(self.login_frame, text="Register", command=self.register, font=("Arial", 12), width=20).pack(pady=10)
+        login_button = tk.Button(self.login_frame, text="Login", command=self.login, font=("Arial", 14), bg="#4b0082", fg="white", width=20, height=2, relief="raised", bd=3)
+        login_button.pack(pady=10)
+
+        register_button = tk.Button(self.login_frame, text="Register", command=self.register, font=("Arial", 14), bg="#32cd32", fg="white", width=20, height=2, relief="raised", bd=3)
+        register_button.pack(pady=10)
 
     def login(self):
-        """פונקציה לחיבור למערכת"""
         username = self.username_entry.get()
         password = self.password_entry.get()
-
-        # self.logger = Log()
 
         with open("users.csv", mode="r") as file:
             reader = csv.reader(file)
@@ -87,7 +86,6 @@ class LibraryApp:
         self.librarian.logger.log_error("logged in fail")
 
     def register(self):
-        """פונקציה לרישום משתמש חדש"""
         username = self.username_entry.get()
         password = self.password_entry.get()
 
@@ -96,10 +94,8 @@ class LibraryApp:
             self.librarian.logger.log_error("Registered in fail")
             return
 
-        # הצפנת הסיסמה
         hashed_password = self.hash_password(password)
 
-        # בדיקה אם המשתמש קיים
         with open("users.csv", mode="r") as file:
             reader = csv.reader(file)
             for row in reader:
@@ -108,7 +104,6 @@ class LibraryApp:
                     self.librarian.logger.log_error("Registered in fail")
                     return
 
-        # שמירת המשתמש בקובץ
         with open("users.csv", mode="a", newline="") as file:
             writer = csv.writer(file)
             writer.writerow([username, hashed_password])
@@ -119,17 +114,19 @@ class LibraryApp:
         self.create_main_menu()
 
     def hash_password(self, password):
-        """הצפנת סיסמא"""
         return hashlib.sha256(password.encode()).hexdigest()
 
     def create_main_menu(self):
-        """יצירת תפריט ראשי אחרי התחברות או רישום מוצלח"""
         for widget in self.main_menu.winfo_children():
             widget.pack_forget()
 
-        self.main_menu.pack(padx=20, pady=20)
+        # Set consistent background color for the main menu
+        self.main_menu.config(bg="#f0f8ff")
 
-        title_label = tk.Label(self.main_menu, text="Library - Main Menu", font=("Arial", 18, "bold"))
+        self.main_menu.pack(fill="both", expand=True, padx=20, pady=20)
+
+        title_label = tk.Label(self.main_menu, text="Library - Main Menu", font=("Arial", 18, "bold"), fg="#4b0082",
+                               bg="#f0f8ff")
         title_label.pack(pady=20)
 
         menu_buttons = [
@@ -138,57 +135,62 @@ class LibraryApp:
             ("Lend Book", self.loaned_gui),
             ("Return Book", self.returned_gui),
             ("View Books", self.view_books_gui),
-            ("Search Books", self.search_books_gui),  # כפתור חיפוש חדש
+            ("Search Books", self.search_books_gui),
             ("Logout", self.logout),
         ]
 
+        # Set consistent background color for buttons
         for text, command in menu_buttons:
-            tk.Button(self.main_menu, text=text, command=command, font=("Arial", 12), width=20).pack(pady=10)
+            tk.Button(self.main_menu, text=text, command=command, font=("Arial", 12), fg="green",
+                      width=20).pack(fill="both", expand=True, pady=10)
 
     def logout(self):
-        """פונקציה להתנתקות"""
         self.username_entry.delete(0, tk.END)
         self.password_entry.delete(0, tk.END)
         self.main_menu.pack_forget()
-        self.login_frame.pack(padx=20, pady=20)
+        self.login_frame.pack(expand=True, fill=tk.BOTH, padx=20, pady=20)
         self.librarian.logger.log_info("log out successfully")
 
-
     def close_window(self):
-        """סגירת התוכנית בצורה תקינה"""
-        self.root.quit()  # סוגר את התוכנית
+        self.root.quit()
+
+# Continue with the rest of your code...
+
+
 
     def added_gui(self):
-        # יצירת חלון הוספת ספר
+        """Create Add Book window"""
+
         add_book_window = tk.Toplevel(self.root)
         add_book_window.title("Add Book")
+        add_book_window.config(bg="#f0f8ff")  # הגדרת הרקע של חלון ה-Add Book
 
-        # יצירת תוויות וכניסות לכל שדה
-        tk.Label(add_book_window, text="Title:", font=("Arial", 12)).grid(row=0, column=0, padx=10, pady=5)
+        # Create labels and entries for each field
+        tk.Label(add_book_window, text="Title:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").grid(row=0, column=0, padx=10, pady=5, sticky="nsew")
         title_entry = tk.Entry(add_book_window, font=("Arial", 12), width=30)
-        title_entry.grid(row=0, column=1, padx=10, pady=5)
+        title_entry.grid(row=0, column=1, padx=10, pady=5, sticky="nsew")
 
-        tk.Label(add_book_window, text="Author:", font=("Arial", 12)).grid(row=1, column=0, padx=10, pady=5)
+        tk.Label(add_book_window, text="Author:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").grid(row=1, column=0, padx=10, pady=5, sticky="nsew")
         author_entry = tk.Entry(add_book_window, font=("Arial", 12), width=30)
-        author_entry.grid(row=1, column=1, padx=10, pady=5)
+        author_entry.grid(row=1, column=1, padx=10, pady=5, sticky="nsew")
 
-        tk.Label(add_book_window, text="Copies:", font=("Arial", 12)).grid(row=2, column=0, padx=10, pady=5)
+        tk.Label(add_book_window, text="Copies:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").grid(row=2, column=0, padx=10, pady=5, sticky="nsew")
         copies_entry = tk.Entry(add_book_window, font=("Arial", 12), width=30)
-        copies_entry.grid(row=2, column=1, padx=10, pady=5)
+        copies_entry.grid(row=2, column=1, padx=10, pady=5, sticky="nsew")
 
-        tk.Label(add_book_window, text="Genre:", font=("Arial", 12)).grid(row=3, column=0, padx=10, pady=5)
+        tk.Label(add_book_window, text="Genre:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").grid(row=3, column=0, padx=10, pady=5, sticky="nsew")
 
         genres = ["Fiction", "Dystopian", "Classic", "Adventure", "Romance", "Historical Fiction",
                   "Psychological Drama", "Philosophy", "Epic Poetry", "Gothic Fiction", "Gothic Romance",
                   "Realism", "Modernism", "Satire", "Science Fiction", "Tragedy", "Fantasy"]
 
         genre_combobox = ttk.Combobox(add_book_window, values=genres, font=("Arial", 12), width=28)
-        genre_combobox.grid(row=3, column=1, padx=10, pady=5)
-        genre_combobox.set(genres[0])  # ברירת מחדל
+        genre_combobox.grid(row=3, column=1, padx=10, pady=5, sticky="nsew")
+        genre_combobox.set(genres[0])  # Default selection
 
-        tk.Label(add_book_window, text="Year:", font=("Arial", 12)).grid(row=4, column=0, padx=10, pady=5)
+        tk.Label(add_book_window, text="Year:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").grid(row=4, column=0, padx=10, pady=5, sticky="nsew")
         year_entry = tk.Entry(add_book_window, font=("Arial", 12), width=30)
-        year_entry.grid(row=4, column=1, padx=10, pady=5)
+        year_entry.grid(row=4, column=1, padx=10, pady=5, sticky="nsew")
 
         def submit():
             title = title_entry.get()
@@ -199,26 +201,31 @@ class LibraryApp:
 
             if title and author and copies and genre and year:
                 try:
-                    copies = int(copies)  # המרת copies למספר שלם
-                    year = int(year)  # המרת year למספר שלם
-                    book = Book(title, author, copies, genre, year)  # יצירת ספר עם is_loaned כ-"No"
-                    self.librarian.added(book)  # קריאה לפונקציה added
-                    messagebox.showinfo("Add Book", f"Book '{title}' added successfully!")
+                    copies = int(copies)  # Convert copies to an integer
+                    year = int(year)  # Convert year to an integer
+                    book = Book(title, author, copies, genre, year)  # Create book with is_loaned as "No"
+                    self.librarian.added(book)  # Call added function to add the book
+                    messagebox.showinfo("Success", f"Book {title} added successfully!")
+                    self.librarian.logger.log_info(f"Book {title} added successfully")
                     add_book_window.destroy()
                 except ValueError:
-                    messagebox.showerror("Add Book", "Copies and year must be integers.")
+                    messagebox.showerror("Error", "Invalid input for copies or year.")
             else:
-                messagebox.showerror("Add Book", "All fields must be filled!")
+                messagebox.showerror("Error", "All fields are required.")
 
-        submit_button = tk.Button(add_book_window, text="Add Book", command=submit, font=("Arial", 12), width=20)
-        submit_button.grid(row=5, columnspan=2, pady=10)
+        submit_button = tk.Button(add_book_window, text="Add Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white")
+        submit_button.grid(row=5, column=0, columnspan=2, pady=10)
+
+
 
     def removed_gui(self):
         # יצירת חלון הסרת ספר
         remove_book_window = tk.Toplevel(self.root)
         remove_book_window.title("Remove Book")
+        remove_book_window.configure(bg="#f0f8ff")  # הגדרת הרקע של חלון ה-Add Book
 
-        tk.Label(remove_book_window, text="Enter Book Title to Remove:", font=("Arial", 12)).pack(pady=10)
+
+        tk.Label(remove_book_window, text="Enter Book Title to Remove:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").pack(pady=10)
         title_entry = tk.Entry(remove_book_window, font=("Arial", 12), width=30)
         title_entry.pack(pady=5)
 
@@ -237,7 +244,7 @@ class LibraryApp:
                 messagebox.showerror("Remove Book", "Book not found!")
 
         # יצירת כפתור להסרת הספר
-        submit_button = tk.Button(remove_book_window, text="Remove Book", command=submit, font=("Arial", 12))
+        submit_button = tk.Button(remove_book_window, text="Remove Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white")
         submit_button.pack(pady=10)
 
     # בדוק שהפונקציה `removed_gui` נקראת במקום מתאים בקוד כדי לפתוח את החלון
@@ -246,8 +253,9 @@ class LibraryApp:
         # יצירת חלון השאלת ספר
         lend_book_window = tk.Toplevel(self.root)
         lend_book_window.title("Lend Book")
+        lend_book_window.configure(bg="#f0f8ff")
 
-        tk.Label(lend_book_window, text="Enter Book Title to Lend:", font=("Arial", 12)).pack(pady=10)
+        tk.Label(lend_book_window, text="Enter Book Title to Lend:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").pack(pady=10)
         title_entry = tk.Entry(lend_book_window, font=("Arial", 12), width=30)
         title_entry.pack(pady=5)
 
@@ -262,15 +270,16 @@ class LibraryApp:
                 messagebox.showerror("Lend Book", "Book not found!")
             # CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
 
-        submit_button = tk.Button(lend_book_window, text="Lend Book", command=submit, font=("Arial", 12), width=20)
+        submit_button = tk.Button(lend_book_window, text="Lend Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white", width=20)
         submit_button.pack(pady=10)
 
     def returned_gui(self):
         # יצירת חלון החזרת ספר
         return_book_window = tk.Toplevel(self.root)
         return_book_window.title("Return Book")
+        return_book_window.configure(bg="#f0f8ff")
 
-        tk.Label(return_book_window, text="Enter Book Title to Return:", font=("Arial", 12)).pack(pady=10)
+        tk.Label(return_book_window, text="Enter Book Title to Return:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").pack(pady=10)
         title_entry = tk.Entry(return_book_window, font=("Arial", 12), width=30)
         title_entry.pack(pady=5)
 
@@ -285,21 +294,21 @@ class LibraryApp:
                 messagebox.showerror("Return Book", "Book not found!")
             # CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
 
-        submit_button = tk.Button(return_book_window, text="Return Book", command=submit, font=("Arial", 12), width=20)
+        submit_button = tk.Button(return_book_window, text="Return Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white", width=20)
         submit_button.pack(pady=10)
 
     def view_books_gui(self):
         # יצירת חלון תצוגת ספרים
         view_books_window = tk.Toplevel(self.root)
         view_books_window.title("View Books")
+        view_books_window.configure(bg="#f0f8ff")
 
         # הגדרת עמודות כולל עותקים זמינים וכוללים וסטטוס השאלה
         columns = ("Title", "Author", "Genre", "Year", "Copies Available", "Total Copies", "Loan Status")
 
         # יצירת Treeview להצגת הספרים
         tree = ttk.Treeview(view_books_window, columns=columns, show="headings")
-        tree.pack(padx=10, pady=10)
-
+        tree.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
         # הוספת כותרות לעמודות
         for col in columns:
             tree.heading(col, text=col)
@@ -310,7 +319,7 @@ class LibraryApp:
             tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
                                            book.available_copies, book.total_copies, loan_status))
 
-        tree.pack(padx=10, pady=10)
+        # tree.pack(padx=10, pady=10)
 
     import tkinter as tk
     from tkinter import ttk, messagebox
@@ -319,9 +328,10 @@ class LibraryApp:
         """יצירת חלון חיפוש ספרים"""
         search_window = tk.Toplevel(self.root)
         search_window.title("Search Books")
+        search_window.configure(bg="#f0f8ff")
 
         # יצירת תוויות ושדות חיפוש
-        tk.Label(search_window, text="Enter search query:", font=("Arial", 20)).pack(pady=25)
+        tk.Label(search_window, text="Enter search query:", font=("Arial", 20), fg="#4b0082",bg="#f0f8ff").pack(pady=25)
         search_entry = tk.Entry(search_window, font=("Arial", 12), width=30)
         search_entry.pack(pady=5)
 
@@ -373,7 +383,7 @@ class LibraryApp:
                 messagebox.showinfo("Search Results", "No books found.")
 
         # כפתור לשליחת חיפוש
-        search_button = tk.Button(search_window, text="Search", command=search_submit, font=("Arial", 12), width=20)
+        search_button = tk.Button(search_window, text="Search", command=search_submit, font=("Arial", 12), bg="#32cd32", fg="white", width=20)
         search_button.pack(pady=10)
 
 
