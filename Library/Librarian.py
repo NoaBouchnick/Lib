@@ -50,18 +50,15 @@ class Librarian:
             self.logger.log_info("book added successfully")
         self.save_books()
 
-    def removed(self, book: Book):
-        if book.title not in self.books:
+    def removed(self, book: Book) -> bool:
+        if book.title not in self.books or book.title in self.books_borrowed:
             self.logger.log_error("book removed fail")
+            return False
         else:
-            if book.total_copies < self.books[book.title].total_copies:
-                self.books[book.title].total_copies -= book.total_copies
-                self.books[book.title].available_copies -= book.total_copies
-                self.logger.log_info("book removed successfully")
-            else:
-                del self.books[book.title]
-                self.logger.log_info("book removed successfully")
-        self.save_books()
+            del self.books[book.title]
+            self.logger.log_info("book removed successfully")
+            self.save_books()
+            return True
 
     def loaned(self, book: Book):
         if book.title in self.books:

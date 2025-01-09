@@ -14,7 +14,7 @@ from Log import Log
 
 class LibraryApp:
     def __init__(self, file_path=None):
-        self.logger = Log()
+        # self.logger = Log()
 
         # יצירת חלון ראשי
         self.root = tk.Tk()
@@ -71,16 +71,20 @@ class LibraryApp:
         username = self.username_entry.get()
         password = self.password_entry.get()
 
+        # self.logger = Log()
+
         with open("users.csv", mode="r") as file:
             reader = csv.reader(file)
             for row in reader:
                 if len(row) >= 2:
                     if row[0] == username and row[1] == self.hash_password(password):
                         messagebox.showinfo("Login", "Logged in successfully!")
+                        self.librarian.logger.log_info("logged in successfully")
                         self.login_frame.pack_forget()
                         self.create_main_menu()
                         return
         messagebox.showerror("Login", "Incorrect username or password.")
+        self.librarian.logger.log_error("logged in fail")
 
     def register(self):
         """פונקציה לרישום משתמש חדש"""
@@ -89,6 +93,7 @@ class LibraryApp:
 
         if not username or not password:
             messagebox.showerror("Register", "Username and password cannot be empty.")
+            self.librarian.logger.log_error("Registered in fail")
             return
 
         # הצפנת הסיסמה
@@ -100,6 +105,7 @@ class LibraryApp:
             for row in reader:
                 if row[0] == username:
                     messagebox.showerror("Register", f"User {username} already exists.")
+                    self.librarian.logger.log_error("Registered in fail")
                     return
 
         # שמירת המשתמש בקובץ
@@ -108,6 +114,7 @@ class LibraryApp:
             writer.writerow([username, hashed_password])
 
         messagebox.showinfo("Register", f"User {username} registered successfully!")
+        self.librarian.logger.log_info("Registered in successfully")
         self.login_frame.pack_forget()
         self.create_main_menu()
 
@@ -117,6 +124,9 @@ class LibraryApp:
 
     def create_main_menu(self):
         """יצירת תפריט ראשי אחרי התחברות או רישום מוצלח"""
+        for widget in self.main_menu.winfo_children():
+            widget.pack_forget()
+
         self.main_menu.pack(padx=20, pady=20)
 
         title_label = tk.Label(self.main_menu, text="Library - Main Menu", font=("Arial", 18, "bold"))
@@ -135,13 +145,14 @@ class LibraryApp:
         for text, command in menu_buttons:
             tk.Button(self.main_menu, text=text, command=command, font=("Arial", 12), width=20).pack(pady=10)
 
-
     def logout(self):
         """פונקציה להתנתקות"""
         self.username_entry.delete(0, tk.END)
         self.password_entry.delete(0, tk.END)
         self.main_menu.pack_forget()
         self.login_frame.pack(padx=20, pady=20)
+        self.librarian.logger.log_info("log out successfully")
+
 
     def close_window(self):
         """סגירת התוכנית בצורה תקינה"""
@@ -215,10 +226,13 @@ class LibraryApp:
             title = title_entry.get()
             if title in self.books:
                 book = self.books[title]
-                # הנחת בסיס שזה צריך לקרוא ל-returned ולא ל-removed
-                self.librarian.removed(book)  # קריאה לפונקציה returned במקום removed
-                messagebox.showinfo("Remove Book", f"Book '{title}' processed successfully!")
-                remove_book_window.destroy()
+                removal_successful = self.librarian.removed(book)  # קריאה לפונקציה removed
+
+                if removal_successful:
+                    messagebox.showinfo("Remove Book", "Book removed successfully!")
+                    remove_book_window.destroy()
+                else:
+                    messagebox.showerror("Remove Book", "Book could not be removed.")
             else:
                 messagebox.showerror("Remove Book", "Book not found!")
 
