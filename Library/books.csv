@@ -12,16 +12,16 @@ The Brothers Karamazov,Fyodor Dostoevsky,No,3,Philosophy,1880
 The Divine Comedy,Dante Alighieri,Yes,1,Epic Poetry,1320
 Jane Eyre,Charlotte Brontë,No,2,Gothic Fiction,1847
 Wuthering Heights,Emily Brontë,No,4,Gothic Romance,1847
-Anna Karenina,Leo Tolstoy,Yes,2,Fiction,1877
+Anna Karenina,Leo Tolstoy,No,2,Fiction,1877
 Madame Bovary,Gustave Flaubert,No,3,Realism,1857
 The Iliad,Homer,Yes,1,Epic Poetry,-750
 The Sound and the Fury,William Faulkner,No,2,Modernism,1929
-Invisible Man,Ralph Ellison,Yes,1,Fiction,1952
-Beloved,Toni Morrison,Yes,3,Historical Fiction,1987
+Invisible Man,Ralph Ellison,No,1,Fiction,1952
+Beloved,Toni Morrison,No,3,Historical Fiction,1987
 Catch-22,Joseph Heller,No,4,Satire,1961
-Slaughterhouse-Five,Kurt Vonnegut,Yes,2,Science Fiction,1969
+Slaughterhouse-Five,Kurt Vonnegut,No,2,Science Fiction,1969
 Brave New World,Aldous Huxley,No,5,Dystopian,1932
-Heart of Darkness,Joseph Conrad,Yes,3,Adventure,1899
+Heart of Darkness,Joseph Conrad,No,3,Adventure,1899
 The Grapes of Wrath,John Steinbeck,No,2,Fiction,1939
 Of Mice and Men,John Steinbeck,Yes,1,Tragedy,1937
 The Old Man and the Sea,Ernest Hemingway,Yes,3,Fiction,1952

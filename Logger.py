@@ -2,7 +2,7 @@ import logging
 from pathlib import Path
 
 
-class Log:
+class Logger:
 
     def __init__(self, log_file=None) -> None:
         self.logger = logging.getLogger("LibraryLogger")

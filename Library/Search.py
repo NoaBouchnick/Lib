@@ -1,10 +1,10 @@
-from Log import Log  # ייבוא מחלקת הלוג
+from Logger import Logger  # ייבוא מחלקת הלוג
 
 class Search:
     def __init__(self, books: dict):
         self.books = books
         self.strategy = None
-        self.logger = Log()  # יצירת אובייקט לוג
+        self.logger = Logger()  # יצירת אובייקט לוג
         self.logger.disable_console_logs()
 
     def set_strategy(self, strategy):

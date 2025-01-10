@@ -1,16 +1,19 @@
 import tkinter as tk
-from tkinter import messagebox, simpledialog
+from tkinter import messagebox
 import hashlib
 import csv
 from tkinter import ttk
 import os
+
+from Error.BookDoesNotExistException import BookDoesNotExistException
+from Error.CustomException import CustomException
+from Error.NoCopyAvailableException import NoCopyAvailableException
+from Error.RemovingBorrowedBookException import RemovingBorrowedBookException
 from Library.Book import Book
-from Library.Customer import Customer
 from Library.Librarian import Librarian
 from Library.CSVHandler import CSVHandler
 from Library.Search import Search
 from Library.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy
-from Log import Log
 
 class LibraryApp:
     def __init__(self, file_path=None):
@@ -156,8 +159,6 @@ class LibraryApp:
 
 # Continue with the rest of your code...
 
-
-
     def added_gui(self):
         """Create Add Book window"""
 
@@ -206,45 +207,65 @@ class LibraryApp:
                     book = Book(title, author, copies, genre, year)  # Create book with is_loaned as "No"
                     self.librarian.added(book)  # Call added function to add the book
                     messagebox.showinfo("Success", f"Book {title} added successfully!")
-                    self.librarian.logger.log_info(f"Book {title} added successfully")
+                    # self.librarian.logger.log_info("Book added successfully")
                     add_book_window.destroy()
-                except ValueError:
+                except ValueError as e:
                     messagebox.showerror("Error", "Invalid input for copies or year.")
+                    self.librarian.logger.log_error("Book added fail")
+                except Exception as e:
+                    messagebox.showerror("Error", f"An unexpected error occurred: {e}")
+                    self.librarian.logger.log_error("Book added fail")
             else:
                 messagebox.showerror("Error", "All fields are required.")
 
         submit_button = tk.Button(add_book_window, text="Add Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white")
         submit_button.grid(row=5, column=0, columnspan=2, pady=10)
 
-
-
     def removed_gui(self):
         # יצירת חלון הסרת ספר
         remove_book_window = tk.Toplevel(self.root)
         remove_book_window.title("Remove Book")
-        remove_book_window.configure(bg="#f0f8ff")  # הגדרת הרקע של חלון ה-Add Book
+        remove_book_window.configure(bg="#f0f8ff")  # הגדרת הרקע של חלון הסרת הספר
 
-
-        tk.Label(remove_book_window, text="Enter Book Title to Remove:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").pack(pady=10)
+        tk.Label(remove_book_window, text="Enter Book Title to Remove:", font=("Arial", 12), fg="#4b0082",
+                 bg="#f0f8ff").pack(pady=10)
         title_entry = tk.Entry(remove_book_window, font=("Arial", 12), width=30)
         title_entry.pack(pady=5)
 
         def submit():
             title = title_entry.get()
-            if title in self.books:
-                book = self.books[title]
-                removal_successful = self.librarian.removed(book)  # קריאה לפונקציה removed
+            if title:
+                try:
+                    # אם הספר קיים במילון
+                    if title in self.books:
+                        book = self.books[title]
+                        removal_successful = self.librarian.removed(book)  # קריאה לפונקציה removed
 
-                if removal_successful:
-                    messagebox.showinfo("Remove Book", "Book removed successfully!")
-                    remove_book_window.destroy()
-                else:
-                    messagebox.showerror("Remove Book", "Book could not be removed.")
+                        if removal_successful:
+                            messagebox.showinfo("Remove Book", "Book removed successfully!")
+                        else:
+                            messagebox.showerror("Remove Book", "Book could not be removed.")
+                    else:
+                        messagebox.showerror("Remove Book", "Book not found!")
+                        self.librarian.logger.log_error("Book removed fail")
+
+                except (CustomException) as e:
+                    messagebox.showerror("Remove Book", f"Error: {str(e)}")
+                    self.librarian.logger.log_error("Book removed fail")
+
+                except Exception as e:
+                    # כל שגיאה לא צפויה
+                    messagebox.showerror("Remove Book", f"Unexpected error: {str(e)}")
+                    self.librarian.logger.log_error("Book removed fail")
+
+                remove_book_window.destroy()
+
             else:
-                messagebox.showerror("Remove Book", "Book not found!")
+                messagebox.showerror("Remove Book", "Please enter a book title.")
 
         # יצירת כפתור להסרת הספר
-        submit_button = tk.Button(remove_book_window, text="Remove Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white")
+        submit_button = tk.Button(remove_book_window, text="Remove Book", command=submit, font=("Arial", 12),
+                                  bg="#32cd32", fg="white")
         submit_button.pack(pady=10)
 
     # בדוק שהפונקציה `removed_gui` נקראת במקום מתאים בקוד כדי לפתוח את החלון
@@ -261,16 +282,34 @@ class LibraryApp:
 
         def submit():
             title = title_entry.get()
-            if title in self.books:
-                book = self.books[title]
-                self.librarian.loaned(book,)  # קריאה לפונקציה loaned
-                messagebox.showinfo("Lend Book", f"Book '{title}' lent successfully!")
+            if title:
+                try:
+                    if title in self.books:
+                        book = self.books[title]
+                        loaned_successful = self.librarian.loaned(book)  # קריאה לפונקציה loaned
+                        if loaned_successful:
+                            messagebox.showinfo("Lend Book", f"Book '{title}' lent successfully!")
+                        else:
+                            messagebox.showerror("Lend Book", f"Book '{title}' lent cannot be borrowed")
+                        lend_book_window.destroy()
+                    else:
+                        messagebox.showerror("Book not found!")  # שגיאה אם הספר לא נמצא
+
+                except CustomException as e:
+                    messagebox.showerror("Lend Book", f"Error: {str(e)}")
+                    self.librarian.logger.log_error("Book loaned fail")
+
+                except Exception as e:
+                    # כל שגיאה לא צפויה
+                    messagebox.showerror("Lend Book", f"Unexpected error: {str(e)}")
+                    self.librarian.logger.log_error("Book loaned fail")
                 lend_book_window.destroy()
             else:
-                messagebox.showerror("Lend Book", "Book not found!")
-            # CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
+                messagebox.showerror("Lend Book", "Please enter a book title.")
 
-        submit_button = tk.Button(lend_book_window, text="Lend Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white", width=20)
+        # יצירת כפתור להשאלת הספר
+        submit_button = tk.Button(lend_book_window, text="Lend Book", command=submit, font=("Arial", 12), bg="#32cd32",
+                                  fg="white", width=20)
         submit_button.pack(pady=10)
 
     def returned_gui(self):
@@ -279,22 +318,43 @@ class LibraryApp:
         return_book_window.title("Return Book")
         return_book_window.configure(bg="#f0f8ff")
 
-        tk.Label(return_book_window, text="Enter Book Title to Return:", font=("Arial", 12), fg="#4b0082",bg="#f0f8ff").pack(pady=10)
+        tk.Label(return_book_window, text="Enter Book Title to Return:", font=("Arial", 12), fg="#4b0082",
+                 bg="#f0f8ff").pack(pady=10)
         title_entry = tk.Entry(return_book_window, font=("Arial", 12), width=30)
         title_entry.pack(pady=5)
 
         def submit():
             title = title_entry.get()
-            if title in self.books:
-                book = self.books[title]
-                self.librarian.returned(book)  # קריאה לפונקציה returned
-                messagebox.showinfo("Return Book", f"Book '{title}' returned successfully!")
-                return_book_window.destroy()
-            else:
-                messagebox.showerror("Return Book", "Book not found!")
-            # CSVHandler.save_books_to_csv(self.books)  # שומר את השינויים בקובץ CSV
+            if title:
+                try:
+                    if title in self.books:
+                        book = self.books[title]
+                        returned_successful =  self.librarian.returned(book)  # קריאה לפונקציה returned
+                        if returned_successful:
+                            messagebox.showinfo("Return Book", f"Book '{title}' returned successfully!")
+                        else:
+                            messagebox.showerror("There are no borrowed copies")
+                        return_book_window.destroy()
+                    else:
+                        raise BookDoesNotExistException("Book not found in the system.")  # שגיאה אם הספר לא נמצא
 
-        submit_button = tk.Button(return_book_window, text="Return Book", command=submit, font=("Arial", 12), bg="#32cd32", fg="white", width=20)
+                except CustomException as e:
+                    messagebox.showerror("Return Book", f"Error: {str(e)}")
+                    # self.librarian.logger.log_error("Book return fail")
+
+                except Exception as e:
+                    # כל שגיאה לא צפויה
+                    messagebox.showerror("Return Book", f"Unexpected error: {str(e)}")
+                    # self.librarian.logger.log_error("Book return fail")
+
+                return_book_window.destroy()
+
+            else:
+                messagebox.showerror("Return Book", "Please enter a book title.")
+
+        # יצירת כפתור להחזרת הספר
+        submit_button = tk.Button(return_book_window, text="Return Book", command=submit, font=("Arial", 12),
+                                  bg="#32cd32", fg="white", width=20)
         submit_button.pack(pady=10)
 
     def view_books_gui(self):
