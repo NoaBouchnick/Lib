@@ -1,44 +1,63 @@
+# notifications.py
+import csv
+from typing import List
+
 from Library.Book import Book
 from Library.Customer import Customer
-# from Library.Librarian import Librarian
+from Logger import Logger
 
 
 class Notifications:
-    def __init__(self) -> None:
-        self.notifications = []
-        # self.librarian = Librarian()
+    def __init__(self,logger, users_file='users.csv'):
+        self.users_file = users_file
+        self.logger = logger
 
-    def send_notification(self, customer: Customer):
-        # שליחה של הודעה ללקוח
-        print(f"Notifying customer: {customer.name}, {customer.phone}, {customer.email}")
+    def get_librarians(self) -> List[str]:
+        """מחזיר את רשימת הספרנים מהעמודה הראשונה בקובץ user.csv"""
+        librarians = []
+        try:
+            with open(self.users_file, 'r', encoding='utf-8') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    if row:  # אם השורה לא ריקה
+                        librarians.append(row[0])  # לוקח רק את העמודה הראשונה
+        except Exception as e:
+            self.logger.log_error(f"Error reading users file: {str(e)}")
+        return librarians
 
-    def notify_waiting_list(self, book: Book):
-        # אם הספר הוחזר או הגיעו עותקים חדשים, נודיע ללקוחות ברשימת ההמתנה
-        if book.title in self.librarian.waiting_list:
-            # מספר העותקים הפנויים
-            available_copies = book.available_copies
+    def notify_book_return(self, book: Book, customers: List[Customer]):
+        """שולח הודעה לספרנים על החזרת ספר והשאלתו ללקוחות הבאים"""
+        try:
+            librarians = self.get_librarians()
 
-            # נשלח הודעה רק למספר המתאים של לקוחות ברשימה
-            waiting_customers = self.librarian.waiting_list[book.title]
+            message = f"The book '{book.title}' returned and loaned to:"
+            for customer in customers:
+                message += f"\n- {customer.name} phon: {customer.phone}, email: {customer.email})"
 
-            # שלח הודעה ללקוחות על פי מספר העותקים הפנויים
-            for i in range(min(available_copies, len(waiting_customers))):
-                self.send_notification(waiting_customers[i])
+            for librarian in librarians:
+                self._send_notification(librarian, message)
 
-            # נעדכן את רשימת ההמתנה, נמחק את הלקוחות שנעשתה להם הודעה
-            self.librarian.waiting_list[book.title] = waiting_customers[min(available_copies, len(waiting_customers)):]  # תיקון כאן
+            self.logger.log_info(f"Notifications sent to librarians about book '{book.title}'")
+        except Exception as e:
+            self.logger.log_error(f"Failed to send notifications: {str(e)}")
 
-            # אחרי שליחת ההודעה, ננקה את רשימת ההמתנה (או עדכון של הלקוחות שעדיין מחכים)
-            print(f"Notified and removed {min(available_copies, len(waiting_customers))} customers from the waiting list.") 
+    def notify_book_addition(self, book: Book, customers: List[Customer]):
+        """שולח הודעה לספרנים על הוספת עותקים והשאלתם"""
+        try:
+            librarians = self.get_librarians()
 
-    # דקורטור לדחיפת לוג לפעולות שונות:
-    # def log_action(func):
-    #     def wrapper(self, *args, **kwargs):
-    #         try:
-    #             result = func(self, *args, **kwargs)
-    #             self.logger.log_info(f"Action {func.__name__} succeeded.")
-    #             return result
-    #         except Exception as e:
-    #             self.logger.log_error(f"Action {func.__name__} failed: {e}")
-    #             raise
-    #     return wrapper
+            message = f"were added {book.total_copies} Copies of the book '{book.title}' and were asked to:"
+            for customer in customers:
+                message += f"\n- {customer.name} (phon: {customer.phone}, email: {customer.email})"
+
+            for librarian in librarians:
+                self._send_notification(librarian, message)
+
+            self.logger.log_info(f"Notifications sent about new copies of book '{book.title}'")
+        except Exception as e:
+            self.logger.log_error(f"Failed to send notifications: {str(e)}")
+
+    def _send_notification(self, librarian: str, message: str):
+        """מימוש פנימי של שליחת ההודעה"""
+        print(f"Message has been sent to the librarian {librarian}:\n{message}\n")
+        # כאן יהיה המימוש האמיתי של שליחת ההודעה בהמשך

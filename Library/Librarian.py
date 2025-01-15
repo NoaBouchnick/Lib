@@ -1,3 +1,4 @@
+import csv
 import os
 
 from Error.BookDoesNotExistException import BookDoesNotExistException
@@ -14,21 +15,8 @@ from Notifications import Notifications
 from .Customer import Customer
 
 
-
-################# בדוק מימוש ###############
-# def log_action(func):
-#     def wrapper(self, *args, **kwargs):
-#         try:
-#             result = func(self, *args, **kwargs)
-#             self.logger.log_info(f"book {func.__name__} successfully")
-#             return result
-#         except Exception as e:
-#             self.logger.log_error(f"book {func.__name__} fail")
-#             raise
-#     return wrapper
-## דקורטור??
-
 class Librarian:
+    WAITING_LIST_FILE = "waiting_list.csv"
 
     def __init__(self, file_path=None) -> None:
         if file_path is None:
@@ -37,7 +25,7 @@ class Librarian:
 
         # טוען ספרים מקובץ CSV
         self.books = CSVHandler.load_books_from_csv(file_path)
-
+        self.waiting_list = CSVHandler.load_waiting_list_from_csv()
         self.books_borrowed = {}
         for title, book in self.books.items():
             if book.is_loaned == "Yes":
@@ -46,30 +34,51 @@ class Librarian:
 
         self.logger = Logger()
         self.waiting_list = {}  # Book, customer
-        self.notifications = Notifications()
+        self.notifications = Notifications(self.logger)
+
+    def get_waiting_list(self):
+        return self.waiting_list
 
     def added(self, book: Book):
         try:
-            # דיבוג: בדיקת ערכי הספר לפני בדיקות תנאים
             self.logger.log_debug(
                 f"Attempting to add book: title={book.title}, total_copies={book.total_copies}, year={book.year}")
 
-            # בדיקה אם ערכי השנה וכמות העותקים הם מסוג int
             if not isinstance(book.total_copies, int) or not isinstance(book.year, int):
-                self.logger.log_debug("Non-integer value detected for total_copies or year.")
                 raise NonIntegerValueException()
 
-            # בדיקה אם כמות העותקים שלילית או אפס
             if book.total_copies <= 0:
-                self.logger.log_debug("Negative or zero value detected for total_copies.")
                 raise NegativeCopiesException()
 
-            # דיבוג: הוספת הספר למערכת
-            self.logger.log_debug(f"Adding book to collection: title={book.title}")
-
+            customers_to_notify = []
             if book.title in self.books:
-                self.books[book.title].total_copies += book.total_copies
-                self.books[book.title].available_copies += book.available_copies
+                existing_book = self.books[book.title]
+                borrowed_copies = self.books_borrowed.get(book.title, 0)
+
+                # עדכון מספר העותקים הכולל
+                existing_book.total_copies += book.total_copies
+                added_copies = book.total_copies
+
+                # העותקים הזמינים הם: סך כל העותקים פחות העותקים המושאלים
+                existing_book.available_copies = existing_book.total_copies - borrowed_copies
+
+                # טיפול ברשימת המתנה אם קיימת
+                if book.title in self.waiting_list and self.waiting_list[book.title]:
+                    # מעבר על כמות העותקים שנוספו
+                    for _ in range(min(added_copies, len(self.waiting_list[book.title]))):
+                        next_customer = self.waiting_list[book.title].pop(0)
+                        customers_to_notify.append(next_customer)
+                        self.loaned(book)  # משאיל את הספר ללקוח הבא ברשימה
+
+                    self.save_waiting_list()
+                    if customers_to_notify:
+                        self.notifications.notify_book_addition(book, customers_to_notify)
+
+                # עדכון סטטוס ההשאלה
+                if existing_book.available_copies == 0:
+                    existing_book.is_loaned = "Yes"
+                else:
+                    existing_book.is_loaned = "No"
             else:
                 self.books[book.title] = book
 
@@ -78,6 +87,11 @@ class Librarian:
 
         except CustomException as e:
             self.logger.log_error("Book added fail")
+            raise e
+
+        except Exception as e:
+            self.logger.log_error("Book added fail")
+            raise e
 
     def removed(self, book: Book) -> bool:
         try:
@@ -107,85 +121,103 @@ class Librarian:
             self.logger.log_error("Book removed fail")
             raise e
 
-    def loaned(self, book: Book)-> bool:
+    def loaned(self, book: Book) -> bool:
         try:
             if book.title in self.books:
                 current_book = self.books[book.title]
 
                 if current_book.available_copies > 0:
                     current_book.available_copies -= 1
+                    self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
+
                     if current_book.available_copies == 0:
                         current_book.is_loaned = "Yes"
-                    self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
+
                     self.logger.log_info("book loaned successfully")
                     self.save_books()
                     return True
                 else:
-                    # אם אין עותקים זמינים
                     raise NoCopyAvailableException()
-
             else:
-                # אם הספר לא קיים
                 raise BookDoesNotExistException()
 
         except CustomException as e:
             self.logger.log_error(f"Book loaned fail")
+            raise e
 
         except Exception as e:
-            # טיפול בשגיאות לא צפויות
             self.logger.log_error("Book loaned fail")
+            raise e
 
     def returned(self, book: Book) -> bool:
         try:
-            # אם הספר לא קיים במערכת או לא הושאל
             if book.title not in self.books:
                 raise BookDoesNotExistException("Book does not exist in the system.")
 
             if book.title not in self.books_borrowed:
                 raise NoBorrowedCopiesException("There are no borrowed copies of this book.")
 
-            # אם הספר קיים והושאל, נבצע את החזרת הספר
             current_book = self.books[book.title]
             current_book.available_copies += 1
-            if current_book.available_copies > 0:
-                current_book.is_loaned = "No"
 
             self.books_borrowed[book.title] -= 1
             if self.books_borrowed[book.title] == 0:
                 del self.books_borrowed[book.title]
+                current_book.is_loaned = "No"
+            else:
+                current_book.is_loaned = "Yes"
 
-            self.logger.log_info("Book returned successfully.")
+            # טיפול ברשימת המתנה רק אם קיימת עבור הספר הספציפי
+            if book.title in self.waiting_list and self.waiting_list[book.title]:
+                next_customer = self.waiting_list[book.title].pop(0)  # מסיר מהרשימה בזיכרון
+                self.save_waiting_list()  # שומר את השינויים בקובץ
+                self.notifications.notify_book_return(book, [next_customer])
+                self.loaned(book)
+
+            self.logger.log_info("Book returned successfully")
             self.save_books()
             return True
 
         except CustomException as e:
             self.logger.log_error("Book returned fail")
-            raise e  # נזרוק את השגיאה שוב
+            raise e
 
         except Exception as e:
             self.logger.log_error("Book returned fail")
-            raise e  # נזרוק את השגיאה שוב
+            raise e
 
+    def waiting_for_book(self, book, customer=None):
+        """הוספת לקוח לרשימת ההמתנה."""
+        if customer is None:
+            customer = self.create_customer()
 
-    def waiting_for_book(self, book: Book):
-        # יצירת לקוח בעת הצורך להוספה לרשימת ההמתנה
-        customer = self.create_customer()  # יצירת לקוח חדש אם צריך
-        if book.title not in self.waiting_list:
+        # בדיקה אם הלקוח כבר רשום לספר זה
+        if book.title in self.waiting_list:
+            # בדיקה לפי שם וטלפון (או כל זיהוי אחר שאתה רוצה)
+            for existing_customer in self.waiting_list[book.title]:
+                if existing_customer.name == customer.name and existing_customer.phone == customer.phone:
+                    raise ValueError(f"Customer {customer.name} is already in waiting list for book '{book.title}'")
+        else:
             self.waiting_list[book.title] = []
+
         self.waiting_list[book.title].append(customer)
         self.logger.log_info(f"Customer {customer} added to waiting list for book '{book.title}'")
+        self.save_waiting_list()
 
     def create_customer(self):
-        def create_customer(self):
-            # בקשת פרטי הלקוח מהמשתמש
-            name = input("Enter customer name: ")
-            phone = input("Enter customer phone: ")
-            email = input("Enter customer email: ")
+        # בקשת פרטי הלקוח מהמשתמש
+        name = input("Enter customer name: ")
+        phone = input("Enter customer phone: ")
+        email = input("Enter customer email: ")
 
-            # יצירת אובייקט לקוח חדש
-            customer = Customer(name, phone, email)
+        # יצירת אובייקט לקוח חדש
+        customer = Customer(name, phone, email)
 
-            return customer
+        return customer
+
     def save_books(self):
         CSVHandler.save_books_to_csv(self.books)
 
+    def save_waiting_list(self):
+        """שומר את רשימת ההמתנה."""
+        CSVHandler.save_waiting_list_to_csv(self.waiting_list)
