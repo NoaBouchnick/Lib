@@ -5249,3 +5249,14 @@
 [2025-01-16 00:47:36,889] INFO: book loaned successfully
 [2025-01-16 00:47:36,890] INFO: Notifications sent about new copies of book 'e'
 [2025-01-16 00:47:36,890] INFO: Book added successfully
+[2025-01-16 01:01:00,446] INFO: logged in successfully
+[2025-01-16 01:01:11,905] ERROR: Book loaned fail
+[2025-01-16 01:01:33,099] INFO: Customer Customer(name: e, phone: 0502020202, email: n@f.com) added to waiting list for book 'e'
+[2025-01-16 01:01:43,601] ERROR: Book loaned fail
+[2025-01-16 01:01:59,069] INFO: Customer Customer(name: r, phone: 0504040404, email: b@w.com) added to waiting list for book 'e'
+[2025-01-16 01:02:11,306] INFO: Notifications sent to librarians about book 'e'
+[2025-01-16 01:02:11,308] INFO: book loaned successfully
+[2025-01-16 01:02:11,308] INFO: Book returned successfully
+[2025-01-16 01:02:30,339] INFO: book loaned successfully
+[2025-01-16 01:02:30,342] INFO: Notifications sent to librarians about book 'e'
+[2025-01-16 01:02:30,342] INFO: Book added successfully

@@ -1,4 +1,3 @@
-import csv
 import os
 
 from Error.BookDoesNotExistException import BookDoesNotExistException
@@ -8,10 +7,12 @@ from Error.NoBorrowedCopiesException import NoBorrowedCopiesException
 from Error.NoCopyAvailableException import NoCopyAvailableException
 from Error.NonIntegerValueException import NonIntegerValueException
 from Error.RemovingBorrowedBookException import RemovingBorrowedBookException
+from LibrarianNotificationObserver import LibrarianNotificationObserver
+from Observer import LibraryNotificationSubject
 from .Book import Book
 from .CSVHandler import CSVHandler
 from Logger import Logger
-from Notifications import Notifications
+# from Notifications import Notifications
 from .Customer import Customer
 
 
@@ -34,7 +35,9 @@ class Librarian:
 
         self.logger = Logger()
         self.waiting_list = {}  # Book, customer
-        self.notifications = Notifications(self.logger)
+        self.notification_subject = LibraryNotificationSubject()
+        self.notification_observer = LibrarianNotificationObserver(self.logger)
+        self.notification_subject.attach(self.notification_observer)
 
     def get_waiting_list(self):
         return self.waiting_list
@@ -72,7 +75,7 @@ class Librarian:
 
                     self.save_waiting_list()
                     if customers_to_notify:
-                        self.notifications.notify_book_addition(book, customers_to_notify)
+                        self.notification_subject.notify(book, customers_to_notify, "addition")
 
                 # עדכון סטטוס ההשאלה
                 if existing_book.available_copies == 0:
@@ -167,11 +170,10 @@ class Librarian:
             else:
                 current_book.is_loaned = "Yes"
 
-            # טיפול ברשימת המתנה רק אם קיימת עבור הספר הספציפי
             if book.title in self.waiting_list and self.waiting_list[book.title]:
-                next_customer = self.waiting_list[book.title].pop(0)  # מסיר מהרשימה בזיכרון
-                self.save_waiting_list()  # שומר את השינויים בקובץ
-                self.notifications.notify_book_return(book, [next_customer])
+                next_customer = self.waiting_list[book.title].pop(0)
+                self.save_waiting_list()
+                self.notification_subject.notify(book, [next_customer], "return")
                 self.loaned(book)
 
             self.logger.log_info("Book returned successfully")
