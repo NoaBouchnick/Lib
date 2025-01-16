@@ -143,6 +143,7 @@ class LibraryApp:
             ("View Books", self.view_books_gui),
             ("Search Books", self.search_books_gui),
             ("waiting list", self.show_waiting_lists),
+            ("Most Demanded Books", self.show_most_demanded_books),
             ("Logout", self.logout),
         ]
 
@@ -554,6 +555,44 @@ class LibraryApp:
                 for customer in customers:
                     tree.insert("", "end", values=(title, customer.name, customer.phone, customer.email))
 
+    def show_most_demanded_books(self):
+        """מציג חלון עם 10 הספרים המבוקשים ביותר"""
+        demanded_books_window = tk.Toplevel(self.root)
+        demanded_books_window.title("Most Demanded Books")
+        demanded_books_window.configure(bg="#f0f8ff")
+
+        # כותרת
+        tk.Label(
+            demanded_books_window,
+            text="Top 10 Most Demanded Books",
+            font=("Arial", 18, "bold"),
+            fg="#4b0082",
+            bg="#f0f8ff"
+        ).pack(pady=20)
+
+        # הגדרת עמודות
+        columns = ("Title", "Total Demand", "Borrowed Copies", "Waiting List")
+
+        # יצירת Treeview להצגת הספרים
+        tree = ttk.Treeview(demanded_books_window, columns=columns, show="headings")
+        tree.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
+
+        # הגדרת כותרות העמודות
+        for col in columns:
+            tree.heading(col, text=col)
+
+        # קבלת הספרים המבוקשים ביותר
+        most_demanded = self.librarian.get_most_demanded_books()
+
+        # הוספת הספרים לטבלה
+        for book_data in most_demanded:
+            title, total_demand, borrowed, waiting = book_data
+            tree.insert("", "end", values=(
+                title,
+                total_demand,
+                borrowed,
+                waiting
+            ))
 
 if __name__ == "__main__":
     app = LibraryApp()

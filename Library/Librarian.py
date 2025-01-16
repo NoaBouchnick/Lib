@@ -217,6 +217,43 @@ class Librarian:
 
         return customer
 
+    def get_most_demanded_books(self, limit=10):
+        """
+        מחזיר את הספרים המבוקשים ביותר על פי:
+        1. כמות העותקים המושאלים
+        2. גודל רשימת ההמתנה
+
+        Args:
+            limit (int): כמות הספרים להחזרה (ברירת מחדל: 10)
+
+        Returns:
+            list: רשימה של טאפלים (שם הספר, ציון ביקוש כולל, עותקים מושאלים, אנשים בהמתנה)
+        """
+        book_demand = []
+
+        for title, book in self.books.items():
+            # מספר העותקים המושאלים
+            borrowed_copies = self.books_borrowed.get(title, 0)
+
+            # מספר האנשים ברשימת ההמתנה
+            waiting_list_count = len(self.waiting_list.get(title, []))
+
+            # הציון הכולל הוא סכום של העותקים המושאלים ואורך רשימת ההמתנה
+            total_demand = borrowed_copies + waiting_list_count
+
+            book_demand.append((
+                title,
+                total_demand,
+                borrowed_copies,
+                waiting_list_count
+            ))
+
+        # מיון לפי הציון הכולל בסדר יורד
+        sorted_books = sorted(book_demand, key=lambda x: x[1], reverse=True)
+
+        # החזרת הכמות המבוקשת של ספרים
+        return sorted_books[:limit]
+
     def save_books(self):
         CSVHandler.save_books_to_csv(self.books)
 

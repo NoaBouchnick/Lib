@@ -5260,3 +5260,6 @@
 [2025-01-16 01:02:30,339] INFO: book loaned successfully
 [2025-01-16 01:02:30,342] INFO: Notifications sent to librarians about book 'e'
 [2025-01-16 01:02:30,342] INFO: Book added successfully
+[2025-01-17 01:47:53,853] INFO: logged in successfully
+[2025-01-17 01:49:16,473] ERROR: Book loaned fail
+[2025-01-17 01:49:36,977] INFO: Customer Customer(name: e, phone: 0505050505, email: a@g.com) added to waiting list for book 'A Game of Thrones'
