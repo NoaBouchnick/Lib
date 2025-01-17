@@ -7,22 +7,19 @@ from Error.NoBorrowedCopiesException import NoBorrowedCopiesException
 from Error.NoCopyAvailableException import NoCopyAvailableException
 from Error.NonIntegerValueException import NonIntegerValueException
 from Error.RemovingBorrowedBookException import RemovingBorrowedBookException
-from LibrarianNotificationObserver import LibrarianNotificationObserver
-from Observer import LibraryNotificationSubject
-from .Book import Book
-from .CSVHandler import CSVHandler
-from Logger import Logger
-# from Notifications import Notifications
-from .Customer import Customer
+from Library.Observer import LibraryNotificationSubject
+from Library.Book import Book
+from system.CSVHandler import CSVHandler
+from Library.Customer import Customer
+from Library.LibrarianNotificationObserver import LibrarianNotificationObserver
+from system.Logger import Logger
 
 
 class Librarian:
-    WAITING_LIST_FILE = "waiting_list.csv"
-
     def __init__(self, file_path=None) -> None:
         if file_path is None:
-            base_path = os.path.dirname(os.path.abspath(__file__))
-            file_path = os.path.join(base_path, 'books.csv')
+            base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            file_path = os.path.join(base_path, 'files', 'books.csv')
 
         # טוען ספרים מקובץ CSV
         self.books = CSVHandler.load_books_from_csv(file_path)

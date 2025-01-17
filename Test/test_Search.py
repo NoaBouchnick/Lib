@@ -1,8 +1,8 @@
 import os
 from unittest import TestCase
 from Library.Librarian import Librarian
-from Library.Search import Search
-from Library.CSVHandler import CSVHandler  # הנחה שיש לך את המחלקה הזו
+from search.Search import Search
+from system.CSVHandler import CSVHandler  # הנחה שיש לך את המחלקה הזו
 
 class TestSearch(TestCase):
 

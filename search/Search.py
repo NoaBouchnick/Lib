@@ -1,4 +1,4 @@
-from Logger import Logger  # ייבוא מחלקת הלוג
+from system.Logger import Logger  # ייבוא מחלקת הלוג
 
 class Search:
     def __init__(self, books: dict):

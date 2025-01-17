@@ -11,9 +11,9 @@ from Error.NoCopyAvailableException import NoCopyAvailableException
 from Library.Book import Book
 from Library.Customer import Customer
 from Library.Librarian import Librarian
-from Library.CSVHandler import CSVHandler
-from Library.Search import Search
-from Library.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy
+from system.CSVHandler import CSVHandler
+from search.Search import Search
+from search.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy
 
 
 class LibraryApp:
@@ -36,7 +36,7 @@ class LibraryApp:
         # טעינת הספרים
         if file_path is None:
             base_path = os.path.dirname(os.path.abspath(__file__))
-            file_path = os.path.join(base_path, 'Library', 'books.csv')
+            file_path = os.path.join(base_path, 'files', 'books.csv')
 
         if not os.path.exists(file_path):
             self.books = {}
@@ -78,7 +78,7 @@ class LibraryApp:
         username = self.username_entry.get()
         password = self.password_entry.get()
 
-        with open("users.csv", mode="r", encoding='utf-8') as file:
+        with open("files/users.csv", mode="r", encoding='utf-8') as file:
             reader = csv.reader(file)
             for row in reader:
                 if len(row) >= 2:
@@ -102,7 +102,7 @@ class LibraryApp:
 
         hashed_password = self.hash_password(password)
 
-        with open("users.csv", mode="r", encoding='utf-8') as file:
+        with open("files/users.csv", mode="r", encoding='utf-8') as file:
             reader = csv.reader(file)
             for row in reader:
                 if row[0] == username:
@@ -110,7 +110,7 @@ class LibraryApp:
                     self.librarian.logger.log_error("Registered in fail")
                     return
 
-        with open("users.csv", mode="a", newline="", encoding='utf-8') as file:
+        with open("files/users.csv", mode="a", newline="", encoding='utf-8') as file:
             writer = csv.writer(file)
             writer.writerow([username, hashed_password])
 

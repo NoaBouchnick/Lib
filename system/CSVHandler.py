@@ -13,7 +13,7 @@ class CSVHandler:
         try:
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
-                file_path = os.path.join(base_path, 'books.csv')
+                file_path = os.path.join(base_path, 'files','books.csv')
 
             with open(file_path, mode='r', newline='', encoding='utf-8') as file:
                 reader = csv.DictReader(file)
@@ -38,7 +38,7 @@ class CSVHandler:
         try:
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
-                file_path = os.path.join(base_path, 'books.csv')
+                file_path = os.path.join(base_path, 'files', 'books.csv')
 
             directory = os.path.dirname(file_path)
             if not os.path.exists(directory):

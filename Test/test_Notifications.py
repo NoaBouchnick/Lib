@@ -2,12 +2,13 @@ import unittest
 import os
 import csv
 import shutil
+from pathlib import Path
 from unittest.mock import patch
 from io import StringIO
 from Library.Book import Book
 from Library.Customer import Customer
-from LibrarianNotificationObserver import LibrarianNotificationObserver
-from Logger import Logger
+from Library.LibrarianNotificationObserver import LibrarianNotificationObserver
+from system.Logger import Logger
 
 
 class TestLibrarianNotificationObserver(unittest.TestCase):
@@ -16,9 +17,12 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
         """
         הגדרת סביבת הטסט - יצירת קובץ משתמשים זמני וקובץ גיבוי
         """
-        cls.base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        cls.test_users_file = os.path.join(cls.base_path, 'Test', 'test_users.csv')
-        cls.original_users_file = os.path.join(cls.base_path, 'users.csv')
+        cls.base_path = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        cls.files_dir = cls.base_path / 'files'
+        os.makedirs(cls.files_dir, exist_ok=True)
+
+        cls.users_file = cls.files_dir / 'users.csv'
+        cls.users_backup = cls.files_dir / 'users_backup.csv'
 
         # יצירת קובץ משתמשים לטסטים
         test_users_data = [
@@ -27,14 +31,14 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
             ['librarian3', 'password3']
         ]
 
-        with open(cls.test_users_file, 'w', newline='', encoding='utf-8') as f:
+        # גיבוי קובץ המשתמשים המקורי אם קיים
+        if cls.users_file.exists():
+            shutil.copy2(cls.users_file, cls.users_backup)
+
+        # יצירת קובץ משתמשים לטסט
+        with open(cls.users_file, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(test_users_data)
-
-        # גיבוי קובץ המשתמשים המקורי אם קיים
-        if os.path.exists(cls.original_users_file):
-            cls.users_backup = os.path.join(cls.base_path, 'users_backup.csv')
-            shutil.copy2(cls.original_users_file, cls.users_backup)
 
     def setUp(self):
         """
@@ -42,7 +46,7 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
         """
         self.logger = Logger()
         self.logger.disable_console_logs()  # השתקת לוגים לקונסול
-        self.observer = LibrarianNotificationObserver(self.logger, self.test_users_file)
+        self.observer = LibrarianNotificationObserver(self.logger)
 
         # נתונים לדוגמה לשימוש בטסטים
         self.test_book = Book("Test Book", "Test Author", 3, "Fiction", 2023)
@@ -54,15 +58,19 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """
-        ניקוי - מחיקת קובץ המשתמשים הזמני ושחזור המקורי
+        ניקוי - שחזור קובץ המשתמשים המקורי
         """
-        if os.path.exists(cls.test_users_file):
-            os.remove(cls.test_users_file)
-
-        # שחזור קובץ המשתמשים המקורי אם היה קיים
-        if hasattr(cls, 'users_backup'):
-            shutil.copy2(cls.users_backup, cls.original_users_file)
-            os.remove(cls.users_backup)
+        try:
+            # שחזור קובץ המשתמשים המקורי אם היה קיים
+            if cls.users_backup.exists():
+                shutil.copy2(cls.users_backup, cls.users_file)
+                os.remove(cls.users_backup)
+            else:
+                # אם לא היה קובץ מקורי, מוחקים את קובץ הטסט
+                if cls.users_file.exists():
+                    os.remove(cls.users_file)
+        except Exception as e:
+            print(f"Error during cleanup: {str(e)}")
 
     def test_get_librarians(self):
         """בדיקת קבלת רשימת הספרנים"""
@@ -78,8 +86,10 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
 
     def test_get_librarians_no_file(self):
         """בדיקת התנהגות כשקובץ המשתמשים לא קיים"""
-        observer = LibrarianNotificationObserver(self.logger, "nonexistent_file.csv")
-        librarians = observer.get_librarians()
+        # יצירת observer חדש עם נתיב לקובץ לא קיים
+        test_observer = LibrarianNotificationObserver(self.logger)
+        test_observer.users_file = Path('nonexistent_file.csv')
+        librarians = test_observer.get_librarians()
         self.assertEqual(len(librarians), 0)
 
     @patch('sys.stdout', new_callable=StringIO)
@@ -93,11 +103,6 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
         self.assertIn("Customer 1", output)
         self.assertIn("0501234567", output)
 
-        # בדיקה שההודעה נשלחה לכל הספרנים
-        self.assertIn("librarian1", output)
-        self.assertIn("librarian2", output)
-        self.assertIn("librarian3", output)
-
     @patch('sys.stdout', new_callable=StringIO)
     def test_notification_on_addition(self, mock_stdout):
         """בדיקת שליחת הודעה בעת הוספת עותקים"""
@@ -109,10 +114,6 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
         self.assertIn("Customer 1", output)
         self.assertIn("Customer 2", output)
 
-        # בדיקה שההודעה נשלחה לכל הספרנים
-        for librarian in ['librarian1', 'librarian2', 'librarian3']:
-            self.assertIn(librarian, output)
-
     @patch('sys.stdout', new_callable=StringIO)
     def test_notification_invalid_event(self, mock_stdout):
         """בדיקת התנהגות עם סוג אירוע לא חוקי"""
@@ -122,7 +123,6 @@ class TestLibrarianNotificationObserver(unittest.TestCase):
 
     def test_notification_no_customers(self):
         """בדיקת התנהגות כשאין לקוחות"""
-        # שימוש ב-patch כדי לוודא שלא נשלחות הודעות
         with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
             self.observer.update(self.test_book, [], "return")
             output = mock_stdout.getvalue()

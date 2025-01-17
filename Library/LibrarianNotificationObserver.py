@@ -1,24 +1,28 @@
 import csv
+import os
 from typing import List
+from pathlib import Path
 from Library.Book import Book
 from Library.Customer import Customer
-from Observer import Observer
+from Library.Observer import Observer
 
 
 class LibrarianNotificationObserver(Observer):
-    def __init__(self, logger, users_file='users.csv'):
-        self.users_file = users_file
+    def __init__(self, logger):
+        base_path = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        self.users_file = base_path / "files" / "users.csv"
         self.logger = logger
 
     def get_librarians(self) -> List[str]:
         """מחזיר את רשימת הספרנים מהעמודה הראשונה בקובץ user.csv"""
         librarians = []
         try:
-            with open(self.users_file, 'r', encoding='utf-8') as file:
-                reader = csv.reader(file)
-                for row in reader:
-                    if row:  # אם השורה לא ריקה
-                        librarians.append(row[0])  # לוקח רק את העמודה הראשונה
+            if self.users_file.exists():
+                with open(self.users_file, 'r', encoding='utf-8') as file:
+                    reader = csv.reader(file)
+                    for row in reader:
+                        if row:  # אם השורה לא ריקה
+                            librarians.append(row[0])  # לוקח רק את העמודה הראשונה
         except Exception as e:
             self.logger.log_error(f"Error reading users file: {str(e)}")
         return librarians
@@ -26,7 +30,6 @@ class LibrarianNotificationObserver(Observer):
     def update(self, book: Book, customers: List[Customer], event_type: str):
         try:
             librarians = self.get_librarians()
-
             if event_type == "return":
                 message = f"The book '{book.title}' returned and loaned to:"
             elif event_type == "addition":

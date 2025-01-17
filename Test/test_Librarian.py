@@ -28,15 +28,21 @@ class TestLibrarian(unittest.TestCase):
         """
         # נתיבים לקבצים המקוריים
         cls.base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        cls.books_file = os.path.join(cls.base_path, 'Library', 'books.csv')
-        cls.waiting_list_file = os.path.join(cls.base_path, '../waiting_list.csv')
+        cls.files_dir = os.path.join(cls.base_path, 'files')
+
+        # יצירת תיקיית files אם לא קיימת
+        os.makedirs(cls.files_dir, exist_ok=True)
+
+        cls.books_file = os.path.join(cls.files_dir, 'books.csv')
+        cls.waiting_list_file = os.path.join(cls.files_dir, 'waiting_list.csv')
 
         # יצירת גיבויים
-        cls.books_backup = os.path.join(cls.base_path, 'Library', 'books_backup.csv')
-        cls.waiting_list_backup = os.path.join(cls.base_path, '../waiting_list_backup.csv')
+        cls.books_backup = os.path.join(cls.files_dir, 'books_backup.csv')
+        cls.waiting_list_backup = os.path.join(cls.files_dir, 'waiting_list_backup.csv')
 
-        # העתקת הקבצים המקוריים לגיבוי
-        shutil.copy2(cls.books_file, cls.books_backup)
+        # העתקת הקבצים המקוריים לגיבוי אם קיימים
+        if os.path.exists(cls.books_file):
+            shutil.copy2(cls.books_file, cls.books_backup)
         if os.path.exists(cls.waiting_list_file):
             shutil.copy2(cls.waiting_list_file, cls.waiting_list_backup)
 
@@ -49,8 +55,12 @@ class TestLibrarian(unittest.TestCase):
         פעולות שמתבצעות לפני כל טסט:
         שחזור הקבצים המקוריים מהגיבוי
         """
+        # וידוא שתיקיית files קיימת
+        os.makedirs(os.path.dirname(self.books_file), exist_ok=True)
+
         # שחזור הקבצים מהגיבוי
-        shutil.copy2(self.books_backup, self.books_file)
+        if os.path.exists(self.books_backup):
+            shutil.copy2(self.books_backup, self.books_file)
         if os.path.exists(self.waiting_list_backup):
             shutil.copy2(self.waiting_list_backup, self.waiting_list_file)
 

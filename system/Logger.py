@@ -1,15 +1,21 @@
 import logging
 from pathlib import Path
+import os
 
 
 class Logger:
-
     def __init__(self, log_file=None) -> None:
         self.logger = logging.getLogger("LibraryLogger")
         self.logger.setLevel(logging.INFO)
 
         if log_file is None:
-            log_file = Path(__file__).parent / "library.log"
+            # מציאת הנתיב לתיקיית files בהתבסס על המבנה החדש
+            base_path = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            log_file = base_path / "files" / "library.log"
+
+            # וידוא שהתיקייה קיימת
+            log_file.parent.mkdir(parents=True, exist_ok=True)
+
         # פורמט של הלוגים
         formatter = logging.Formatter('[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -25,7 +31,6 @@ class Logger:
 
     def log_info(self, message):
         self.logger.info(message)
-
 
     def log_error(self, message):
         self.logger.error(message)
