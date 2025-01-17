@@ -5263,3 +5263,1018 @@
 [2025-01-17 01:47:53,853] INFO: logged in successfully
 [2025-01-17 01:49:16,473] ERROR: Book loaned fail
 [2025-01-17 01:49:36,977] INFO: Customer Customer(name: e, phone: 0505050505, email: a@g.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 01:58:16,237] ERROR: Book added fail
+[2025-01-17 01:58:16,244] ERROR: Book added fail
+[2025-01-17 01:58:16,244] ERROR: Book added fail
+[2025-01-17 01:58:16,251] INFO: Book added successfully
+[2025-01-17 01:58:16,251] INFO: Book added successfully
+[2025-01-17 01:58:16,251] INFO: Book added successfully
+[2025-01-17 01:58:16,260] INFO: Book added successfully
+[2025-01-17 01:58:16,260] INFO: Book added successfully
+[2025-01-17 01:58:16,260] INFO: Book added successfully
+[2025-01-17 01:58:16,260] INFO: Book added successfully
+[2025-01-17 01:58:16,262] INFO: Book added successfully
+[2025-01-17 01:58:16,262] INFO: Book added successfully
+[2025-01-17 01:58:16,262] INFO: Book added successfully
+[2025-01-17 01:58:16,262] INFO: Book added successfully
+[2025-01-17 01:58:16,272] INFO: Book added successfully
+[2025-01-17 01:58:16,272] INFO: Book added successfully
+[2025-01-17 01:58:16,272] INFO: Book added successfully
+[2025-01-17 01:58:16,272] INFO: Book added successfully
+[2025-01-17 01:58:16,272] INFO: Book added successfully
+[2025-01-17 01:58:16,275] INFO: book loaned successfully
+[2025-01-17 01:58:16,275] INFO: book loaned successfully
+[2025-01-17 01:58:16,275] INFO: book loaned successfully
+[2025-01-17 01:58:16,275] INFO: book loaned successfully
+[2025-01-17 01:58:16,275] INFO: book loaned successfully
+[2025-01-17 01:58:16,278] INFO: book loaned successfully
+[2025-01-17 01:58:16,278] INFO: book loaned successfully
+[2025-01-17 01:58:16,278] INFO: book loaned successfully
+[2025-01-17 01:58:16,278] INFO: book loaned successfully
+[2025-01-17 01:58:16,278] INFO: book loaned successfully
+[2025-01-17 01:58:16,280] INFO: book loaned successfully
+[2025-01-17 01:58:16,280] INFO: book loaned successfully
+[2025-01-17 01:58:16,280] INFO: book loaned successfully
+[2025-01-17 01:58:16,280] INFO: book loaned successfully
+[2025-01-17 01:58:16,280] INFO: book loaned successfully
+[2025-01-17 01:58:16,282] INFO: book loaned successfully
+[2025-01-17 01:58:16,282] INFO: book loaned successfully
+[2025-01-17 01:58:16,282] INFO: book loaned successfully
+[2025-01-17 01:58:16,282] INFO: book loaned successfully
+[2025-01-17 01:58:16,282] INFO: book loaned successfully
+[2025-01-17 01:58:16,283] INFO: book loaned successfully
+[2025-01-17 01:58:16,283] INFO: book loaned successfully
+[2025-01-17 01:58:16,283] INFO: book loaned successfully
+[2025-01-17 01:58:16,283] INFO: book loaned successfully
+[2025-01-17 01:58:16,283] INFO: book loaned successfully
+[2025-01-17 01:58:16,296] INFO: Book added successfully
+[2025-01-17 01:58:16,296] INFO: Book added successfully
+[2025-01-17 01:58:16,296] INFO: Book added successfully
+[2025-01-17 01:58:16,296] INFO: Book added successfully
+[2025-01-17 01:58:16,296] INFO: Book added successfully
+[2025-01-17 01:58:16,296] INFO: Book added successfully
+[2025-01-17 01:58:16,299] INFO: book loaned successfully
+[2025-01-17 01:58:16,299] INFO: book loaned successfully
+[2025-01-17 01:58:16,299] INFO: book loaned successfully
+[2025-01-17 01:58:16,299] INFO: book loaned successfully
+[2025-01-17 01:58:16,299] INFO: book loaned successfully
+[2025-01-17 01:58:16,299] INFO: book loaned successfully
+[2025-01-17 01:58:16,301] INFO: book loaned successfully
+[2025-01-17 01:58:16,301] INFO: book loaned successfully
+[2025-01-17 01:58:16,301] INFO: book loaned successfully
+[2025-01-17 01:58:16,301] INFO: book loaned successfully
+[2025-01-17 01:58:16,301] INFO: book loaned successfully
+[2025-01-17 01:58:16,301] INFO: book loaned successfully
+[2025-01-17 01:58:16,303] ERROR: Book loaned fail
+[2025-01-17 01:58:16,303] ERROR: Book loaned fail
+[2025-01-17 01:58:16,303] ERROR: Book loaned fail
+[2025-01-17 01:58:16,303] ERROR: Book loaned fail
+[2025-01-17 01:58:16,303] ERROR: Book loaned fail
+[2025-01-17 01:58:16,303] ERROR: Book loaned fail
+[2025-01-17 01:58:16,304] INFO: Book returned successfully
+[2025-01-17 01:58:16,304] INFO: Book returned successfully
+[2025-01-17 01:58:16,304] INFO: Book returned successfully
+[2025-01-17 01:58:16,304] INFO: Book returned successfully
+[2025-01-17 01:58:16,304] INFO: Book returned successfully
+[2025-01-17 01:58:16,304] INFO: Book returned successfully
+[2025-01-17 01:58:16,311] INFO: Book added successfully
+[2025-01-17 01:58:16,311] INFO: Book added successfully
+[2025-01-17 01:58:16,311] INFO: Book added successfully
+[2025-01-17 01:58:16,311] INFO: Book added successfully
+[2025-01-17 01:58:16,311] INFO: Book added successfully
+[2025-01-17 01:58:16,311] INFO: Book added successfully
+[2025-01-17 01:58:16,311] INFO: Book added successfully
+[2025-01-17 01:58:16,313] INFO: Book removed successfully.
+[2025-01-17 01:58:16,313] INFO: Book removed successfully.
+[2025-01-17 01:58:16,313] INFO: Book removed successfully.
+[2025-01-17 01:58:16,313] INFO: Book removed successfully.
+[2025-01-17 01:58:16,313] INFO: Book removed successfully.
+[2025-01-17 01:58:16,313] INFO: Book removed successfully.
+[2025-01-17 01:58:16,313] INFO: Book removed successfully.
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,322] INFO: Book added successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 01:58:16,325] INFO: book loaned successfully
+[2025-01-17 02:00:42,591] INFO: Book added successfully
+[2025-01-17 02:00:42,592] INFO: book loaned successfully
+[2025-01-17 02:00:42,593] INFO: book loaned successfully
+[2025-01-17 02:00:42,594] INFO: book loaned successfully
+[2025-01-17 02:00:42,595] INFO: book loaned successfully
+[2025-01-17 02:00:42,596] INFO: book loaned successfully
+[2025-01-17 02:00:42,597] INFO: Customer Customer(name: Customer 0, phone: 0500000000, email: test0@test.com) added to waiting list for book 'High Demand'
+[2025-01-17 02:00:42,598] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'High Demand'
+[2025-01-17 02:00:42,598] INFO: Customer Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'High Demand'
+[2025-01-17 02:00:42,599] INFO: Customer Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book 'High Demand'
+[2025-01-17 02:00:42,600] INFO: Customer Customer(name: Customer 4, phone: 0500000004, email: test4@test.com) added to waiting list for book 'High Demand'
+[2025-01-17 02:00:42,601] INFO: Book added successfully
+[2025-01-17 02:00:42,602] INFO: book loaned successfully
+[2025-01-17 02:00:42,603] INFO: book loaned successfully
+[2025-01-17 02:00:42,605] INFO: book loaned successfully
+[2025-01-17 02:00:42,606] INFO: Customer Customer(name: Customer 0, phone: 0500000000, email: test0@test.com) added to waiting list for book 'Medium Demand'
+[2025-01-17 02:00:42,607] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'Medium Demand'
+[2025-01-17 02:00:42,608] INFO: Customer Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'Medium Demand'
+[2025-01-17 02:00:42,609] INFO: Book added successfully
+[2025-01-17 02:00:42,611] INFO: book loaned successfully
+[2025-01-17 02:00:42,612] INFO: Customer Customer(name: Customer 0, phone: 0500000000, email: test0@test.com) added to waiting list for book 'Low Demand'
+[2025-01-17 02:00:42,624] INFO: Book added successfully
+[2025-01-17 02:00:42,624] INFO: Book added successfully
+[2025-01-17 02:00:42,626] INFO: book loaned successfully
+[2025-01-17 02:00:42,626] INFO: book loaned successfully
+[2025-01-17 02:00:42,628] INFO: Customer Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book 'Waiting Test'
+[2025-01-17 02:00:42,628] INFO: Customer Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book 'Waiting Test'
+[2025-01-17 02:00:42,629] INFO: Customer Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book 'Waiting Test'
+[2025-01-17 02:00:42,629] INFO: Customer Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book 'Waiting Test'
+[2025-01-17 02:00:42,631] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:00:42,631] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:00:42,631] INFO: Notifications sent to librarians about book 'Waiting Test'
+[2025-01-17 02:00:42,631] INFO: Notifications sent to librarians about book 'Waiting Test'
+[2025-01-17 02:00:42,631] INFO: book loaned successfully
+[2025-01-17 02:00:42,631] INFO: book loaned successfully
+[2025-01-17 02:00:42,633] INFO: Book returned successfully
+[2025-01-17 02:00:42,633] INFO: Book returned successfully
+[2025-01-17 02:03:02,315] INFO: book loaned successfully
+[2025-01-17 02:03:02,318] INFO: book loaned successfully
+[2025-01-17 02:03:02,321] INFO: book loaned successfully
+[2025-01-17 02:03:02,324] ERROR: Book loaned fail
+[2025-01-17 02:03:02,324] INFO: Book returned successfully
+[2025-01-17 02:07:32,001] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:07:32,001] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:07:32,002] INFO: Customer Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:07:32,002] INFO: Customer Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:07:32,003] INFO: Customer Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:07:32,003] INFO: Customer Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:07:32,003] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:07:32,003] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:07:32,004] INFO: Customer Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:07:32,004] INFO: Customer Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:07:32,005] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:07:32,005] INFO: Customer Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:08:11,526] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:08:11,526] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:08:11,527] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:08:11,527] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:08:11,529] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:08:11,529] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:08:11,530] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:08:11,530] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:08:11,532] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:08:11,532] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:08:11,533] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:08:11,533] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:11:57,703] ERROR: Error reading users file: [Errno 2] No such file or directory: 'nonexistent_file.csv'
+[2025-01-17 02:11:57,703] ERROR: Error reading users file: [Errno 2] No such file or directory: 'nonexistent_file.csv'
+[2025-01-17 02:11:57,706] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,706] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,706] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,706] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,707] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,707] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,707] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,707] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,707] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,709] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,709] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,709] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,709] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,709] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,709] INFO: Notifications sent to librarians about book 'Test Book'
+[2025-01-17 02:11:57,710] INFO: Notifications sent to librarians about book 'Test's Book!'
+[2025-01-17 02:11:57,710] INFO: Notifications sent to librarians about book 'Test's Book!'
+[2025-01-17 02:11:57,710] INFO: Notifications sent to librarians about book 'Test's Book!'
+[2025-01-17 02:11:57,710] INFO: Notifications sent to librarians about book 'Test's Book!'
+[2025-01-17 02:11:57,710] INFO: Notifications sent to librarians about book 'Test's Book!'
+[2025-01-17 02:11:57,710] INFO: Notifications sent to librarians about book 'Test's Book!'
+[2025-01-17 02:11:57,710] INFO: Notifications sent to librarians about book 'Test's Book!'
+[2025-01-17 02:12:16,522] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:12:16,522] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:12:16,523] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:12:16,523] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:12:16,524] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:12:16,524] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:12:16,525] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:12:16,525] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:12:16,525] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:12:16,525] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:12:16,526] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:12:16,526] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:13:27,749] ERROR: Book added fail
+[2025-01-17 02:13:27,749] ERROR: Book added fail
+[2025-01-17 02:13:27,755] ERROR: Book added fail
+[2025-01-17 02:13:27,755] ERROR: Book added fail
+[2025-01-17 02:13:27,755] ERROR: Book added fail
+[2025-01-17 02:13:27,762] INFO: Book added successfully
+[2025-01-17 02:13:27,762] INFO: Book added successfully
+[2025-01-17 02:13:27,762] INFO: Book added successfully
+[2025-01-17 02:13:27,762] INFO: Book added successfully
+[2025-01-17 02:13:27,770] INFO: Book added successfully
+[2025-01-17 02:13:27,770] INFO: Book added successfully
+[2025-01-17 02:13:27,770] INFO: Book added successfully
+[2025-01-17 02:13:27,770] INFO: Book added successfully
+[2025-01-17 02:13:27,770] INFO: Book added successfully
+[2025-01-17 02:13:27,778] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,778] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,778] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,778] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,778] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,778] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,779] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,780] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,780] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,780] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,780] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,780] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,780] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:13:27,781] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:13:27,789] INFO: book loaned successfully
+[2025-01-17 02:13:27,789] INFO: book loaned successfully
+[2025-01-17 02:13:27,789] INFO: book loaned successfully
+[2025-01-17 02:13:27,789] INFO: book loaned successfully
+[2025-01-17 02:13:27,789] INFO: book loaned successfully
+[2025-01-17 02:13:27,789] INFO: book loaned successfully
+[2025-01-17 02:13:27,789] INFO: book loaned successfully
+[2025-01-17 02:13:27,790] INFO: Book returned successfully
+[2025-01-17 02:13:27,790] INFO: Book returned successfully
+[2025-01-17 02:13:27,790] INFO: Book returned successfully
+[2025-01-17 02:13:27,790] INFO: Book returned successfully
+[2025-01-17 02:13:27,790] INFO: Book returned successfully
+[2025-01-17 02:13:27,790] INFO: Book returned successfully
+[2025-01-17 02:13:27,790] INFO: Book returned successfully
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,797] ERROR: Book loaned fail
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,803] INFO: Book removed successfully.
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,811] ERROR: Book removed fail
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,816] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,817] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,819] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,820] INFO: book loaned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:13:27,821] INFO: Book returned successfully
+[2025-01-17 02:15:04,878] ERROR: Book added fail
+[2025-01-17 02:15:04,878] ERROR: Book added fail
+[2025-01-17 02:15:04,884] ERROR: Book added fail
+[2025-01-17 02:15:04,884] ERROR: Book added fail
+[2025-01-17 02:15:04,884] ERROR: Book added fail
+[2025-01-17 02:15:04,892] INFO: Book added successfully
+[2025-01-17 02:15:04,892] INFO: Book added successfully
+[2025-01-17 02:15:04,892] INFO: Book added successfully
+[2025-01-17 02:15:04,892] INFO: Book added successfully
+[2025-01-17 02:15:04,903] INFO: Book added successfully
+[2025-01-17 02:15:04,903] INFO: Book added successfully
+[2025-01-17 02:15:04,903] INFO: Book added successfully
+[2025-01-17 02:15:04,903] INFO: Book added successfully
+[2025-01-17 02:15:04,903] INFO: Book added successfully
+[2025-01-17 02:15:04,912] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,912] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,912] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,912] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,912] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,912] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,913] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,913] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,913] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,913] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,913] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,913] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,914] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,914] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,914] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,914] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,914] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,914] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,915] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,915] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,915] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,915] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,915] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,915] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,916] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,916] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,916] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,916] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,916] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,916] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:15:04,918] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:15:04,918] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:15:04,918] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:15:04,918] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:15:04,918] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:15:04,918] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:15:04,930] INFO: book loaned successfully
+[2025-01-17 02:15:04,930] INFO: book loaned successfully
+[2025-01-17 02:15:04,930] INFO: book loaned successfully
+[2025-01-17 02:15:04,930] INFO: book loaned successfully
+[2025-01-17 02:15:04,930] INFO: book loaned successfully
+[2025-01-17 02:15:04,930] INFO: book loaned successfully
+[2025-01-17 02:15:04,930] INFO: book loaned successfully
+[2025-01-17 02:15:04,932] INFO: Book returned successfully
+[2025-01-17 02:15:04,932] INFO: Book returned successfully
+[2025-01-17 02:15:04,932] INFO: Book returned successfully
+[2025-01-17 02:15:04,932] INFO: Book returned successfully
+[2025-01-17 02:15:04,932] INFO: Book returned successfully
+[2025-01-17 02:15:04,932] INFO: Book returned successfully
+[2025-01-17 02:15:04,932] INFO: Book returned successfully
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,942] ERROR: Book loaned fail
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,952] INFO: Book removed successfully.
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,966] ERROR: Book removed fail
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,983] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,984] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,987] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,988] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,989] INFO: book loaned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:15:04,992] INFO: Book returned successfully
+[2025-01-17 02:16:22,386] ERROR: Book added fail
+[2025-01-17 02:16:22,386] ERROR: Book added fail
+[2025-01-17 02:16:22,391] ERROR: Book added fail
+[2025-01-17 02:16:22,391] ERROR: Book added fail
+[2025-01-17 02:16:22,391] ERROR: Book added fail
+[2025-01-17 02:16:22,397] INFO: Book added successfully
+[2025-01-17 02:16:22,397] INFO: Book added successfully
+[2025-01-17 02:16:22,397] INFO: Book added successfully
+[2025-01-17 02:16:22,397] INFO: Book added successfully
+[2025-01-17 02:16:22,405] INFO: Book added successfully
+[2025-01-17 02:16:22,405] INFO: Book added successfully
+[2025-01-17 02:16:22,405] INFO: Book added successfully
+[2025-01-17 02:16:22,405] INFO: Book added successfully
+[2025-01-17 02:16:22,405] INFO: Book added successfully
+[2025-01-17 02:16:22,411] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,411] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,411] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,411] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,411] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,411] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,412] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,412] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,412] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,412] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,412] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,412] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,413] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,413] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,413] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,413] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,413] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,413] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,414] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,414] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,414] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,414] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,414] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,414] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,415] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,415] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,415] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,415] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,415] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,415] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:16:22,416] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:16:22,416] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:16:22,416] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:16:22,416] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:16:22,416] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:16:22,416] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:16:22,424] INFO: book loaned successfully
+[2025-01-17 02:16:22,424] INFO: book loaned successfully
+[2025-01-17 02:16:22,424] INFO: book loaned successfully
+[2025-01-17 02:16:22,424] INFO: book loaned successfully
+[2025-01-17 02:16:22,424] INFO: book loaned successfully
+[2025-01-17 02:16:22,424] INFO: book loaned successfully
+[2025-01-17 02:16:22,424] INFO: book loaned successfully
+[2025-01-17 02:16:22,425] INFO: Book returned successfully
+[2025-01-17 02:16:22,425] INFO: Book returned successfully
+[2025-01-17 02:16:22,425] INFO: Book returned successfully
+[2025-01-17 02:16:22,425] INFO: Book returned successfully
+[2025-01-17 02:16:22,425] INFO: Book returned successfully
+[2025-01-17 02:16:22,425] INFO: Book returned successfully
+[2025-01-17 02:16:22,425] INFO: Book returned successfully
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,433] ERROR: Book loaned fail
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,440] INFO: Book removed successfully.
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,446] ERROR: Book removed fail
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,453] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,454] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,455] INFO: book loaned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:16:22,456] INFO: Book returned successfully
+[2025-01-17 02:18:53,232] ERROR: Book added fail
+[2025-01-17 02:18:53,232] ERROR: Book added fail
+[2025-01-17 02:18:53,237] ERROR: Book added fail
+[2025-01-17 02:18:53,237] ERROR: Book added fail
+[2025-01-17 02:18:53,237] ERROR: Book added fail
+[2025-01-17 02:18:53,241] INFO: Book added successfully
+[2025-01-17 02:18:53,241] INFO: Book added successfully
+[2025-01-17 02:18:53,241] INFO: Book added successfully
+[2025-01-17 02:18:53,241] INFO: Book added successfully
+[2025-01-17 02:18:53,247] INFO: Book added successfully
+[2025-01-17 02:18:53,247] INFO: Book added successfully
+[2025-01-17 02:18:53,247] INFO: Book added successfully
+[2025-01-17 02:18:53,247] INFO: Book added successfully
+[2025-01-17 02:18:53,247] INFO: Book added successfully
+[2025-01-17 02:18:53,254] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,254] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,254] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,254] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,254] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,254] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,255] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,257] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,257] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,257] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,257] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,257] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,257] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,258] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,258] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,258] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,258] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,258] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,258] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:18:53,259] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:18:53,259] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:18:53,259] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:18:53,259] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:18:53,259] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:18:53,259] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:18:53,268] INFO: book loaned successfully
+[2025-01-17 02:18:53,268] INFO: book loaned successfully
+[2025-01-17 02:18:53,268] INFO: book loaned successfully
+[2025-01-17 02:18:53,268] INFO: book loaned successfully
+[2025-01-17 02:18:53,268] INFO: book loaned successfully
+[2025-01-17 02:18:53,268] INFO: book loaned successfully
+[2025-01-17 02:18:53,268] INFO: book loaned successfully
+[2025-01-17 02:18:53,270] INFO: Book returned successfully
+[2025-01-17 02:18:53,270] INFO: Book returned successfully
+[2025-01-17 02:18:53,270] INFO: Book returned successfully
+[2025-01-17 02:18:53,270] INFO: Book returned successfully
+[2025-01-17 02:18:53,270] INFO: Book returned successfully
+[2025-01-17 02:18:53,270] INFO: Book returned successfully
+[2025-01-17 02:18:53,270] INFO: Book returned successfully
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,278] ERROR: Book loaned fail
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,284] INFO: Book removed successfully.
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,292] ERROR: Book removed fail
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,298] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,299] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,300] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,301] INFO: book loaned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:18:53,302] INFO: Book returned successfully
+[2025-01-17 02:20:37,824] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:20:37,824] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:20:37,825] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:20:37,825] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:20:37,826] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:20:37,826] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:20:37,827] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:20:37,827] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:20:37,827] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:20:37,827] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:20:37,828] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:20:37,828] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:21:07,688] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:21:07,688] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:21:07,689] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:21:07,689] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:21:07,689] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:21:07,689] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:21:07,690] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:21:07,690] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:21:07,691] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:21:07,691] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:21:07,691] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:21:07,691] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:24:08,970] ERROR: Book added fail
+[2025-01-17 02:24:08,970] ERROR: Book added fail
+[2025-01-17 02:24:08,976] ERROR: Book added fail
+[2025-01-17 02:24:08,976] ERROR: Book added fail
+[2025-01-17 02:24:08,976] ERROR: Book added fail
+[2025-01-17 02:24:08,983] INFO: Book added successfully
+[2025-01-17 02:24:08,983] INFO: Book added successfully
+[2025-01-17 02:24:08,983] INFO: Book added successfully
+[2025-01-17 02:24:08,983] INFO: Book added successfully
+[2025-01-17 02:24:08,989] INFO: Book added successfully
+[2025-01-17 02:24:08,989] INFO: Book added successfully
+[2025-01-17 02:24:08,989] INFO: Book added successfully
+[2025-01-17 02:24:08,989] INFO: Book added successfully
+[2025-01-17 02:24:08,989] INFO: Book added successfully
+[2025-01-17 02:24:08,998] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:08,998] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:08,998] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:08,998] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:08,998] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:08,998] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,000] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,000] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,000] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,000] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,000] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,000] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,001] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,001] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,001] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,001] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,001] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,001] INFO:  Customer(name: Customer 3, phone: 0500000003, email: test3@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,003] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,003] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,003] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,003] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,003] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,003] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,004] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,004] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,004] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,004] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,004] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,004] INFO:  Customer(name: Customer 2, phone: 0500000002, email: test2@test.com) added to waiting list for book 'A Game of Thrones'
+[2025-01-17 02:24:09,005] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:24:09,005] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:24:09,005] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:24:09,005] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:24:09,005] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:24:09,005] INFO:  Customer(name: Customer 1, phone: 0500000001, email: test1@test.com) added to waiting list for book 'The Hobbit'
+[2025-01-17 02:24:09,014] INFO: book loaned successfully
+[2025-01-17 02:24:09,014] INFO: book loaned successfully
+[2025-01-17 02:24:09,014] INFO: book loaned successfully
+[2025-01-17 02:24:09,014] INFO: book loaned successfully
+[2025-01-17 02:24:09,014] INFO: book loaned successfully
+[2025-01-17 02:24:09,014] INFO: book loaned successfully
+[2025-01-17 02:24:09,014] INFO: book loaned successfully
+[2025-01-17 02:24:09,016] INFO: Book returned successfully
+[2025-01-17 02:24:09,016] INFO: Book returned successfully
+[2025-01-17 02:24:09,016] INFO: Book returned successfully
+[2025-01-17 02:24:09,016] INFO: Book returned successfully
+[2025-01-17 02:24:09,016] INFO: Book returned successfully
+[2025-01-17 02:24:09,016] INFO: Book returned successfully
+[2025-01-17 02:24:09,016] INFO: Book returned successfully
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,022] ERROR: Book loaned fail
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,030] INFO: Book removed successfully.
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,039] ERROR: Book removed fail
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,048] INFO:  Customer(name: Customer 1, phone: 0501234567, email: test1@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,049] INFO:  Customer(name: Customer 2, phone: 0521234567, email: test2@test.com) added to waiting list for book '1984'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,050] ERROR: Error reading users file: [Errno 2] No such file or directory: 'users.csv'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: Notifications sent to librarians about book '1984'
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,051] INFO: book loaned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully
+[2025-01-17 02:24:09,052] INFO: Book returned successfully

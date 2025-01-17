@@ -203,7 +203,7 @@ class Librarian:
             self.waiting_list[book.title] = []
 
         self.waiting_list[book.title].append(customer)
-        self.logger.log_info(f"Customer {customer} added to waiting list for book '{book.title}'")
+        self.logger.log_info(f" {customer} added to waiting list for book '{book.title}'")
         self.save_waiting_list()
 
     def create_customer(self):
