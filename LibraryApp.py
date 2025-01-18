@@ -25,23 +25,24 @@ class LibraryApp:
         self.root.bind("<Configure>", self.on_resize)
         self.root.protocol("WM_DELETE_WINDOW", self.close_window)
 
-        # יצירת אובייקט Librarian וטענת רשימת ההמתנה
-        self.librarian = Librarian()
-        self.librarian.waiting_list = CSVHandler.load_waiting_list_from_csv()  # טעינת רשימת ההמתנה מהקובץ
+        # קביעת נתיבי ברירת מחדל אם לא התקבלו
+        if file_path is None:
+            base_path = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.join(base_path, 'files', 'books.csv')
+            waiting_list_path = os.path.join(base_path, 'files', 'waiting_list.csv')
+        else:
+            base_dir = os.path.dirname(file_path)
+            waiting_list_path = os.path.join(base_dir, 'files', 'waiting_list.csv')
+
+        # יצירת אובייקט Librarian עם שני הנתיבים
+        self.librarian = Librarian(books_path=file_path, waiting_list_path=waiting_list_path)
 
         self.main_menu = tk.Frame(self.root)
         self.login_frame = tk.Frame(self.root, bg='#f0f8ff')
         self.create_login_screen()
 
-        # טעינת הספרים
-        if file_path is None:
-            base_path = os.path.dirname(os.path.abspath(__file__))
-            file_path = os.path.join(base_path, 'files', 'books.csv')
-
-        if not os.path.exists(file_path):
-            self.books = {}
-        else:
-            self.books = CSVHandler.load_books_from_csv(file_path)
+        # טעינת הספרים - עכשיו ישירות מה-Librarian
+        self.books = self.librarian.books
 
     def on_resize(self, event):
         """Resize elements when window is resized"""

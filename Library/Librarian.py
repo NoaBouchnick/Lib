@@ -16,25 +16,34 @@ from system.Logger import Logger
 
 
 class Librarian:
-    def __init__(self, file_path=None) -> None:
-        if file_path is None:
+    def __init__(self, books_path=None, waiting_list_path=None) -> None:
+        # קביעת נתיבים ברירת מחדל אם לא התקבלו
+        if books_path is None or waiting_list_path is None:
             base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            file_path = os.path.join(base_path, 'files', 'books.csv')
+            files_dir = os.path.join(base_path, 'files')
 
-        # טוען ספרים מקובץ CSV
-        self.books = CSVHandler.load_books_from_csv(file_path)
-        self.waiting_list = CSVHandler.load_waiting_list_from_csv()
+            if books_path is None:
+                books_path = os.path.join(files_dir, 'books.csv')
+            if waiting_list_path is None:
+                waiting_list_path = os.path.join(files_dir, 'waiting_list.csv')
+
+        # אתחול בסיסי
+        self.logger = Logger()
         self.books_borrowed = {}
+        self.notification_subject = LibraryNotificationSubject()
+        self.notification_observer = LibrarianNotificationObserver(self.logger)
+        self.notification_subject.attach(self.notification_observer)
+
+        # טעינת ספרים ורשימת המתנה מהקבצים
+        self.books = CSVHandler.load_books_from_csv(books_path)
+        self.waiting_list = CSVHandler.load_waiting_list_from_csv(waiting_list_path)
+
+        # עדכון מצב הספרים המושאלים
         for title, book in self.books.items():
             if book.is_loaned == "Yes":
                 book.available_copies = 0
                 self.books_borrowed[title] = book.total_copies
 
-        self.logger = Logger()
-        self.waiting_list = {}  # Book, customer
-        self.notification_subject = LibraryNotificationSubject()
-        self.notification_observer = LibrarianNotificationObserver(self.logger)
-        self.notification_subject.attach(self.notification_observer)
 
     def get_waiting_list(self):
         return self.waiting_list

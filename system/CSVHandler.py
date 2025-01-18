@@ -1,11 +1,10 @@
 import os
 import csv
-from Library.Book import Book  # הנחה שמחלקת Book נמצאת בקובץ נפרד בשם Book.py
+from Library.Book import Book
 from Library.Customer import Customer
 
 
 class CSVHandler:
-
     @staticmethod
     def load_books_from_csv(file_path=None):
         """טוען ספרים מקובץ CSV ומחזיר רשימה של ספרים."""
@@ -13,7 +12,7 @@ class CSVHandler:
         try:
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
-                file_path = os.path.join(base_path, 'files','books.csv')
+                file_path = os.path.join(base_path, '../files', 'books.csv')
 
             with open(file_path, mode='r', newline='', encoding='utf-8') as file:
                 reader = csv.DictReader(file)
@@ -35,10 +34,11 @@ class CSVHandler:
 
     @staticmethod
     def save_books_to_csv(books, file_path=None):
+        """שומר את הספרים לקובץ CSV."""
         try:
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
-                file_path = os.path.join(base_path, 'files', 'books.csv')
+                file_path = os.path.join(base_path, '../files', 'books.csv')
 
             directory = os.path.dirname(file_path)
             if not os.path.exists(directory):
@@ -51,7 +51,6 @@ class CSVHandler:
                 writer.writeheader()
 
                 for book in books.values():
-                    # שלוף את הנתונים מתוך האובייקט של הספר
                     writer.writerow({
                         'title': book.title,
                         'author': book.author,
@@ -64,11 +63,16 @@ class CSVHandler:
             print(f"Error saving books to CSV: {str(e)}")
 
     @staticmethod
-    def load_waiting_list_from_csv(file_path="waiting_list.csv"):
+    def load_waiting_list_from_csv(file_path=None):
         """טוען את רשימת ההמתנה מקובץ CSV."""
         waiting_list = {}
-        if os.path.exists(file_path):
-            try:
+        try:
+            # אם לא התקבל נתיב, משתמשים בנתיב ברירת מחדל
+            if file_path is None:
+                base_path = os.path.dirname(os.path.abspath(__file__))
+                file_path = os.path.join(base_path, '../files', 'waiting_list.csv')
+
+            if os.path.exists(file_path):
                 with open(file_path, mode='r', newline='', encoding='utf-8') as file:
                     reader = csv.DictReader(file)
                     for row in reader:
@@ -81,14 +85,24 @@ class CSVHandler:
                         if book_title not in waiting_list:
                             waiting_list[book_title] = []
                         waiting_list[book_title].append(customer)
-            except Exception as e:
-                print(f"Error loading waiting list: {str(e)}")
+        except Exception as e:
+            print(f"Error loading waiting list from {file_path}: {str(e)}")
         return waiting_list
 
     @staticmethod
-    def save_waiting_list_to_csv(waiting_list, file_path="waiting_list.csv"):
+    def save_waiting_list_to_csv(waiting_list, file_path=None):
         """שומר את רשימת ההמתנה בקובץ CSV."""
         try:
+            # אם לא התקבל נתיב, משתמשים בנתיב ברירת מחדל
+            if file_path is None:
+                base_path = os.path.dirname(os.path.abspath(__file__))
+                file_path = os.path.join(base_path, '../files', 'waiting_list.csv')
+
+            # וידוא שהתיקייה קיימת
+            directory = os.path.dirname(file_path)
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+
             with open(file_path, mode='w', newline='', encoding='utf-8') as file:
                 fieldnames = ['Book Title', 'Customer Name', 'Customer Phone', 'Customer Email']
                 writer = csv.DictWriter(file, fieldnames=fieldnames)
@@ -104,5 +118,4 @@ class CSVHandler:
                             'Customer Email': customer.email
                         })
         except Exception as e:
-            print(f"Error saving waiting list: {str(e)}")
-
+            print(f"Error saving waiting list to {file_path}: {str(e)}")

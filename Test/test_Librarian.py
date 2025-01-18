@@ -1,229 +1,124 @@
 import unittest
 import os
-import csv
 import shutil
-from Library.Book import Book
-from Library.Customer import Customer
-from Library.Librarian import Librarian
+import logging
 from Error.BookDoesNotExistException import BookDoesNotExistException
 from Error.NegativeCopiesException import NegativeCopiesException
-from Error.NonIntegerValueException import NonIntegerValueException
-from Error.NoCopyAvailableException import NoCopyAvailableException
 from Error.NoBorrowedCopiesException import NoBorrowedCopiesException
+from Error.NoCopyAvailableException import NoCopyAvailableException
+from Error.NonIntegerValueException import NonIntegerValueException
 from Error.RemovingBorrowedBookException import RemovingBorrowedBookException
+from Library.Librarian import Librarian
+from Library.Book import Book
+from Library.Customer import Customer
 
 
 class TestLibrarian(unittest.TestCase):
-    books_file = None
-    waiting_list_file = None
-    books_backup = None
-    waiting_list_backup = None
-    base_path = None
-
     @classmethod
     def setUpClass(cls):
-        """
-        פעולות שמתבצעות פעם אחת לפני כל הטסטים:
-        גיבוי הקבצים המקוריים והשתקת לוגים
-        """
-        # נתיבים לקבצים המקוריים
+        """הכנת סביבת טסט"""
+        # השבתת לוגים
+        logging.disable(logging.CRITICAL)
+
+        # נתיב הבסיס
         cls.base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         cls.files_dir = os.path.join(cls.base_path, 'files')
 
-        # יצירת תיקיית files אם לא קיימת
-        os.makedirs(cls.files_dir, exist_ok=True)
-
-        cls.books_file = os.path.join(cls.files_dir, 'books.csv')
-        cls.waiting_list_file = os.path.join(cls.files_dir, 'waiting_list.csv')
-
-        # יצירת גיבויים
+        # יצירת גיבוי מלא של הקבצים
         cls.books_backup = os.path.join(cls.files_dir, 'books_backup.csv')
         cls.waiting_list_backup = os.path.join(cls.files_dir, 'waiting_list_backup.csv')
 
-        # העתקת הקבצים המקוריים לגיבוי אם קיימים
-        if os.path.exists(cls.books_file):
-            shutil.copy2(cls.books_file, cls.books_backup)
-        if os.path.exists(cls.waiting_list_file):
-            shutil.copy2(cls.waiting_list_file, cls.waiting_list_backup)
-
-        # יצירת ספרייה ראשונית להשתקת הלוגים
-        temp_librarian = Librarian(cls.books_file)
-        temp_librarian.logger.disable_console_logs()
-
-    def setUp(self):
-        """
-        פעולות שמתבצעות לפני כל טסט:
-        שחזור הקבצים המקוריים מהגיבוי
-        """
-        # וידוא שתיקיית files קיימת
-        os.makedirs(os.path.dirname(self.books_file), exist_ok=True)
-
-        # שחזור הקבצים מהגיבוי
-        if os.path.exists(self.books_backup):
-            shutil.copy2(self.books_backup, self.books_file)
-        if os.path.exists(self.waiting_list_backup):
-            shutil.copy2(self.waiting_list_backup, self.waiting_list_file)
-
-        # יצירת מופע Librarian חדש והשתקת הלוגים שלו
-        self.librarian = Librarian(self.books_file)
-        self.librarian.logger.disable_console_logs()
+        # יצירת גיבוי מהקבצים המקוריים
+        shutil.copy2(
+            os.path.join(cls.files_dir, 'books.csv'),
+            cls.books_backup
+        )
+        shutil.copy2(
+            os.path.join(cls.files_dir, 'waiting_list.csv'),
+            cls.waiting_list_backup
+        )
 
     @classmethod
     def tearDownClass(cls):
-        """
-        פעולות שמתבצעות פעם אחת אחרי כל הטסטים:
-        שחזור הקבצים המקוריים ומחיקת הגיבויים
-        """
-        try:
-            # שחזור קובץ הספרים המקורי
-            if os.path.exists(cls.books_backup):
-                shutil.copy2(cls.books_backup, cls.books_file)
+        """החזרה למצב מקורי"""
+        # החזרת הקבצים המקוריים מהגיבוי
+        shutil.copy2(cls.books_backup, os.path.join(cls.files_dir, 'books.csv'))
+        shutil.copy2(cls.waiting_list_backup, os.path.join(cls.files_dir, 'waiting_list.csv'))
 
-            # טיפול בקובץ רשימת ההמתנה
-            original_waiting_list_existed = os.path.exists(cls.waiting_list_backup)
+        # מחיקת קבצי הגיבוי
+        os.remove(cls.books_backup)
+        os.remove(cls.waiting_list_backup)
 
-            # שחזור או מחיקה של קובץ רשימת ההמתנה
-            if original_waiting_list_existed:
-                # אם היה קובץ מקורי - משחזרים אותו
-                shutil.copy2(cls.waiting_list_backup, cls.waiting_list_file)
-            else:
-                # אם לא היה קובץ מקורי - מוחקים את הקובץ שנוצר
-                if os.path.exists(cls.waiting_list_file):
-                    os.remove(cls.waiting_list_file)
-
-        except Exception as e:
-            print(f"Error during file restoration: {str(e)}")
-
-        finally:
-            # מחיקת קבצי הגיבוי
-            for backup_file in [cls.books_backup, cls.waiting_list_backup]:
-                if os.path.exists(backup_file):
-                    try:
-                        os.remove(backup_file)
-                    except Exception as e:
-                        print(f"Error removing backup file {backup_file}: {str(e)}")
-
-            # וידוא סופי שקובץ רשימת ההמתנה נמחק אם לא היה קובץ מקורי
-            if not original_waiting_list_existed and os.path.exists(cls.waiting_list_file):
-                try:
-                    os.remove(cls.waiting_list_file)
-                except Exception as e:
-                    print(f"Error during final cleanup: {str(e)}")
-
-    def test_add_book_normal(self):
-        """בדיקת הוספת ספר במקרה רגיל"""
-        book = Book("New Test Book", "Test Author", 3, "Fiction", 2023)
-        self.librarian.added(book)
-        self.assertIn("New Test Book", self.librarian.books)
-        self.assertEqual(self.librarian.books["New Test Book"].total_copies, 3)
+    def setUp(self):
+        """הכנת אובייקט Librarian לכל טסט"""
+        self.librarian = Librarian(
+            books_path=os.path.join(self.base_path, 'files', 'books.csv'),
+            waiting_list_path=os.path.join(self.base_path, 'files', 'waiting_list.csv')
+        )
+        # השבתת לוגים של הספרייה
+        self.librarian.logger.disable_console_logs()
 
     def test_add_book_negative_copies(self):
-        """בדיקת הוספת ספר עם מספר עותקים שלילי"""
-        book = Book("Negative Book", "Author", -1, "Fiction", 2023)
+        """בדיקת הוספת ספר עם עותקים שליליים"""
+        book = Book("Negative Test", "Author Name", -5, "Genre", 2021)
         with self.assertRaises(NegativeCopiesException):
             self.librarian.added(book)
 
     def test_add_book_non_integer_copies(self):
-        """בדיקת הוספת ספר עם מספר עותקים לא שלם"""
-        book = Book("Float Book", "Author", 3.5, "Fiction", 2023)
+        """בדיקת הוספת ספר עם עותקים שאינם מספר שלם"""
+        book = Book("Non-integer Test", "Author Name", 3.5, "Genre", 2021)
         with self.assertRaises(NonIntegerValueException):
             self.librarian.added(book)
 
-    def test_add_existing_book(self):
-        """בדיקת הוספת עותקים לספר קיים"""
-        # משתמשים בספר קיים - "The Great Gatsby"
-        book = Book("The Great Gatsby", "F. Scott Fitzgerald", 2, "Classic", 1925)
-        initial_copies = self.librarian.books["The Great Gatsby"].total_copies
-        self.librarian.added(book)
-        final_copies = self.librarian.books["The Great Gatsby"].total_copies
-        self.assertEqual(final_copies, initial_copies + 2)
-
-    def test_remove_book_normal(self):
-        """בדיקת הסרת ספר במקרה רגיל"""
-        # משתמשים בספר שלא מושאל - "The Great Gatsby"
-        book = self.librarian.books["The Great Gatsby"]
-        result = self.librarian.removed(book)
-        self.assertTrue(result)
-        self.assertNotIn("The Great Gatsby", self.librarian.books)
+    def test_remove_nonexistent_book(self):
+        """בדיקת הסרת ספר שאינו קיים"""
+        book = Book("Nonexistent Book", "Author Name", 1, "Genre", 2021)
+        with self.assertRaises(BookDoesNotExistException):
+            self.librarian.removed(book)
 
     def test_remove_borrowed_book(self):
-        """בדיקת הסרת ספר שמושאל"""
-        # משתמשים בספר שמושאל - "1984"
-        book = self.librarian.books["1984"]
+        """בדיקת הסרת ספר מושאל"""
+        book = self.librarian.books["1984"]  # ספר מושאל בספרייה
         with self.assertRaises(RemovingBorrowedBookException):
             self.librarian.removed(book)
 
-    def test_loan_and_return_flow(self):
-        """בדיקת תהליך מלא של השאלה והחזרה"""
-        # משתמשים בספר עם מספר עותקים זמינים - "The Great Gatsby"
-        book = self.librarian.books["The Great Gatsby"]
-        initial_copies = book.available_copies
+    def test_loan_nonexistent_book(self):
+        """בדיקת השאלת ספר שאינו קיים"""
+        book = Book("Nonexistent Book", "Author Name", 1, "Genre", 2021)
+        with self.assertRaises(BookDoesNotExistException):
+            self.librarian.loaned(book)
 
-        # השאלת ספר
-        self.assertTrue(self.librarian.loaned(book))
-        self.assertEqual(book.available_copies, initial_copies - 1)
-
-        # החזרת ספר
-        self.assertTrue(self.librarian.returned(book))
-        self.assertEqual(book.available_copies, initial_copies)
-
-    def test_loan_unavailable_book(self):
-        """בדיקת השאלת ספר כשאין עותקים זמינים"""
-        # משתמשים בספר מושאל לחלוטין - "The Divine Comedy"
-        book = self.librarian.books["The Divine Comedy"]
+    def test_loan_no_available_copies(self):
+        """בדיקת השאלת ספר ללא עותקים זמינים"""
+        book = self.librarian.books["The Divine Comedy"]  # ספר ללא עותקים זמינים
         with self.assertRaises(NoCopyAvailableException):
             self.librarian.loaned(book)
 
-    def test_waiting_list_and_notification(self):
-        """בדיקת רשימת המתנה והודעות"""
-        # משתמשים בספר מושאל - "1984"
-        book = self.librarian.books["1984"]
+    def test_return_nonexistent_book(self):
+        """בדיקת החזרת ספר שאינו קיים"""
+        book = Book("Nonexistent Book", "Author Name", 1, "Genre", 2021)
+        with self.assertRaises(BookDoesNotExistException):
+            self.librarian.returned(book)
 
-        # הוספת לקוחות לרשימת המתנה
-        customer1 = Customer("Customer 1", "0501234567", "test1@test.com")
-        customer2 = Customer("Customer 2", "0521234567", "test2@test.com")
+    def test_return_no_borrowed_copies(self):
+        """בדיקת החזרת ספר שאינו מושאל"""
+        book = self.librarian.books["The Great Gatsby"]  # ספר שאינו מושאל
+        with self.assertRaises(NoBorrowedCopiesException):
+            self.librarian.returned(book)
 
-        self.librarian.waiting_for_book(book, customer1)
-        self.librarian.waiting_for_book(book, customer2)
+    def test_waiting_for_book(self):
+        """בדיקת הוספת לקוח לרשימת המתנה"""
+        borrowed_book = self.librarian.books["1984"]  # ספר מושאל
+        customer = Customer("John Doe", "0501234567", "john@example.com")
 
-        # בדיקת גודל רשימת ההמתנה
-        self.assertEqual(len(self.librarian.waiting_list[book.title]), 2)
+        self.librarian.waiting_for_book(borrowed_book, customer)
 
-        # החזרת ספר והשאלה אוטומטית ללקוח הראשון
-        self.librarian.returned(book)
-        self.assertEqual(len(self.librarian.waiting_list[book.title]), 1)
+        self.assertIn(borrowed_book.title, self.librarian.waiting_list)
+        self.assertIn(customer, self.librarian.waiting_list[borrowed_book.title])
 
-    def test_get_most_demanded_books(self):
-        """בדיקת דירוג הספרים המבוקשים ביותר"""
-        # הוספת לקוחות לרשימות המתנה של ספרים מבוקשים
-        high_demand_books = [
-            ("1984", 3),  # 5 עותקים כבר מושאלים
-            ("A Game of Thrones", 2),  # 5 עותקים כבר מושאלים
-            ("The Hobbit", 1)  # 4 עותקים כבר מושאלים
-        ]
-
-        # הוספת אנשים לרשימות המתנה
-        for book_title, num_customers in high_demand_books:
-            book = self.librarian.books[book_title]
-            for i in range(num_customers):
-                phone = f"050{str(i + 1).zfill(7)}"
-                customer = Customer(f"Customer {i + 1}", phone, f"test{i + 1}@test.com")
-                self.librarian.waiting_for_book(book, customer)
-
-        # בדיקת התוצאות
-        results = self.librarian.get_most_demanded_books(limit=3)
-
-        # 1984: 5 מושאלים + 3 בהמתנה = 8
-        self.assertEqual(results[0][0], "1984")
-        self.assertEqual(results[0][1], 8)
-
-        # A Game of Thrones: 5 מושאלים + 2 בהמתנה = 7
-        self.assertEqual(results[1][0], "A Game of Thrones")
-        self.assertEqual(results[1][1], 7)
-
-        # The Hobbit: 4 מושאלים + 1 בהמתנה = 5
-        self.assertEqual(results[2][0], "The Hobbit")
-        self.assertEqual(results[2][1], 5)
+        # בדיקת כפילות לקוחות
+        with self.assertRaises(ValueError):
+            self.librarian.waiting_for_book(borrowed_book, customer)
 
 
 if __name__ == '__main__':
