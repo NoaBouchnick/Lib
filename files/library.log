@@ -9810,3 +9810,9 @@
 [2025-01-18 22:31:19,693] ERROR: Book returned fail
 [2025-01-18 22:58:56,282] ERROR: logged in fail
 [2025-01-18 22:58:59,200] INFO: Registered in successfully
+[2025-01-19 18:18:45,634] INFO: logged in successfully
+[2025-01-19 18:19:14,807] ERROR: Book loaned fail
+[2025-01-19 18:19:35,504] INFO:  Customer(name: e, phone: 0505050505, email: n@b.com) added to waiting list for book 'The Odyssey'
+[2025-01-19 18:19:50,897] INFO: Notifications sent to librarians about book 'The Odyssey'
+[2025-01-19 18:19:50,897] INFO: book loaned successfully
+[2025-01-19 18:19:50,898] INFO: Book returned successfully
