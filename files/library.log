@@ -9816,3 +9816,40 @@
 [2025-01-19 18:19:50,897] INFO: Notifications sent to librarians about book 'The Odyssey'
 [2025-01-19 18:19:50,897] INFO: book loaned successfully
 [2025-01-19 18:19:50,898] INFO: Book returned successfully
+[2025-01-20 23:20:16,119] INFO: logged in successfully
+[2025-01-20 23:20:41,061] INFO: Book added successfully
+[2025-01-20 23:20:48,041] INFO: Book removed successfully.
+[2025-01-20 23:23:47,526] ERROR: Book loaned fail
+[2025-01-20 23:24:18,833] INFO: Search book "The Odyssey" by name completed successfully
+[2025-01-20 23:24:18,833] INFO: Search book "The Odyssey" by name completed successfully
+[2025-01-20 23:24:27,794] INFO: Search book "The" by name completed successfully
+[2025-01-20 23:24:27,794] INFO: Search book "The" by name completed successfully
+[2025-01-20 23:24:27,794] INFO: Search book "The" by name completed successfully
+[2025-01-20 23:30:57,930] INFO: logged in successfully
+[2025-01-20 23:31:01,092] INFO: Displayed all books successfully
+[2025-01-20 23:31:06,966] INFO: Displayed available books successfully
+[2025-01-20 23:31:12,807] INFO: Displayed borrowed books successfully
+[2025-01-20 23:31:15,529] INFO: displayed successfully
+[2025-01-20 23:32:15,633] INFO: logged in successfully
+[2025-01-20 23:34:43,052] INFO: logged in successfully
+[2025-01-20 23:34:47,043] ERROR: Book loaned fail
+[2025-01-20 23:35:32,851] INFO: logged in successfully
+[2025-01-20 23:38:26,590] INFO: logged in successfully
+[2025-01-20 23:39:04,958] INFO: logged in successfully
+[2025-01-20 23:39:09,008] ERROR: Book return fail
+[2025-01-20 23:44:37,476] INFO: logged in successfully
+[2025-01-20 23:44:38,985] INFO: Displayed all books successfully
+[2025-01-20 23:44:52,007] INFO: displayed successfully
+[2025-01-20 23:44:53,936] INFO: Displayed borrowed books successfully
+[2025-01-20 23:44:54,657] INFO: Displayed available books successfully
+[2025-01-20 23:44:55,385] INFO: Displayed all books successfully
+[2025-01-20 23:45:05,794] INFO: Displayed book by category successfully
+[2025-01-20 23:45:11,634] INFO: Displayed book by category successfully
+[2025-01-20 23:45:23,534] INFO: Displayed book by category successfully
+[2025-01-20 23:45:25,368] INFO: Displayed all books successfully
+[2025-01-20 23:45:26,811] INFO: Displayed book by category successfully
+[2025-01-20 23:45:32,964] INFO: Displayed all books successfully
+[2025-01-20 23:45:37,261] INFO: Displayed book by category successfully
+[2025-01-20 23:46:17,006] ERROR: Book borrowed  fail
+[2025-01-20 23:46:46,183] INFO:  Customer(name: e, phone: 0505050505, email: e@e.com) added to waiting list for book 'The Odyssey'
+[2025-01-20 23:46:54,809] INFO: log out successful

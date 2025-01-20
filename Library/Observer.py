@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List
-from Library.Book import Book
+from Books.Book import Book
 from Library.Customer import Customer
 
 
@@ -22,7 +22,6 @@ class Subject(ABC):
     @abstractmethod
     def notify(self, book: Book, customers: List[Customer], event_type: str):
         pass
-
 
 class LibraryNotificationSubject(Subject):
     def __init__(self):

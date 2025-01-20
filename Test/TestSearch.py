@@ -6,8 +6,7 @@ import logging
 from search.Search import Search
 from search.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy, YearSearchStrategy, \
     CopiesSearchStrategy
-from system.Logger import Logger
-from Library.Book import Book
+from Books.Book import Book
 
 
 class TestSearch(unittest.TestCase):

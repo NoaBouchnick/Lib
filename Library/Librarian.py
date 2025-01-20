@@ -7,8 +7,8 @@ from Error.NoBorrowedCopiesException import NoBorrowedCopiesException
 from Error.NoCopyAvailableException import NoCopyAvailableException
 from Error.NonIntegerValueException import NonIntegerValueException
 from Error.RemovingBorrowedBookException import RemovingBorrowedBookException
+from Books.Book import Book
 from Library.Observer import LibraryNotificationSubject
-from Library.Book import Book
 from system.CSVHandler import CSVHandler
 from Library.Customer import Customer
 from Library.LibrarianNotificationObserver import LibrarianNotificationObserver
@@ -142,7 +142,7 @@ class Librarian:
                     if current_book.available_copies == 0:
                         current_book.is_loaned = "Yes"
 
-                    self.logger.log_info("book loaned successfully")
+                    self.logger.log_info("book borrowed  successfully")
                     self.save_books()
                     return True
                 else:
@@ -151,11 +151,11 @@ class Librarian:
                 raise BookDoesNotExistException()
 
         except CustomException as e:
-            self.logger.log_error(f"Book loaned fail")
+            self.logger.log_error(f"Book borrowed  fail")
             raise e
 
         except Exception as e:
-            self.logger.log_error("Book loaned fail")
+            self.logger.log_error("Book borrowed  fail")
             raise e
 
     def returned(self, book: Book) -> bool:

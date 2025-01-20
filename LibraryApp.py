@@ -8,10 +8,9 @@ import os
 from Error.BookDoesNotExistException import BookDoesNotExistException
 from Error.CustomException import CustomException
 from Error.NoCopyAvailableException import NoCopyAvailableException
-from Library.Book import Book
+from Books.Book import Book
 from Library.Customer import Customer
 from Library.Librarian import Librarian
-from system.CSVHandler import CSVHandler
 from search.Search import Search
 from search.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy
 
@@ -144,7 +143,6 @@ class LibraryApp:
             ("View Books", self.view_books_gui),
             ("Search Books", self.search_books_gui),
             ("waiting list", self.show_waiting_lists),
-            ("Most Demanded Books", self.show_most_demanded_books),
             ("Logout", self.logout),
         ]
 
@@ -158,7 +156,7 @@ class LibraryApp:
         self.password_entry.delete(0, tk.END)
         self.main_menu.pack_forget()
         self.login_frame.pack(expand=True, fill=tk.BOTH, padx=20, pady=20)
-        self.librarian.logger.log_info("log out successfully")
+        self.librarian.logger.log_info("log out successful")
 
     def close_window(self):
         self.root.quit()
@@ -315,10 +313,11 @@ class LibraryApp:
                                 self.request_customer_details(book)  # שימוש במתודה של המחלקה
                             lend_book_window.destroy()
                     else:
+                        self.librarian.logger.log_error("Book borrowed  fail")
                         messagebox.showerror("Book not found", f"Book '{title}' not found.")
                 except Exception as e:
                     messagebox.showerror("Lend Book", f"Unexpected error: {str(e)}")
-                    self.librarian.logger.log_error("Book loaned fail")
+                    self.librarian.logger.log_error("Book borrowed  fail")
                     lend_book_window.destroy()
             else:
                 messagebox.showerror("Lend Book", "Please enter a book title.")
@@ -397,12 +396,12 @@ class LibraryApp:
 
                 except CustomException as e:
                     messagebox.showerror("Return Book", f"Error: {str(e)}")
-                    # self.librarian.logger.log_error("Book return fail")
+                    self.librarian.logger.log_error("Book return fail")
 
                 except Exception as e:
                     # כל שגיאה לא צפויה
                     messagebox.showerror("Return Book", f"Unexpected error: {str(e)}")
-                    # self.librarian.logger.log_error("Book return fail")
+                    self.librarian.logger.log_error("Book return fail")
 
                 return_book_window.destroy()
 
@@ -415,26 +414,118 @@ class LibraryApp:
         submit_button.pack(pady=10)
 
     def view_books_gui(self):
-        # יצירת חלון תצוגת ספרים
         view_books_window = tk.Toplevel(self.root)
         view_books_window.title("View Books")
         view_books_window.configure(bg="#f0f8ff")
 
-        # הגדרת עמודות כולל עותקים זמינים וכוללים וסטטוס השאלה
+        # יצירת מסגרת לכפתורים
+        buttons_frame = tk.Frame(view_books_window, bg="#f0f8ff")
+        buttons_frame.pack(pady=10)
+
+        # הגדרת עמודות
         columns = ("Title", "Author", "Genre", "Year", "Copies Available", "Total Copies", "Loan Status")
 
         # יצירת Treeview להצגת הספרים
         tree = ttk.Treeview(view_books_window, columns=columns, show="headings")
         tree.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
-        # הוספת כותרות לעמודות
+
         for col in columns:
             tree.heading(col, text=col)
 
-        # הוספת ספרים לרשימה, כולל כמות העותקים הכוללת וסטטוס השאלה
-        for book in self.books.values():
-            loan_status = "Yes" if book.is_loaned == "Yes" else "No"  # קביעת סטטוס השאלה
-            tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
-                                           book.available_copies, book.total_copies, loan_status))
+        # הוספת frame חדש לבחירת קטגוריה
+        category_frame = tk.Frame(view_books_window, bg="#f0f8ff")
+        category_frame.pack(pady=5)
+
+        genres = ["Fiction", "Dystopian", "Classic", "Adventure", "Romance", "Historical Fiction",
+                  "Psychological Drama", "Philosophy", "Epic Poetry", "Gothic Fiction", "Gothic Romance",
+                  "Realism", "Modernism", "Satire", "Science Fiction", "Tragedy", "Fantasy"]
+
+        tk.Label(category_frame, text="Select Genre:", bg="#f0f8ff").pack(side=tk.LEFT, padx=5)
+        genre_combobox = ttk.Combobox(category_frame, values=genres, width=20)
+        genre_combobox.pack(side=tk.LEFT, padx=5)
+
+        def show_all_books():
+            tree.delete(*tree.get_children())
+            for book in self.books.values():
+                loan_status = "Yes" if book.is_loaned == "Yes" else "No"
+                tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
+                                               book.available_copies, book.total_copies, loan_status))
+            self.librarian.logger.log_info("Displayed all books successfully")
+
+        def show_available_books():
+            tree.delete(*tree.get_children())
+            available_books = [book for book in self.books.values() if book.available_copies > 0]
+            if available_books:
+                for book in available_books:
+                    loan_status = "No"
+                    tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
+                                                   book.available_copies, book.total_copies, loan_status))
+                self.librarian.logger.log_info("Displayed available books successfully")
+            else:
+                self.librarian.logger.log_error("Displayed available books fail")
+                messagebox.showinfo("Info", "No available books found")
+
+        def show_borrowed_books():
+            tree.delete(*tree.get_children())
+            borrowed_books = [book for book in self.books.values() if book.is_loaned == "Yes"]
+            if borrowed_books:
+                for book in borrowed_books:
+                    loan_status = "Yes"
+                    tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
+                                                   book.available_copies, book.total_copies, loan_status))
+                self.librarian.logger.log_info("Displayed borrowed books successfully")
+            else:
+                self.librarian.logger.log_error("Displayed borrowed books fail")
+                messagebox.showinfo("Info", "No borrowed books found")
+
+        def show_popular_books():
+            tree.delete(*tree.get_children())
+            popular_books = self.librarian.get_most_demanded_books()
+            if popular_books:
+                for title, demand, borrowed, waiting in popular_books:
+                    book = self.books.get(title)
+                    if book:
+                        loan_status = "Yes" if book.is_loaned == "Yes" else "No"
+                        tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
+                                                       book.available_copies, book.total_copies, loan_status))
+                self.librarian.logger.log_info("displayed successfully")
+            else:
+                self.librarian.logger.log_error("displayed fail")
+                messagebox.showinfo("Info", "No popular books found")
+
+        def show_books_by_category():
+            selected_genre = genre_combobox.get()
+            if not selected_genre:
+                messagebox.showwarning("Warning", "Please select a genre first")
+                return
+
+            tree.delete(*tree.get_children())
+            genre_books = [book for book in self.books.values() if book.genre == selected_genre]
+            if genre_books:
+                for book in genre_books:
+                    loan_status = "Yes" if book.is_loaned == "Yes" else "No"
+                    tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
+                                                   book.available_copies, book.total_copies, loan_status))
+                self.librarian.logger.log_info("Displayed book by category successfully")
+            else:
+                self.librarian.logger.log_error("Displayed book by category fail")
+                messagebox.showinfo("Info", "No books found in this category")
+
+        # יצירת כפתורים
+        buttons = [
+            ("All Books", show_all_books),
+            ("Available Books", show_available_books),
+            ("Borrowed Books", show_borrowed_books),
+            ("Popular Books", show_popular_books),
+            ("Filter by Genre", show_books_by_category)
+        ]
+
+        for text, command in buttons:
+            tk.Button(buttons_frame, text=text, command=command,
+                      font=("Arial", 12), bg="#32cd32", fg="white", width=15).pack(side=tk.LEFT, padx=5)
+
+        # הצגת כל הספרים כברירת מחדל
+        show_all_books()
 
     def search_books_gui(self):
         """יצירת חלון חיפוש ספרים"""

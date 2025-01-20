@@ -9,7 +9,7 @@ from Error.NoCopyAvailableException import NoCopyAvailableException
 from Error.NonIntegerValueException import NonIntegerValueException
 from Error.RemovingBorrowedBookException import RemovingBorrowedBookException
 from Library.Librarian import Librarian
-from Library.Book import Book
+from Books.Book import Book
 from Library.Customer import Customer
 
 
