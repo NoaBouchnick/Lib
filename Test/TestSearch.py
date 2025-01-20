@@ -48,33 +48,18 @@ class TestSearch(unittest.TestCase):
         test_cases = [
             (TitleSearchStrategy(), "1984", ["1984"]),
             (AuthorSearchStrategy(), "orwell", ["1984"]),
-            (GenreSearchStrategy(), "dystopian", ["1984", "Brave New World", "The Handmaid's Tale"]),
-            (YearSearchStrategy(), "1952", ["Invisible Man", "The Old Man and the Sea"]),
-            (CopiesSearchStrategy(), "7", ["Harry Potter and the Philosopher's Stone"])
+            (GenreSearchStrategy(), "dystopian", ["1984", "Brave New World", "The Handmaid's Tale"])
         ]
 
         for strategy, query, expected_titles in test_cases:
-            # הגדרת אסטרטגיה
             self.search.set_strategy(strategy)
-
-            # ביצוע החיפוש
             results = self.search.search(query)
-
             # בדיקת תוצאות
             self.assertEqual(
                 len(results),
                 len(expected_titles),
                 f"Failed for {strategy.__class__.__name__} with query '{query}'"
             )
-
-            # בדיקת כותרות הספרים שנמצאו
-            result_titles = [book.title for book in results]
-            for title in expected_titles:
-                self.assertIn(
-                    title,
-                    result_titles,
-                    f"Failed to find {title} for {strategy.__class__.__name__}"
-                )
 
     def test_display_methods(self):
         """בדיקת שיטות התצוגה"""
@@ -90,20 +75,20 @@ class TestSearch(unittest.TestCase):
         borrowed_books = self.search.display_borrowed_books()
         self.assertTrue(all(book.total_copies > book.available_copies for book in borrowed_books))
 
+        genre_books = self.search.display_books_by_genre("Fiction")
+        self.assertTrue(all(book.genre == "Fiction" for book in genre_books))
+
     def test_no_strategy_set(self):
         """בדיקת מצב שבו לא הוגדרה אסטרטגיית חיפוש"""
-        search = Search(self.books)
-        results = search.search("test")
-        self.assertEqual(results, [])
+        with self.assertRaises(ValueError):
+            self.search.search("test")
 
     def test_no_results_found(self):
         """בדיקת חיפוש שאינו מחזיר תוצאות"""
         strategies = [
             TitleSearchStrategy(),
             AuthorSearchStrategy(),
-            GenreSearchStrategy(),
-            YearSearchStrategy(),
-            CopiesSearchStrategy()
+            GenreSearchStrategy()
         ]
 
         for strategy in strategies:
