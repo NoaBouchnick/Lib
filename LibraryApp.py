@@ -12,7 +12,7 @@ from Books.Book import Book
 from Library.Customer import Customer
 from Library.Librarian import Librarian
 from search.Search import Search
-from search.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy
+from search.SearchStrategy import TitleSearchStrategy, AuthorSearchStrategy, GenreSearchStrategy, YearSearchStrategy
 
 
 class LibraryApp:
@@ -418,6 +418,13 @@ class LibraryApp:
         view_books_window.title("View Books")
         view_books_window.configure(bg="#f0f8ff")
 
+        # יצירת אובייקט Search עם כל הנתונים הדרושים
+        search = Search(
+            books=self.books,
+            waiting_list=self.librarian.waiting_list,
+            books_borrowed=self.librarian.books_borrowed
+        )
+
         # יצירת מסגרת לכפתורים
         buttons_frame = tk.Frame(view_books_window, bg="#f0f8ff")
         buttons_frame.pack(pady=10)
@@ -446,51 +453,43 @@ class LibraryApp:
 
         def show_all_books():
             tree.delete(*tree.get_children())
-            for book in self.books.values():
+            books = search.display_all_books()  # שימוש בפונקציה מהמחלקה
+            for book in books:
                 loan_status = "Yes" if book.is_loaned == "Yes" else "No"
                 tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
                                                book.available_copies, book.total_copies, loan_status))
-            self.librarian.logger.log_info("Displayed all books successfully")
 
         def show_available_books():
             tree.delete(*tree.get_children())
-            available_books = [book for book in self.books.values() if book.available_copies > 0]
+            available_books = search.display_available_books()  # שימוש בפונקציה מהמחלקה
             if available_books:
                 for book in available_books:
                     loan_status = "No"
                     tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
                                                    book.available_copies, book.total_copies, loan_status))
-                self.librarian.logger.log_info("Displayed available books successfully")
             else:
-                self.librarian.logger.log_error("Displayed available books fail")
                 messagebox.showinfo("Info", "No available books found")
 
         def show_borrowed_books():
             tree.delete(*tree.get_children())
-            borrowed_books = [book for book in self.books.values() if book.is_loaned == "Yes"]
+            borrowed_books = search.display_borrowed_books()  # שימוש בפונקציה מהמחלקה
             if borrowed_books:
                 for book in borrowed_books:
                     loan_status = "Yes"
                     tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
                                                    book.available_copies, book.total_copies, loan_status))
-                self.librarian.logger.log_info("Displayed borrowed books successfully")
             else:
-                self.librarian.logger.log_error("Displayed borrowed books fail")
                 messagebox.showinfo("Info", "No borrowed books found")
 
         def show_popular_books():
             tree.delete(*tree.get_children())
-            popular_books = self.librarian.get_most_demanded_books()
+            popular_books = search.display_popular_books()  # שימוש בפונקציה מהמחלקה
             if popular_books:
-                for title, demand, borrowed, waiting in popular_books:
-                    book = self.books.get(title)
-                    if book:
-                        loan_status = "Yes" if book.is_loaned == "Yes" else "No"
-                        tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
-                                                       book.available_copies, book.total_copies, loan_status))
-                self.librarian.logger.log_info("displayed successfully")
+                for book in popular_books:
+                    loan_status = "Yes" if book.is_loaned == "Yes" else "No"
+                    tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
+                                                   book.available_copies, book.total_copies, loan_status))
             else:
-                self.librarian.logger.log_error("displayed fail")
                 messagebox.showinfo("Info", "No popular books found")
 
         def show_books_by_category():
@@ -500,17 +499,14 @@ class LibraryApp:
                 return
 
             tree.delete(*tree.get_children())
-            genre_books = [book for book in self.books.values() if book.genre == selected_genre]
+            genre_books = search.display_books_by_genre(selected_genre)  # שימוש בפונקציה מהמחלקה
             if genre_books:
                 for book in genre_books:
                     loan_status = "Yes" if book.is_loaned == "Yes" else "No"
                     tree.insert("", "end", values=(book.title, book.author, book.genre, book.year,
                                                    book.available_copies, book.total_copies, loan_status))
-                self.librarian.logger.log_info("Displayed book by category successfully")
             else:
-                self.librarian.logger.log_error("Displayed book by category fail")
                 messagebox.showinfo("Info", "No books found in this category")
-
         # יצירת כפתורים
         buttons = [
             ("All Books", show_all_books),
@@ -533,62 +529,94 @@ class LibraryApp:
         search_window.title("Search Books")
         search_window.configure(bg="#f0f8ff")
 
+        # יצירת אובייקט Search עם כל הנתונים הדרושים
+        search = Search(
+            books=self.books,
+            waiting_list=self.librarian.waiting_list,
+            books_borrowed=self.librarian.books_borrowed
+        )
+
         # יצירת תוויות ושדות חיפוש
         tk.Label(search_window, text="Enter search query:", font=("Arial", 20), fg="#4b0082", bg="#f0f8ff").pack(
             pady=25)
         search_entry = tk.Entry(search_window, font=("Arial", 12), width=30)
         search_entry.pack(pady=5)
 
-        search_criteria = ["Title", "Author", "Genre"]
+        search_criteria = ["Title", "Author", "Genre", "Year"]  # הוספנו אפשרות לחיפוש לפי שנה
         search_criteria_combobox = ttk.Combobox(search_window, values=search_criteria, font=("Arial", 12), width=28)
-        search_criteria_combobox.set(search_criteria[0])  # ברירת מחדל
+        search_criteria_combobox.set(search_criteria[0])
         search_criteria_combobox.pack(pady=10)
+
+        def display_results(results):
+            if results:
+                result_window = tk.Toplevel(search_window)
+                result_window.title("Search Results")
+
+                # יצירת Treeview להצגת התוצאות
+                treeview = ttk.Treeview(result_window,
+                                        columns=("Title", "Author", "Genre", "Year", "Available Copies", "Total Copies",
+                                                 "Status"),
+                                        show="headings")
+                treeview.pack(pady=20, padx=20)
+
+                # הגדרת כותרות העמודות
+                columns = [
+                    ("Title", "Title", 150),
+                    ("Author", "Author", 150),
+                    ("Genre", "Genre", 100),
+                    ("Year", "Year", 70),
+                    ("Available Copies", "Available", 70),
+                    ("Total Copies", "Total", 70),
+                    ("Status", "Status", 70)
+                ]
+
+                for col, heading, width in columns:
+                    treeview.heading(col, text=heading)
+                    treeview.column(col, width=width)
+
+                # הוספת נתונים
+                for book in results:
+                    status = "Available" if book.available_copies > 0 else "Not Available"
+                    treeview.insert("", "end", values=(
+                        book.title,
+                        book.author,
+                        book.genre,
+                        book.year,
+                        book.available_copies,
+                        book.total_copies,
+                        status
+                    ))
+            else:
+                messagebox.showinfo("Search Results", "No books found.")
 
         def search_submit():
             query = search_entry.get()
             criterion = search_criteria_combobox.get()
 
-            # יצירת אסטרטגיה חיפוש חדשה בהתאם למפתח
+            if not query:
+                messagebox.showwarning("Search", "Please enter a search query")
+                return
+
+            # בחירת אסטרטגיית החיפוש המתאימה
             if criterion == "Title":
                 strategy = TitleSearchStrategy()
             elif criterion == "Author":
                 strategy = AuthorSearchStrategy()
-            else:
+            elif criterion == "Genre":
                 strategy = GenreSearchStrategy()
+            elif criterion == "Year":
+                strategy = YearSearchStrategy()
 
-            search = Search(self.books)
             search.set_strategy(strategy)
-
-            results = search.search(query)
-
-            # הצגת תוצאות החיפוש בחלון חדש או הודעה
-            if results:
-                result_window = tk.Toplevel(search_window)
-                result_window.title("Search Results")
-
-                # יצירת Treeview להצגת התוצאות בצורה מסודרת
-                treeview = ttk.Treeview(result_window, columns=("Title", "Author", "Genre", "Year", "Available Copies"),
-                                        show="headings")
-                treeview.pack(pady=20, padx=20)
-
-                # הגדרת כותרות העמודות
-                treeview.heading("Title", text="Title")
-                treeview.heading("Author", text="Author")
-                treeview.heading("Genre", text="Genre")
-                treeview.heading("Year", text="Year")
-                treeview.heading("Available Copies", text="Available Copies")
-
-                # הוספת נתונים ל-Treeview
-                for book in results:
-                    treeview.insert("", "end",
-                                    values=(book.title, book.author, book.genre, book.year, book.available_copies))
-
-            else:
-                messagebox.showinfo("Search Results", "No books found.")
+            try:
+                results = search.search(query)
+                display_results(results)
+            except Exception as e:
+                messagebox.showerror("Search Error", f"An error occurred: {str(e)}")
 
         # כפתור לשליחת חיפוש
-        search_button = tk.Button(search_window, text="Search", command=search_submit, font=("Arial", 12), bg="#32cd32",
-                                  fg="white", width=20)
+        search_button = tk.Button(search_window, text="Search", command=search_submit,
+                                  font=("Arial", 12), bg="#32cd32", fg="white", width=20)
         search_button.pack(pady=10)
 
     def waiting_list_gui(self):

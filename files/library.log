@@ -9853,3 +9853,132 @@
 [2025-01-20 23:46:17,006] ERROR: Book borrowed  fail
 [2025-01-20 23:46:46,183] INFO:  Customer(name: e, phone: 0505050505, email: e@e.com) added to waiting list for book 'The Odyssey'
 [2025-01-20 23:46:54,809] INFO: log out successful
+[2025-01-21 11:37:28,535] INFO: logged in successfully
+[2025-01-21 11:37:39,658] INFO: add book completed successfully
+[2025-01-21 11:37:39,658] INFO: add book completed successfully
+[2025-01-21 11:37:52,488] INFO: loan book completed successfully
+[2025-01-21 11:37:52,488] INFO: loan book completed successfully
+[2025-01-21 11:37:52,488] INFO: loan book completed successfully
+[2025-01-21 11:38:02,893] INFO: return book completed successfully
+[2025-01-21 11:38:02,893] INFO: return book completed successfully
+[2025-01-21 11:38:02,893] INFO: return book completed successfully
+[2025-01-21 11:38:02,893] INFO: return book completed successfully
+[2025-01-21 11:38:47,328] INFO: logged in successfully
+[2025-01-21 11:38:59,723] ERROR: Book added fail
+[2025-01-21 11:39:08,810] INFO: add book completed successfully
+[2025-01-21 11:39:08,810] INFO: add book completed successfully
+[2025-01-21 11:39:21,650] INFO: remove book completed successfully
+[2025-01-21 11:39:21,650] INFO: remove book completed successfully
+[2025-01-21 11:39:21,650] INFO: remove book completed successfully
+[2025-01-21 11:43:07,068] INFO: Login successful
+[2025-01-21 11:43:07,068] INFO: Login successful
+[2025-01-21 11:53:29,177] INFO: Login successful
+[2025-01-21 11:53:29,177] INFO: Login successful
+[2025-01-21 11:54:39,896] INFO: Login successful
+[2025-01-21 11:54:39,896] INFO: Login successful
+[2025-01-21 11:54:48,320] ERROR: Book added fail
+[2025-01-21 11:54:48,320] ERROR: Book added fail
+[2025-01-21 11:54:56,289] INFO: add book completed successfully
+[2025-01-21 11:54:56,289] INFO: add book completed successfully
+[2025-01-21 11:54:56,289] INFO: add book completed successfully
+[2025-01-21 11:55:01,146] INFO: loan book completed successfully
+[2025-01-21 11:55:01,146] INFO: loan book completed successfully
+[2025-01-21 11:55:01,146] INFO: loan book completed successfully
+[2025-01-21 11:55:01,146] INFO: loan book completed successfully
+[2025-01-21 11:58:23,981] INFO: logged in successfully
+[2025-01-21 11:58:25,950] INFO: Displayed all books successfully
+[2025-01-21 11:58:32,380] INFO: Displayed available books successfully
+[2025-01-21 11:58:37,496] INFO: Displayed borrowed books successfully
+[2025-01-21 11:58:41,058] INFO: displayed successfully
+[2025-01-21 11:58:46,847] INFO: Displayed book by category successfully
+[2025-01-21 11:59:04,207] INFO: search completed successfully
+[2025-01-21 11:59:04,207] INFO: search completed successfully
+[2025-01-21 11:59:04,207] INFO: search completed successfully
+[2025-01-21 11:59:21,272] INFO: remove book completed successfully
+[2025-01-21 11:59:21,272] INFO: remove book completed successfully
+[2025-01-21 11:59:21,272] INFO: remove book completed successfully
+[2025-01-21 11:59:21,272] INFO: remove book completed successfully
+[2025-01-21 12:02:01,757] INFO: logged in successfully
+[2025-01-21 12:02:08,063] INFO: add book completed successfully
+[2025-01-21 12:02:18,843] INFO: search completed successfully
+[2025-01-21 12:02:18,843] INFO: search completed successfully
+[2025-01-21 12:02:46,735] ERROR: Book removed fail
+[2025-01-21 12:02:46,735] ERROR: Book removed fail
+[2025-01-21 12:02:52,107] INFO: remove book completed successfully
+[2025-01-21 12:02:52,107] INFO: remove book completed successfully
+[2025-01-21 12:03:14,890] ERROR: remove book failed
+[2025-01-21 12:03:14,890] ERROR: remove book failed
+[2025-01-21 12:03:17,476] ERROR: Book removed fail
+[2025-01-21 12:03:17,476] ERROR: Book removed fail
+[2025-01-21 12:03:19,836] INFO: Displayed all books successfully
+[2025-01-21 12:03:19,836] INFO: Displayed all books successfully
+[2025-01-21 12:03:22,423] INFO: Displayed available books successfully
+[2025-01-21 12:03:22,423] INFO: Displayed available books successfully
+[2025-01-21 12:03:24,212] INFO: Displayed borrowed books successfully
+[2025-01-21 12:03:24,212] INFO: Displayed borrowed books successfully
+[2025-01-21 12:03:25,534] INFO: displayed successfully
+[2025-01-21 12:03:25,534] INFO: displayed successfully
+[2025-01-21 12:03:34,300] INFO: Displayed book by category successfully
+[2025-01-21 12:03:34,300] INFO: Displayed book by category successfully
+[2025-01-21 12:03:44,407] ERROR: Book return fail
+[2025-01-21 12:03:44,407] ERROR: Book return fail
+[2025-01-21 12:03:55,473] ERROR: Book return fail
+[2025-01-21 12:03:55,473] ERROR: Book return fail
+[2025-01-21 12:04:27,599] INFO: Notifications sent to librarians about book 'The Odyssey'
+[2025-01-21 12:04:27,599] INFO: Notifications sent to librarians about book 'The Odyssey'
+[2025-01-21 12:04:27,600] INFO: loan book completed successfully
+[2025-01-21 12:04:27,600] INFO: loan book completed successfully
+[2025-01-21 12:04:27,601] INFO: return book completed successfully
+[2025-01-21 12:04:27,601] INFO: return book completed successfully
+[2025-01-21 12:04:53,783] ERROR: logged in fail
+[2025-01-21 12:05:00,890] INFO: logged in successfully
+[2025-01-21 12:05:08,839] ERROR: loan book failed
+[2025-01-21 12:05:22,438] ERROR: Book borrowed  fail
+[2025-01-21 12:07:00,863] INFO: logged in successfully
+[2025-01-21 12:07:04,245] ERROR: Book borrowed  fail
+[2025-01-21 12:13:37,557] INFO: login completed successfully
+[2025-01-21 12:13:40,458] INFO: logout completed successfully
+[2025-01-21 12:13:44,795] ERROR: login failed
+[2025-01-21 12:15:29,723] INFO: login completed successfully
+[2025-01-21 12:16:29,079] ERROR: login failed
+[2025-01-21 12:16:37,143] INFO: login completed successfully
+[2025-01-21 12:18:50,462] ERROR: logged in fail
+[2025-01-21 12:27:15,113] INFO: logged in successfully
+[2025-01-21 12:27:25,959] INFO: search completed successfully
+[2025-01-21 12:27:25,959] INFO: search completed successfully
+[2025-01-21 12:27:43,538] INFO: search completed successfully
+[2025-01-21 12:27:43,538] INFO: search completed successfully
+[2025-01-21 12:28:34,583] INFO: Displayed all books successfully
+[2025-01-21 12:28:34,583] INFO: Displayed all books successfully
+[2025-01-21 12:28:36,334] INFO: displayed successfully
+[2025-01-21 12:28:36,334] INFO: displayed successfully
+[2025-01-21 12:28:43,027] INFO: Displayed borrowed books successfully
+[2025-01-21 12:28:43,027] INFO: Displayed borrowed books successfully
+[2025-01-21 12:28:43,892] INFO: Displayed available books successfully
+[2025-01-21 12:28:43,892] INFO: Displayed available books successfully
+[2025-01-21 12:28:44,500] INFO: Displayed all books successfully
+[2025-01-21 12:28:44,500] INFO: Displayed all books successfully
+[2025-01-21 12:30:11,438] INFO: logged in successfully
+[2025-01-21 12:30:19,581] INFO: search completed successfully
+[2025-01-21 12:30:19,581] INFO: search completed successfully
+[2025-01-21 12:30:27,456] INFO: Display all books completed successfully
+[2025-01-21 12:30:27,456] INFO: Display all books completed successfully
+[2025-01-21 12:30:27,456] INFO: Display all books completed successfully
+[2025-01-21 12:30:34,500] INFO: Display available books completed successfully
+[2025-01-21 12:30:34,500] INFO: Display available books completed successfully
+[2025-01-21 12:30:34,500] INFO: Display available books completed successfully
+[2025-01-21 12:30:37,862] INFO: Display borrowed books completed successfully
+[2025-01-21 12:30:37,862] INFO: Display borrowed books completed successfully
+[2025-01-21 12:30:37,862] INFO: Display borrowed books completed successfully
+[2025-01-21 12:30:39,688] INFO: Display available books completed successfully
+[2025-01-21 12:30:39,688] INFO: Display available books completed successfully
+[2025-01-21 12:30:39,688] INFO: Display available books completed successfully
+[2025-01-21 12:30:41,209] INFO: Display popular books completed successfully
+[2025-01-21 12:30:41,209] INFO: Display popular books completed successfully
+[2025-01-21 12:30:41,209] INFO: Display popular books completed successfully
+[2025-01-21 12:30:52,982] INFO: Display books by category completed successfully
+[2025-01-21 12:30:52,982] INFO: Display books by category completed successfully
+[2025-01-21 12:30:52,982] INFO: Display books by category completed successfully
+[2025-01-21 12:34:22,095] ERROR: logged in fail
+[2025-01-21 12:34:25,440] INFO: Registered in successfully
+[2025-01-21 12:34:35,682] INFO: log out successful

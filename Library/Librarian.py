@@ -1,4 +1,5 @@
 import os
+from functools import wraps
 
 from Error.BookDoesNotExistException import BookDoesNotExistException
 from Error.CustomException import CustomException
@@ -13,6 +14,34 @@ from system.CSVHandler import CSVHandler
 from Library.Customer import Customer
 from Library.LibrarianNotificationObserver import LibrarianNotificationObserver
 from system.Logger import Logger
+
+
+def log_operation(operation_name):
+    """
+    דקורטור לתיעוד פעולות בספרייה - משתמש בלוגר של המחלקה
+    """
+    def decorator(func):
+        @wraps(func)
+        def wrapper(self, *args, **kwargs):
+            try:
+                # רישום הודעת דיבוג לפני ביצוע הפעולה
+                if args and hasattr(args[0], 'title'):
+                    self.logger.log_debug(f"Attempting {operation_name}: title={args[0].title}")
+
+                # הרצת הפונקציה המקורית
+                result = func(self, *args, **kwargs)
+
+                # רישום הודעת הצלחה
+                self.logger.log_info(f"{operation_name} completed successfully")
+                return result
+
+            except Exception as e:
+                # רישום הודעת שגיאה
+                self.logger.log_error(f"{operation_name} failed")
+                raise e
+
+        return wrapper
+    return decorator
 
 
 class Librarian:
@@ -44,164 +73,109 @@ class Librarian:
                 book.available_copies = 0
                 self.books_borrowed[title] = book.total_copies
 
-
     def get_waiting_list(self):
         return self.waiting_list
 
+    @log_operation("add book")
     def added(self, book: Book):
-        try:
-            self.logger.log_debug(
-                f"Attempting to add book: title={book.title}, total_copies={book.total_copies}, year={book.year}")
+        if not isinstance(book.total_copies, int) or not isinstance(book.year, int):
+            raise NonIntegerValueException()
 
-            if not isinstance(book.total_copies, int) or not isinstance(book.year, int):
-                raise NonIntegerValueException()
+        if book.total_copies <= 0:
+            raise NegativeCopiesException()
 
-            if book.total_copies <= 0:
-                raise NegativeCopiesException()
+        customers_to_notify = []
+        if book.title in self.books:
+            existing_book = self.books[book.title]
+            borrowed_copies = self.books_borrowed.get(book.title, 0)
 
-            customers_to_notify = []
-            if book.title in self.books:
-                existing_book = self.books[book.title]
-                borrowed_copies = self.books_borrowed.get(book.title, 0)
-
-                # עדכון מספר העותקים הכולל
-                existing_book.total_copies += book.total_copies
-                added_copies = book.total_copies
-
-                # העותקים הזמינים הם: סך כל העותקים פחות העותקים המושאלים
-                existing_book.available_copies = existing_book.total_copies - borrowed_copies
-
-                # טיפול ברשימת המתנה אם קיימת
-                if book.title in self.waiting_list and self.waiting_list[book.title]:
-                    # מעבר על כמות העותקים שנוספו
-                    for _ in range(min(added_copies, len(self.waiting_list[book.title]))):
-                        next_customer = self.waiting_list[book.title].pop(0)
-                        customers_to_notify.append(next_customer)
-                        self.loaned(book)  # משאיל את הספר ללקוח הבא ברשימה
-
-                    self.save_waiting_list()
-                    if customers_to_notify:
-                        self.notification_subject.notify(book, customers_to_notify, "addition")
-
-                # עדכון סטטוס ההשאלה
-                if existing_book.available_copies == 0:
-                    existing_book.is_loaned = "Yes"
-                else:
-                    existing_book.is_loaned = "No"
-            else:
-                self.books[book.title] = book
-
-            self.logger.log_info("Book added successfully")
-            self.save_books()
-
-        except CustomException as e:
-            self.logger.log_error("Book added fail")
-            raise e
-
-        except Exception as e:
-            self.logger.log_error("Book added fail")
-            raise e
-
-    def removed(self, book: Book) -> bool:
-        try:
-            # דיבוג: בדיקה אם הספר קיים במערכת
-            self.logger.log_debug(f"Attempting to remove book: title={book.title}")
-
-            # בדיקה אם הספר קיים במערכת או כבר הושאל
-            if book.title not in self.books:
-                self.logger.log_debug(f"Book {book.title} does not exist.")
-                raise BookDoesNotExistException()
-
-            if book.title in self.books_borrowed:
-                self.logger.log_debug(f"Book {book.title} is currently borrowed.")
-                raise RemovingBorrowedBookException()
-
-            # הסרת הספר אם הוא לא הושאל
-            del self.books[book.title]
-            self.logger.log_info(f"Book removed successfully.")
-            self.save_books()
-            return True
-
-        except CustomException as e:
-            self.logger.log_error("Book removed fail")
-            raise e
-        except Exception as e:
-            # כל שגיאה לא צפויה
-            self.logger.log_error("Book removed fail")
-            raise e
-
-    def loaned(self, book: Book) -> bool:
-        try:
-            if book.title in self.books:
-                current_book = self.books[book.title]
-
-                if current_book.available_copies > 0:
-                    current_book.available_copies -= 1
-                    self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
-
-                    if current_book.available_copies == 0:
-                        current_book.is_loaned = "Yes"
-
-                    self.logger.log_info("book borrowed  successfully")
-                    self.save_books()
-                    return True
-                else:
-                    raise NoCopyAvailableException()
-            else:
-                raise BookDoesNotExistException()
-
-        except CustomException as e:
-            self.logger.log_error(f"Book borrowed  fail")
-            raise e
-
-        except Exception as e:
-            self.logger.log_error("Book borrowed  fail")
-            raise e
-
-    def returned(self, book: Book) -> bool:
-        try:
-            if book.title not in self.books:
-                raise BookDoesNotExistException("Book does not exist in the system.")
-
-            if book.title not in self.books_borrowed:
-                raise NoBorrowedCopiesException("There are no borrowed copies of this book.")
-
-            current_book = self.books[book.title]
-            current_book.available_copies += 1
-
-            self.books_borrowed[book.title] -= 1
-            if self.books_borrowed[book.title] == 0:
-                del self.books_borrowed[book.title]
-                current_book.is_loaned = "No"
-            else:
-                current_book.is_loaned = "Yes"
+            existing_book.total_copies += book.total_copies
+            added_copies = book.total_copies
+            existing_book.available_copies = existing_book.total_copies - borrowed_copies
 
             if book.title in self.waiting_list and self.waiting_list[book.title]:
-                next_customer = self.waiting_list[book.title].pop(0)
+                for _ in range(min(added_copies, len(self.waiting_list[book.title]))):
+                    next_customer = self.waiting_list[book.title].pop(0)
+                    customers_to_notify.append(next_customer)
+                    self.loaned(book)
+
                 self.save_waiting_list()
-                self.notification_subject.notify(book, [next_customer], "return")
-                self.loaned(book)
+                if customers_to_notify:
+                    self.notification_subject.notify(book, customers_to_notify, "addition")
 
-            self.logger.log_info("Book returned successfully")
-            self.save_books()
-            return True
+            if existing_book.available_copies == 0:
+                existing_book.is_loaned = "Yes"
+            else:
+                existing_book.is_loaned = "No"
+        else:
+            self.books[book.title] = book
 
-        except CustomException as e:
-            self.logger.log_error("Book returned fail")
-            raise e
+        self.save_books()
 
-        except Exception as e:
-            self.logger.log_error("Book returned fail")
-            raise e
+    @log_operation("remove book")
+    def removed(self, book: Book) -> bool:
+        if book.title not in self.books:
+            raise BookDoesNotExistException()
 
+        if book.title in self.books_borrowed:
+            raise RemovingBorrowedBookException()
+
+        del self.books[book.title]
+        self.save_books()
+        return True
+
+    @log_operation("loan book")
+    def loaned(self, book: Book) -> bool:
+        if book.title in self.books:
+            current_book = self.books[book.title]
+
+            if current_book.available_copies > 0:
+                current_book.available_copies -= 1
+                self.books_borrowed[book.title] = self.books_borrowed.get(book.title, 0) + 1
+
+                if current_book.available_copies == 0:
+                    current_book.is_loaned = "Yes"
+
+                self.save_books()
+                return True
+            else:
+                raise NoCopyAvailableException()
+        else:
+            raise BookDoesNotExistException()
+
+    @log_operation("return book")
+    def returned(self, book: Book) -> bool:
+        if book.title not in self.books:
+            raise BookDoesNotExistException()
+
+        if book.title not in self.books_borrowed:
+            raise NoBorrowedCopiesException()
+
+        current_book = self.books[book.title]
+        current_book.available_copies += 1
+
+        self.books_borrowed[book.title] -= 1
+        if self.books_borrowed[book.title] == 0:
+            del self.books_borrowed[book.title]
+            current_book.is_loaned = "No"
+        else:
+            current_book.is_loaned = "Yes"
+
+        if book.title in self.waiting_list and self.waiting_list[book.title]:
+            next_customer = self.waiting_list[book.title].pop(0)
+            self.save_waiting_list()
+            self.notification_subject.notify(book, [next_customer], "return")
+            self.loaned(book)
+
+        self.save_books()
+        return True
+
+    @log_operation("add to waiting list")
     def waiting_for_book(self, book, customer=None):
-        """הוספת לקוח לרשימת ההמתנה."""
         if customer is None:
             customer = self.create_customer()
 
-        # בדיקה אם הלקוח כבר רשום לספר זה
         if book.title in self.waiting_list:
-            # בדיקה לפי שם וטלפון (או כל זיהוי אחר שאתה רוצה)
             for existing_customer in self.waiting_list[book.title]:
                 if existing_customer.name == customer.name and existing_customer.phone == customer.phone:
                     raise ValueError(f"Customer {customer.name} is already in waiting list for book '{book.title}'")
@@ -209,7 +183,6 @@ class Librarian:
             self.waiting_list[book.title] = []
 
         self.waiting_list[book.title].append(customer)
-        self.logger.log_info(f" {customer} added to waiting list for book '{book.title}'")
         self.save_waiting_list()
 
     def create_customer(self):

@@ -115,6 +115,45 @@ class TestSearch(unittest.TestCase):
                 f"Failed for query '{query}'"
             )
 
+    def test_display_popular_books(self):
+        """בדיקת שיטת הצגת ספרים פופולריים"""
+        # הכנת נתונים למבחן
+        # נניח שיש מילון של ספרים שאולים
+        self.search.books_borrowed = {
+            "1984": 5,
+            "The Hobbit": 3,
+            "Brave New World": 2
+        }
+
+        # הכנת רשימת המתנה
+        self.search.waiting_list = {
+            "1984": ["User1", "User2"],
+            "The Hobbit": ["User3"],
+            "Brave New World": []
+        }
+
+        # הצגת ספרים פופולריים
+        popular_books = self.search.display_popular_books()
+
+        # בדיקות
+        # ודא שרק נחזרו ספרים עם ביקוש
+        self.assertTrue(len(popular_books) > 0)
+
+        # ודא שלא מוחזרים יותר מ-10 ספרים
+        self.assertTrue(len(popular_books) <= 10)
+
+        # ודא שהספרים ממוינים לפי פופולריות (ההזמנות + השאלות)
+        popularities = [
+            self.search.books_borrowed.get(book.title, 0) +
+            len(self.search.waiting_list.get(book.title, []))
+            for book in popular_books
+        ]
+        self.assertEqual(popularities, sorted(popularities, reverse=True))
+
+        # בדוק שהספרים הנכונים מופיעים בראש הרשימה
+        # 1984 צריך להיות הספר הפופולרי ביותר (5 השאלות + 2 רשימת המתנה)
+        self.assertEqual(popular_books[0].title, "1984")
+
 
 if __name__ == '__main__':
     unittest.main()
