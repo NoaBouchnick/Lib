@@ -15,28 +15,25 @@ from Library.Customer import Customer
 from Library.LibrarianNotificationObserver import LibrarianNotificationObserver
 from system.Logger import Logger
 
-
 def log_operation(operation_name):
-    """
-    דקורטור לתיעוד פעולות בספרייה - משתמש בלוגר של המחלקה
-    """
+    #decorator for logging library operations using the class logger
     def decorator(func):
         @wraps(func)
         def wrapper(self, *args, **kwargs):
             try:
-                # רישום הודעת דיבוג לפני ביצוע הפעולה
+                # log debug message before executing the operation
                 if args and hasattr(args[0], 'title'):
                     self.logger.log_debug(f"Attempting {operation_name}: title={args[0].title}")
 
-                # הרצת הפונקציה המקורית
+                # run original function
                 result = func(self, *args, **kwargs)
 
-                # רישום הודעת הצלחה
+                # log success message
                 self.logger.log_info(f"{operation_name} completed successfully")
                 return result
 
             except Exception as e:
-                # רישום הודעת שגיאה
+                # log error message
                 self.logger.log_error(f"{operation_name} failed")
                 raise e
 
@@ -44,9 +41,11 @@ def log_operation(operation_name):
     return decorator
 
 
+#represents a librarian managing the book collection and costumer interactions
 class Librarian:
+    #initializes the librarian, including loading books and waiting list
     def __init__(self, books_path=None, waiting_list_path=None) -> None:
-        # קביעת נתיבים ברירת מחדל אם לא התקבלו
+        # sets default paths to files if none was specified
         if books_path is None or waiting_list_path is None:
             base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             files_dir = os.path.join(base_path, 'files')
@@ -56,26 +55,28 @@ class Librarian:
             if waiting_list_path is None:
                 waiting_list_path = os.path.join(files_dir, 'waiting_list.csv')
 
-        # אתחול בסיסי
+        # basic start
         self.logger = Logger()
         self.books_borrowed = {}
         self.notification_subject = LibraryNotificationSubject()
         self.notification_observer = LibrarianNotificationObserver(self.logger)
         self.notification_subject.attach(self.notification_observer)
 
-        # טעינת ספרים ורשימת המתנה מהקבצים
+        # load books and waiting list from files
         self.books = CSVHandler.load_books_from_csv(books_path)
         self.waiting_list = CSVHandler.load_waiting_list_from_csv(waiting_list_path)
 
-        # עדכון מצב הספרים המושאלים
+        # update loaned books status
         for title, book in self.books.items():
             if book.is_loaned == "Yes":
                 book.available_copies = 0
                 self.books_borrowed[title] = book.total_copies
 
+    #retrieves the waiting list
     def get_waiting_list(self):
         return self.waiting_list
 
+    #adds a book to library or updates number of copies
     @log_operation("add book")
     def added(self, book: Book):
         if not isinstance(book.total_copies, int) or not isinstance(book.year, int):
@@ -112,6 +113,7 @@ class Librarian:
 
         self.save_books()
 
+    #removes book from library
     @log_operation("remove book")
     def removed(self, book: Book) -> bool:
         if book.title not in self.books:
@@ -124,6 +126,7 @@ class Librarian:
         self.save_books()
         return True
 
+    #loans a book to costumer if there is an available copy
     @log_operation("loan book")
     def loaned(self, book: Book) -> bool:
         if book.title in self.books:
@@ -143,6 +146,8 @@ class Librarian:
         else:
             raise BookDoesNotExistException()
 
+    #returns borrowed book to library.
+    # if there is a waiting list for the book it loans it to the first costumer on the list
     @log_operation("return book")
     def returned(self, book: Book) -> bool:
         if book.title not in self.books:
@@ -170,6 +175,7 @@ class Librarian:
         self.save_books()
         return True
 
+    #adds costumer to waiting list if no copies are available
     @log_operation("add to waiting list")
     def waiting_for_book(self, book, customer=None):
         if customer is None:
@@ -185,39 +191,34 @@ class Librarian:
         self.waiting_list[book.title].append(customer)
         self.save_waiting_list()
 
+    #creates a costumer object
     def create_customer(self):
-        # בקשת פרטי הלקוח מהמשתמש
+        # requests costumer details
         name = input("Enter customer name: ")
         phone = input("Enter customer phone: ")
         email = input("Enter customer email: ")
 
-        # יצירת אובייקט לקוח חדש
+        #create and return new costumer object
         customer = Customer(name, phone, email)
 
         return customer
-
+    """
+    returns most demanded books based on:
+    1. the number of borrowed copies
+    2. the size of the waiting list
+    final demand score=number of borrowed copies+size of waiting list"""
     def get_most_demanded_books(self, limit=10):
-        """
-        מחזיר את הספרים המבוקשים ביותר על פי:
-        1. כמות העותקים המושאלים
-        2. גודל רשימת ההמתנה
 
-        Args:
-            limit (int): כמות הספרים להחזרה (ברירת מחדל: 10)
-
-        Returns:
-            list: רשימה של טאפלים (שם הספר, ציון ביקוש כולל, עותקים מושאלים, אנשים בהמתנה)
-        """
         book_demand = []
 
         for title, book in self.books.items():
-            # מספר העותקים המושאלים
+            # number of borrowed copies
             borrowed_copies = self.books_borrowed.get(title, 0)
 
-            # מספר האנשים ברשימת ההמתנה
+            # number of people on waiting list
             waiting_list_count = len(self.waiting_list.get(title, []))
 
-            # הציון הכולל הוא סכום של העותקים המושאלים ואורך רשימת ההמתנה
+            # final demand score
             total_demand = borrowed_copies + waiting_list_count
 
             book_demand.append((
@@ -227,15 +228,16 @@ class Librarian:
                 waiting_list_count
             ))
 
-        # מיון לפי הציון הכולל בסדר יורד
+        # order from highest score to lowest
         sorted_books = sorted(book_demand, key=lambda x: x[1], reverse=True)
 
-        # החזרת הכמות המבוקשת של ספרים
+        # returns a list of the requested length
         return sorted_books[:limit]
 
+    #saves the current state of the library's books to books.cvs
     def save_books(self):
         CSVHandler.save_books_to_csv(self.books)
 
+    #saves the current state of the waiting list to waiting_list.cvs
     def save_waiting_list(self):
-        """שומר את רשימת ההמתנה."""
         CSVHandler.save_waiting_list_to_csv(self.waiting_list)

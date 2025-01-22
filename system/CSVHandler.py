@@ -3,11 +3,11 @@ import csv
 from Books.Book import Book
 from Library.Customer import Customer
 
-
+#a utility class for handling CVS file operations for books and waiting lists in the library
 class CSVHandler:
+    #loads books from CVS file and returns a dictionary of book objects
     @staticmethod
     def load_books_from_csv(file_path=None):
-        """טוען ספרים מקובץ CSV ומחזיר רשימה של ספרים."""
         books = {}
         try:
             if file_path is None:
@@ -32,9 +32,9 @@ class CSVHandler:
             print(f"File not found: {file_path}, starting with empty library.")
         return books
 
+    #saves books to a cvs file
     @staticmethod
     def save_books_to_csv(books, file_path=None):
-        """שומר את הספרים לקובץ CSV."""
         try:
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
@@ -62,12 +62,12 @@ class CSVHandler:
         except Exception as e:
             print(f"Error saving books to CSV: {str(e)}")
 
+    #loads waiting list from CVS file
     @staticmethod
     def load_waiting_list_from_csv(file_path=None):
-        """טוען את רשימת ההמתנה מקובץ CSV."""
         waiting_list = {}
         try:
-            # אם לא התקבל נתיב, משתמשים בנתיב ברירת מחדל
+            # if no path is given, uses default path
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
                 file_path = os.path.join(base_path, '../files', 'waiting_list.csv')
@@ -89,16 +89,16 @@ class CSVHandler:
             print(f"Error loading waiting list from {file_path}: {str(e)}")
         return waiting_list
 
+    #saves waiting list to CVS file
     @staticmethod
     def save_waiting_list_to_csv(waiting_list, file_path=None):
-        """שומר את רשימת ההמתנה בקובץ CSV."""
         try:
-            # אם לא התקבל נתיב, משתמשים בנתיב ברירת מחדל
+            #if no path is given uses default path
             if file_path is None:
                 base_path = os.path.dirname(os.path.abspath(__file__))
                 file_path = os.path.join(base_path, '../files', 'waiting_list.csv')
 
-            # וידוא שהתיקייה קיימת
+            # ensures  file exists
             directory = os.path.dirname(file_path)
             if not os.path.exists(directory):
                 os.makedirs(directory)
