@@ -434,14 +434,17 @@ class LibraryApp:
                     else:
                         raise BookDoesNotExistException("Book not found in the system.")  # error if the book is not found
 
+                except BookDoesNotExistException as e:
+                    messagebox.showerror("Return Book", f"Error: {str(e)}")
+                    self.librarian.logger.log_error("book return fail")
+
                 except CustomException as e:
                     messagebox.showerror("Return Book", f"Error: {str(e)}")
-                    self.librarian.logger.log_error("Book return fail")
 
                 except Exception as e:
                     # any unexpected error
                     messagebox.showerror("Return Book", f"Unexpected error: {str(e)}")
-                    self.librarian.logger.log_error("Book return fail")
+                    self.librarian.logger.log_error("book return fail")
 
                 return_book_window.destroy()
 
@@ -667,6 +670,7 @@ class LibraryApp:
                 display_results(results)
             except Exception as e:
                 messagebox.showerror("Search Error", f"An error occurred: {str(e)}")
+                search_window.destroy()
 
         # search button
         search_button = tk.Button(search_window, text="Search", command=search_submit,

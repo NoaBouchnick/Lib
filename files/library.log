@@ -9982,3 +9982,127 @@
 [2025-01-21 12:34:22,095] ERROR: logged in fail
 [2025-01-21 12:34:25,440] INFO: Registered in successfully
 [2025-01-21 12:34:35,682] INFO: log out successful
+[2025-01-23 00:43:21,549] INFO: logged in successfully
+[2025-01-23 00:43:34,342] ERROR: Book added fail
+[2025-01-23 00:43:40,961] INFO: add book completed successfully
+[2025-01-23 00:45:12,481] ERROR: logged in fail
+[2025-01-23 00:45:18,202] INFO: logged in successfully
+[2025-01-23 00:45:23,382] INFO: remove book successfully
+[2025-01-23 00:47:59,171] INFO: logged in successfully
+[2025-01-23 00:48:05,092] INFO: book added successfully
+[2025-01-23 00:48:30,352] INFO: book borrowed successfully
+[2025-01-23 00:48:37,939] INFO:  book returned successfully
+[2025-01-23 00:48:43,022] INFO: Display all books successfully
+[2025-01-23 00:48:43,022] INFO: Display all books successfully
+[2025-01-23 00:48:51,025] INFO: Display available books successfully
+[2025-01-23 00:48:51,025] INFO: Display available books successfully
+[2025-01-23 00:48:53,395] INFO: Display borrowed books successfully
+[2025-01-23 00:48:53,395] INFO: Display borrowed books successfully
+[2025-01-23 00:48:55,036] INFO: Display popular books successfully
+[2025-01-23 00:48:55,036] INFO: Display popular books successfully
+[2025-01-23 00:49:28,082] INFO: Display books by category successfully
+[2025-01-23 00:49:28,082] INFO: Display books by category successfully
+[2025-01-23 00:49:45,329] INFO: search successfully
+[2025-01-23 00:49:45,329] INFO: search successfully
+[2025-01-23 00:49:45,329] INFO: search successfully
+[2025-01-23 00:49:54,422] INFO: search successfully
+[2025-01-23 00:49:54,422] INFO: search successfully
+[2025-01-23 00:49:54,422] INFO: search successfully
+[2025-01-23 00:54:48,954] INFO: logged in successfully
+[2025-01-23 00:54:59,772] ERROR: search failed
+[2025-01-23 00:54:59,772] ERROR: search failed
+[2025-01-23 00:55:41,423] INFO: search successfully
+[2025-01-23 00:55:41,423] INFO: search successfully
+[2025-01-23 01:03:44,006] INFO: logged in successfully
+[2025-01-23 01:03:50,689] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:03:50,689] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:03:50,689] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:03:50,689] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:04:37,289] INFO: logged in successfully
+[2025-01-23 01:05:11,537] INFO: logged in successfully
+[2025-01-23 01:06:01,784] INFO: logged in successfully
+[2025-01-23 01:06:06,146] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:06:06,146] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:07:27,523] INFO: logged in successfully
+[2025-01-23 01:07:30,897] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:07:30,897] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:07:30,897] INFO: search successfully
+[2025-01-23 01:07:30,897] INFO: search successfully
+[2025-01-23 01:07:42,866] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:07:42,866] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:07:42,866] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:07:42,866] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:07:42,866] ERROR: search failed
+[2025-01-23 01:07:42,866] ERROR: search failed
+[2025-01-23 01:08:32,447] INFO: logged in successfully
+[2025-01-23 01:08:38,964] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:08:38,964] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:10:54,720] INFO: logged in successfully
+[2025-01-23 01:11:00,073] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:11:00,073] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:11:06,613] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:11:06,613] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:11:06,613] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:12:04,291] INFO: logged in successfully
+[2025-01-23 01:12:08,018] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:12:08,018] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:12:12,390] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:12:12,390] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:13:48,011] INFO: logged in successfully
+[2025-01-23 01:13:51,289] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:13:51,289] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:14:04,428] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:14:04,428] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:14:04,428] ERROR: Search book "÷" by genre completed fail
+[2025-01-23 01:14:42,782] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:14:42,782] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:14:42,782] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:14:42,782] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:15:05,859] INFO: logged in successfully
+[2025-01-23 01:15:33,079] INFO: logged in successfully
+[2025-01-23 01:15:36,364] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:15:36,364] INFO: Search book "÷" by name completed successfully
+[2025-01-23 01:16:22,369] INFO: Search book "÷" by author name completed successfully
+[2025-01-23 01:16:22,369] INFO: Search book "÷" by author name completed successfully
+[2025-01-23 01:16:22,369] INFO: Search book "÷" by author name completed successfully
+[2025-01-23 01:16:32,456] INFO: logged in successfully
+[2025-01-23 01:16:37,206] INFO: Search book "÷" by author name completed successfully
+[2025-01-23 01:16:37,206] INFO: Search book "÷" by author name completed successfully
+[2025-01-23 01:16:44,113] ERROR: book returned failed
+[2025-01-23 01:16:44,113] ERROR: book returned failed
+[2025-01-23 01:16:47,250] ERROR: Book return fail
+[2025-01-23 01:16:47,250] ERROR: Book return fail
+[2025-01-23 01:18:16,997] INFO: logged in successfully
+[2025-01-23 01:18:20,182] ERROR: book returned fail
+[2025-01-23 01:18:22,921] ERROR: Book return fail
+[2025-01-23 01:18:40,352] INFO: logged in successfully
+[2025-01-23 01:18:43,771] ERROR: book returned fail
+[2025-01-23 01:21:06,844] INFO: logged in successfully
+[2025-01-23 01:21:14,006] ERROR: book return fail
+[2025-01-23 01:21:32,083] INFO: book borrowed successfully
+[2025-01-23 01:21:38,066] INFO: Display all books successfully
+[2025-01-23 01:21:38,066] INFO: Display all books successfully
+[2025-01-23 01:21:39,656] INFO: Display borrowed books successfully
+[2025-01-23 01:21:39,656] INFO: Display borrowed books successfully
+[2025-01-23 01:21:46,611] ERROR: book borrowed fail
+[2025-01-23 01:21:46,611] ERROR: book borrowed fail
+[2025-01-23 01:21:55,511] ERROR: book borrowed fail
+[2025-01-23 01:21:55,511] ERROR: book borrowed fail
+[2025-01-23 01:22:26,721] INFO: add to waiting list successfully
+[2025-01-23 01:22:26,721] INFO: add to waiting list successfully
+[2025-01-23 01:22:50,797] ERROR: book borrowed fail
+[2025-01-23 01:22:50,797] ERROR: book borrowed fail
+[2025-01-23 01:23:14,627] ERROR: add to waiting list fail
+[2025-01-23 01:23:14,627] ERROR: add to waiting list fail
+[2025-01-23 01:23:24,324] INFO: add to waiting list successfully
+[2025-01-23 01:23:24,324] INFO: add to waiting list successfully
+[2025-01-23 01:23:41,970] INFO: book borrowed successfully
+[2025-01-23 01:23:41,970] INFO: book borrowed successfully
+[2025-01-23 01:23:41,972] INFO: book borrowed successfully
+[2025-01-23 01:23:41,972] INFO: book borrowed successfully
+[2025-01-23 01:23:41,973] INFO: Notifications sent to librarians about book '÷'
+[2025-01-23 01:23:41,973] INFO: Notifications sent to librarians about book '÷'
+[2025-01-23 01:23:41,974] INFO: book added successfully
+[2025-01-23 01:23:41,974] INFO: book added successfully
+[2025-01-23 01:24:14,777] INFO: log out successful
+[2025-01-23 01:24:14,777] INFO: log out successful

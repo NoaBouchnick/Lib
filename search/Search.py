@@ -1,5 +1,6 @@
 from functools import wraps
 from Books.BookIterator import AllBooksIterator, AvailableBooksIterator, BorrowedBooksIterator
+from Error.BookDoesNotExistException import BookDoesNotExistException
 from Library.Librarian import log_operation
 from system.Logger import Logger
 #provides search functionality for books in the library
@@ -29,12 +30,20 @@ class Search:
     def set_strategy(self, strategy):
         self.strategy = strategy
 
-    #preforms a search using set strategy
-    @log_operation("search")
+    # preforms a search using set strategy
     def search(self, query: str):
         if not self.strategy:
             raise ValueError("No search strategy set.")
-        return self.strategy.search(query, self.books)
+        try:
+            results = self.strategy.search(query, self.books)
+            if not results:
+                # self.logger.log_error(f'Search book "{query}" by {self.strategy.get_search_type()} completed fail')
+                raise BookDoesNotExistException(f"No books found matching the query: '{query}'")
+            self.logger.log_info(f'Search book "{query}" by {self.strategy.get_search_type()} completed successfully')
+            return results
+        except Exception as e:
+            self.logger.log_error(f'Search book "{query}" by {self.strategy.get_search_type()} completed fail')
+            raise e
 
     #displays all books in the library
     @log_operation("Display all books")

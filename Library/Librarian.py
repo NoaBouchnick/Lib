@@ -29,12 +29,12 @@ def log_operation(operation_name):
                 result = func(self, *args, **kwargs)
 
                 # log success message
-                self.logger.log_info(f"{operation_name} completed successfully")
+                self.logger.log_info(f"{operation_name} successfully")
                 return result
 
             except Exception as e:
                 # log error message
-                self.logger.log_error(f"{operation_name} failed")
+                self.logger.log_error(f"{operation_name} fail")
                 raise e
 
         return wrapper
@@ -77,7 +77,7 @@ class Librarian:
         return self.waiting_list
 
     #adds a book to library or updates number of copies
-    @log_operation("add book")
+    @log_operation("book added")
     def added(self, book: Book):
         if not isinstance(book.total_copies, int) or not isinstance(book.year, int):
             raise NonIntegerValueException()
@@ -114,7 +114,7 @@ class Librarian:
         self.save_books()
 
     #removes book from library
-    @log_operation("remove book")
+    @log_operation("book removed")
     def removed(self, book: Book) -> bool:
         if book.title not in self.books:
             raise BookDoesNotExistException()
@@ -127,7 +127,7 @@ class Librarian:
         return True
 
     #loans a book to costumer if there is an available copy
-    @log_operation("loan book")
+    @log_operation("book borrowed")
     def loaned(self, book: Book) -> bool:
         if book.title in self.books:
             current_book = self.books[book.title]
@@ -148,7 +148,7 @@ class Librarian:
 
     #returns borrowed book to library.
     # if there is a waiting list for the book it loans it to the first costumer on the list
-    @log_operation("return book")
+    @log_operation("book returned")
     def returned(self, book: Book) -> bool:
         if book.title not in self.books:
             raise BookDoesNotExistException()
